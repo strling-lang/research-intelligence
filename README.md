@@ -102,4 +102,4 @@ Reports are co-located with their synthesizing `index.md` in the relevant focus 
 
 ## 7. Research Constraints
 
-Unlimited potential! You can be as creative as you want in proposing new pattern structures. However, all proposals must be grounded in real-world research needs documented in `/reports`.
+Unlimited potential! You can be as creative as you want in proposing new pattern structures. However, all proposals must be grounded in real-world research needs documented in `/inquiries/*.md` reports.
