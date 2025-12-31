@@ -5,7 +5,7 @@
 
 ---
 
-[← Back to Inquiries](../README.md)
+[← Back to Inquiries](../index.md)
 
 ---
 

@@ -21,6 +21,8 @@ We drive the evolution of the **Universal Pattern Engine** through a recursive i
 
 ## 3. Repository Structure
 
+Explore the centralized [Research Inquiry Hub](inquiries/index.md) for more details.
+
 ### 📂 /inquiries/[focus-name]/
 
 **Purpose**: The atomic unit of research organization. Each folder is a **Flat Focus Node** containing both the inquiry synthesis and its co-located research reports.
