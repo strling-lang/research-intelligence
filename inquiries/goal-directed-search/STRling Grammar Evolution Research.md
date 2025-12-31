@@ -26,9 +26,9 @@ The Raku Cursor is not merely a pointer. It is an immutable snapshot of the pars
 
 The internal anatomy of a Cursor, as implemented in Raku's NQP (Not Quite Perl) layer, includes several vital components that STRling must emulate to support advanced features:
 
--   **pos (Position):** The current integer offset in the target string. This is the most basic primitive, but in a Grammar engine, it serves as the anchor for all subsequent matching attempts.3
--   **orig (Original String):** A reference to the immutable source string being parsed. By carrying this reference within the cursor, Raku avoids the expensive operation of substring copying. When a sub-rule needs to match against the text, it does not receive a sliced string; it receives a view of the original string bounded by the cursor's coordinates.4
--   **$\!match (The Match State):** Perhaps the most profound divergence from traditional regex is that the Cursor holds the potential result of the match in progress. In Raku, the Match object is actually a subclass of Cursor. This implies that a "result" is simply a specialized state of the parser that has been marked as successful.3
+- **pos (Position):** The current integer offset in the target string. This is the most basic primitive, but in a Grammar engine, it serves as the anchor for all subsequent matching attempts.3
+- **orig (Original String):** A reference to the immutable source string being parsed. By carrying this reference within the cursor, Raku avoids the expensive operation of substring copying. When a sub-rule needs to match against the text, it does not receive a sliced string; it receives a view of the original string bounded by the cursor's coordinates.4
+- **$\!match (The Match State):** Perhaps the most profound divergence from traditional regex is that the Cursor holds the potential result of the match in progress. In Raku, the Match object is actually a subclass of Cursor. This implies that a "result" is simply a specialized state of the parser that has been marked as successful.3
 
 #### **2.1.2 The Shadow Cursor Implementation Strategy**
 
@@ -64,17 +64,17 @@ Raku's subparse method allows a grammar to be invoked on a string starting at an
 Implications for STRling:  
 To support this, STRling must introduce a Delegate pattern. We cannot implement this using a single regex string, because regex engines are monolithic. We must break the pattern into "chunks" separated by delegation points.
 
--   **Proposed API:**  
-    Python  
-    \# Conceptual Python API for Grammar Braiding  
-    python_grammar \= s.Grammar("Python")  
-    sql_grammar \= s.Grammar("SQL")
+- **Proposed API:**  
+  Python  
+  \# Conceptual Python API for Grammar Braiding  
+  python_grammar \= s.Grammar("Python")  
+  sql_grammar \= s.Grammar("SQL")
 
-    \# Define the "Island"  
-    python_grammar.rule("sql_query",  
-     s.literal('sql"') \+  
-     s.delegate(target=sql_grammar, terminator=s.literal('"'))  
-    )
+  \# Define the "Island"  
+  python_grammar.rule("sql_query",  
+   s.literal('sql"') \+  
+   s.delegate(target=sql_grammar, terminator=s.literal('"'))  
+  )
 
 In this architecture, STRling compiles the "Python" grammar up to the sql" literal. It then emits a specialized instruction (discussed in Section 3\) to pause the VM, invoke the sql_grammar, and wait for the return signal. This effectively "braids" the execution of two distinct state machines.
 
@@ -89,9 +89,9 @@ Standard regex engines return "groups" (Group 1, Group 2). This is fragile; if a
 The STRling MatchTree:  
 We must move away from re.MatchObject. STRling should return a custom MatchTree object.
 
--   **Named Access:** match\['uuid'\] should return the specific sub-match for the UUID rule, regardless of where it appeared in the sequence.
--   **Hierarchical Navigation:** If a pattern defines a Person containing an Address containing a ZipCode, the result object should allow traversal: match\['Person'\]\['Address'\]\['ZipCode'\].
--   **Self-Describing:** The MatchTree should carry metadata about which rule generated it, allowing for introspection and debugging.3
+- **Named Access:** match\['uuid'\] should return the specific sub-match for the UUID rule, regardless of where it appeared in the sequence.
+- **Hierarchical Navigation:** If a pattern defines a Person containing an Address containing a ZipCode, the result object should allow traversal: match\['Person'\]\['Address'\]\['ZipCode'\].
+- **Self-Describing:** The MatchTree should carry metadata about which rule generated it, allowing for introspection and debugging.3
 
 This hierarchy is constructed automatically during the parsing phase. In the Raku model, every time a sub-rule (like token word) succeeds, its resulting Match object is attached to the parent's Match object.10 STRling's new VM must replicate this "attach-on-success" behavior to build the CST dynamically.
 
@@ -107,8 +107,8 @@ Strategic Decision for STRling:
 While LTM is theoretically superior for extensibility, it adds significant complexity to the compiler (requiring NFA-to-DFA conversion). Given our pragmatic constraints, we will initially adopt Ordered Choice (PEG style) rather than LTM. However, we can simulate LTM by strictly enforcing that "longer" patterns are registered before "shorter" ones in the STRling registry.  
 The proto concept, however, is valuable. STRling should support a **Pattern Registry** that acts as a dispatch table.
 
--   **Registry:** A central store where users can register patterns like s.register("ipv4",...) and s.register("ipv6",...).
--   **Polymorphic Reference:** A user can then write s.ref("ip_address"), and STRling can resolve this to an ordered choice of all registered IP patterns. This decouples the definition of the grammar from its usage, allowing for plugin-based extensions.
+- **Registry:** A central store where users can register patterns like s.register("ipv4",...) and s.register("ipv6",...).
+- **Polymorphic Reference:** A user can then write s.ref("ip_address"), and STRling can resolve this to an ordered choice of all registered IP patterns. This decouples the definition of the grammar from its usage, allowing for plugin-based extensions.
 
 ## ---
 
@@ -122,8 +122,8 @@ The fundamental flaw in standard Regular Expressions is the ambiguity of the Alt
 
 PEG replaces Alternation (|) with **Ordered Choice** (/).
 
--   **Mechanism:** In PEG, the expression A / B means "Try A. If A matches, **commit to it**. Do not ever backtrack to try B, even if the subsequent parts of the grammar fail." 13
--   **Safety Guarantee:** This "greedy" commitment behavior ensures that for any given input position, a rule either succeeds or fails in a deterministic manner. It eliminates the possibility of "catastrophic backtracking" loops.
+- **Mechanism:** In PEG, the expression A / B means "Try A. If A matches, **commit to it**. Do not ever backtrack to try B, even if the subsequent parts of the grammar fail." 13
+- **Safety Guarantee:** This "greedy" commitment behavior ensures that for any given input position, a rule either succeeds or fails in a deterministic manner. It eliminates the possibility of "catastrophic backtracking" loops.
 
 STRling Mandate:  
 The STRling "Atomic Emitter" (Task 8.2) must compile patterns into a format that enforces Ordered Choice. We are effectively building a "ReDoS-immune" engine by design.
@@ -152,8 +152,8 @@ We have analyzed the LPeg source code (lpvm.c) to identify the core instruction 
 
 One of LPeg's key performance secrets is the **Head-Fail** analysis. Before compiling a complex pattern, the engine checks if the pattern must start with a specific character.
 
--   **Example:** For the pattern ( "foo" / "bar" ), the engine knows it must start with f or b.
--   **Optimization:** The compiler emits a TestChar instruction _before_ the Choice. If the current character is z, it fails immediately without the overhead of pushing the Choice state onto the stack.16
+- **Example:** For the pattern ( "foo" / "bar" ), the engine knows it must start with f or b.
+- **Optimization:** The compiler emits a TestChar instruction _before_ the Choice. If the current character is z, it fails immediately without the overhead of pushing the Choice state onto the stack.16
 
 **Implementation Detail:** STRling's compiler must perform a "First Set" analysis on the AST to identify these optimization opportunities. This ensures that the generated bytecode is not just safe, but performant.
 
@@ -180,12 +180,12 @@ Task 8.2 requires an "Emitter Specification." The STRling compilation pipeline w
 
 1. **DSL Parsing:** Convert the user's Python/JS calls (s.literal('a') \+ s.digits()) into a high-level Internal Representation (IR) tree.
 2. **Analysis Phase:**
-    - **Nullable Check:** Verify which nodes can match the empty string (to prevent infinite loops).
-    - **First-Set Calculation:** Determine starting characters for Head-Fail optimization.
+   - **Nullable Check:** Verify which nodes can match the empty string (to prevent infinite loops).
+   - **First-Set Calculation:** Determine starting characters for Head-Fail optimization.
 3. **Emission Phase:** Traverse the IR and generate the opcode list.
-    - _Sequence A \+ B:_ Emit code for A, followed immediately by code for B.
-    - _Ordered Choice A | B:_ Emit Choice L1, code for A, Commit L2, label L1, code for B, label L2.
-    - _Repetition A\*:_ Emit Choice L_End, label L_Start, code for A, PartialCommit L_Start, label L_End.
+   - _Sequence A \+ B:_ Emit code for A, followed immediately by code for B.
+   - _Ordered Choice A | B:_ Emit Choice L1, code for A, Commit L2, label L1, code for B, label L2.
+   - _Repetition A\*:_ Emit Choice L_End, label L_Start, code for A, PartialCommit L_Start, label L_End.
 4. **Bytecode Serialization:** The resulting list of integers/structs is the "compiled" pattern, ready for execution by the VM.
 
 ## ---
@@ -198,10 +198,10 @@ The final piece of the puzzle is the developer interface. How do we expose this 
 
 In formal language theory, concatenation is a product (Cartesian product of strings), and union is a sum. LPeg maps language operators to these concepts:
 
--   \* (Multiplication) $\\rightarrow$ Sequence
--   \+ (Addition) $\\rightarrow$ Ordered Choice
--   \- (Subtraction) $\\rightarrow$ Difference (Match A but not B)
--   / (Division) $\\rightarrow$ Capture Transformation (Apply function to result)
+- \* (Multiplication) $\\rightarrow$ Sequence
+- \+ (Addition) $\\rightarrow$ Ordered Choice
+- \- (Subtraction) $\\rightarrow$ Difference (Match A but not B)
+- / (Division) $\\rightarrow$ Capture Transformation (Apply function to result)
 
 This algebraic approach allows for extremely concise grammar definitions. However, we must adapt this to the idioms of our target host languages: Python and JavaScript.
 
@@ -249,15 +249,15 @@ Research into "fake" overloading in JS using valueOf reveals it to be fragile an
 
 While we cannot overload operators, we can use the ES6 Proxy object to improve the _creation_ API, creating a "Magic Builder".26
 
--   **Dynamic Properties:** s.uuid or s.ipv4 can be intercepted by a Proxy to lazily load patterns from the registry.
+- **Dynamic Properties:** s.uuid or s.ipv4 can be intercepted by a Proxy to lazily load patterns from the registry.
 
 For composition, however, we must accept the platform constraints and offer a **Fluent Interface** (Method Chaining) that mirrors the algebraic structure semantically, if not syntactically.27
 
 **JavaScript API Mapping:**
 
--   Python a \+ b $\\rightarrow$ JS a.then(b)
--   Python a | b $\\rightarrow$ JS a.or(b)
--   Python a / f $\\rightarrow$ JS a.map(f)
+- Python a \+ b $\\rightarrow$ JS a.then(b)
+- Python a | b $\\rightarrow$ JS a.or(b)
+- Python a / f $\\rightarrow$ JS a.map(f)
 
 While less concise, the Fluent Interface preserves the _order of operations_ clarity that is often lost in nested function calls (or(then(a, b), c)). The use of Proxy can be reserved for DSL-like property accessors, e.g., s.digits.oneOrMore, to reduce parentheses noise.29
 
@@ -279,9 +279,9 @@ Raku's execution model is complex, involving NFAs, DFAs, and LTM graphs. It is p
 
 STRling v2.0 will essentially be:
 
--   **The Skin of Raku:** A class-based API, method interpolation, and grammar braiding for structure.
--   **The Muscle of LPeg:** A stack-based PEG VM for the actual bytecode execution.
--   **The Dress of Python:** An algebraic, operator-overloaded DSL for definition.
+- **The Skin of Raku:** A class-based API, method interpolation, and grammar braiding for structure.
+- **The Muscle of LPeg:** A stack-based PEG VM for the actual bytecode execution.
+- **The Dress of Python:** An algebraic, operator-overloaded DSL for definition.
 
 ## ---
 
@@ -291,27 +291,27 @@ The transition to this new architecture is a significant undertaking. We advocat
 
 ### **6.1 Phase 1: The Atomic Core**
 
--   **Action:** Implement the VM class in Python and a JS equivalent.
--   **Deliverable:** A unit-tested engine capable of executing manually constructed bytecode instructions (Char, Choice, Commit).
--   **Verification:** Validate that simple patterns execute in linear time, specifically testing against known ReDoS vectors.
+- **Action:** Implement the VM class in Python and a JS equivalent.
+- **Deliverable:** A unit-tested engine capable of executing manually constructed bytecode instructions (Char, Choice, Commit).
+- **Verification:** Validate that simple patterns execute in linear time, specifically testing against known ReDoS vectors.
 
 ### **6.2 Phase 2: The Emitter and Algebra**
 
--   **Action:** Build the Compiler that transforms the existing STRling AST into VM bytecode.
--   **Action:** Implement the Python \_\_magic\_\_ methods to output this AST.
--   **Deliverable:** The ability to write s.literal("a") \+ s.literal("b") and have it execute on the VM.
+- **Action:** Build the Compiler that transforms the existing STRling AST into VM bytecode.
+- **Action:** Implement the Python \_\_magic\_\_ methods to output this AST.
+- **Deliverable:** The ability to write s.literal("a") \+ s.literal("b") and have it execute on the VM.
 
 ### **6.3 Phase 3: The Shadow Cursor and Braiding**
 
--   **Action:** Implement the Cursor and MatchTree objects.
--   **Action:** Implement the subparse logic and the Delegate instruction in the VM.
--   **Deliverable:** A working demonstration of parsing a SQL string embedded in a Python variable using two distinct grammar definitions.
+- **Action:** Implement the Cursor and MatchTree objects.
+- **Action:** Implement the subparse logic and the Delegate instruction in the VM.
+- **Deliverable:** A working demonstration of parsing a SQL string embedded in a Python variable using two distinct grammar definitions.
 
 ### **6.4 Phase 4: The Registry and LSP Integration**
 
--   **Action:** Build the PatternRegistry for proto-like dispatch.
--   **Action:** Expose the MatchTree coordinates to the Language Server Protocol (LSP).
--   **Outcome:** Because we track line/col in our Shadow Cursor, STRling can now power syntax highlighters and linters with character-perfect accuracy, opening a new market for the tool beyond simple data extraction.
+- **Action:** Build the PatternRegistry for proto-like dispatch.
+- **Action:** Expose the MatchTree coordinates to the Language Server Protocol (LSP).
+- **Outcome:** Because we track line/col in our Shadow Cursor, STRling can now power syntax highlighters and linters with character-perfect accuracy, opening a new market for the tool beyond simple data extraction.
 
 ### **6.5 Conclusion**
 

@@ -107,8 +107,8 @@ Crucially, generators can be composed. The expression (1 to 3\) \+ (10 to 20\) g
 
 To facilitate string analysis without the overhead of passing string arguments to every function, Icon introduced the **String Scanning Environment**. This environment is defined by two keywords (global state variables within the scope of a scan):
 
--   \&subject: The string currently being analyzed.
--   \&pos: The integer cursor position within the subject (1-indexed).16
+- \&subject: The string currently being analyzed.
+- \&pos: The integer cursor position within the subject (1-indexed).16
 
 The scanning operator ? establishes this environment. In the expression s? expr, the string s is assigned to \&subject, and \&pos is initialized to 1\. The expression expr is then evaluated within this context. Functions like move(n) and tab(n) implicitly operate on \&subject and modify \&pos.
 
@@ -184,9 +184,9 @@ Because STRling generates an intermediate artifact (the TargetArtifact JSON), it
 
 This validation acts as a robust type check for the pattern itself. It ensures:
 
--   **Structural Integrity:** All nodes have required fields (e.g., Quant must have min and max).
--   **Semantic Validity:** Feature flags (like unicode) are consistent with the pattern's contents.
--   **Engine Compatibility:** The schema can enforce constraints specific to the target engine (e.g., ensuring no lookbehinds are used if the target doesn't support them).
+- **Structural Integrity:** All nodes have required fields (e.g., Quant must have min and max).
+- **Semantic Validity:** Feature flags (like unicode) are consistent with the pattern's contents.
+- **Engine Compatibility:** The schema can enforce constraints specific to the target engine (e.g., ensuring no lookbehinds are used if the target doesn't support them).
 
 This shifts the detection of pattern errors from runtime (where SNOBOL4 would fail during a match) to compile-time (where the STRling compiler rejects the artifact).6
 
@@ -210,8 +210,8 @@ In SNOBOL4, a programmer might insert a FENCE to truncate this search. In Icon, 
 
 STRling’s architecture enables **Static ReDoS Analysis**. Because the pattern is parsed into a high-level IR _before_ it becomes a regex string, algorithms can traverse the IR tree to detect dangerous topologies. Specifically, the compiler can look for:
 
--   **Nested Quantifiers:** A Quant node containing another Quant node (Star-Height \> 1).
--   **Overlapping Alternations:** Alt nodes where branches match overlapping sets of characters.
+- **Nested Quantifiers:** A Quant node containing another Quant node (Star-Height \> 1).
+- **Overlapping Alternations:** Alt nodes where branches match overlapping sets of characters.
 
 The \_analyze_features method in the STRling compiler 6 already walks the IR to detect features. This pass can be extended to identify ReDoS signatures. If a dangerous pattern is detected, the compiler could either:
 
@@ -258,29 +258,29 @@ This section provides a granular examination of the STRling components, referenc
 
 The nodes.py file 6 serves as the ontological definition of the STRling universe. It defines the classes that the parser must produce and the compiler must consume.
 
--   **Alt**: Represents alternation (|). It holds a list of branches.
--   **Seq**: Represents concatenation. It holds a list of parts. This node is the direct structural equivalent of SNOBOL4's concatenation operator.
--   **Quant**: Encapsulates repetition. Crucially, it explicitly stores min, max, and mode (Greedy, Lazy, Possessive). The explicit storage of mode allows STRling to support possessive quantifiers (analogous to FENCE behavior) natively in the IR.6
--   **Group**: A complex node handling capturing, non-capturing, named, and atomic groups. The atomic boolean flag is the reification of the SNOBOL4 FENCE concept into the data structure.6
--   **Look**: Represents lookarounds. Fields dir ("Ahead"/"Behind") and neg (True/False) allow for the definition of all four lookaround types, mapping to Icon’s assertion logic.
+- **Alt**: Represents alternation (|). It holds a list of branches.
+- **Seq**: Represents concatenation. It holds a list of parts. This node is the direct structural equivalent of SNOBOL4's concatenation operator.
+- **Quant**: Encapsulates repetition. Crucially, it explicitly stores min, max, and mode (Greedy, Lazy, Possessive). The explicit storage of mode allows STRling to support possessive quantifiers (analogous to FENCE behavior) natively in the IR.6
+- **Group**: A complex node handling capturing, non-capturing, named, and atomic groups. The atomic boolean flag is the reification of the SNOBOL4 FENCE concept into the data structure.6
+- **Look**: Represents lookarounds. Fields dir ("Ahead"/"Behind") and neg (True/False) allow for the definition of all four lookaround types, mapping to Icon’s assertion logic.
 
 ### **6.2 The Compiler's Logic (compiler.py)**
 
 The Compiler class 6 is the engine of transformation. It performs two critical steps: **Lowering** and **Normalization**.
 
--   **Lowering:** This step translates AST nodes one-to-one into IR nodes (e.g., N.Seq becomes IR.Seq).
--   **Normalization:** The \_normalize method executes optimizations. A key optimization is **Literal Fusion**: if the compiler detects adjacent Lit nodes in a sequence (e.g., Lit('a') followed by Lit('b')), it merges them into a single Lit('ab').
-    -   _Input:_ Seq(\[Lit('a'), Lit('b')\])
-    -   Output: Lit('ab')  
-        This optimization 6 ensures that the high modularity of the DSL (where users might concatenate many small strings) does not result in inefficient regex generation (e.g., a(?:b) vs ab). This mirrors the internal optimizations of SNOBOL4 implementations, which would merge concatenated string structures to speed up matching.5
--   **Feature Analysis:** The \_analyze_features method walks the IR tree to detect specific features like atomic_group, lookbehind, etc. This metadata is included in the final artifact, enabling the "Iron Law" check—ensuring that the generated pattern does not use features unsupported by the requested target engine.
+- **Lowering:** This step translates AST nodes one-to-one into IR nodes (e.g., N.Seq becomes IR.Seq).
+- **Normalization:** The \_normalize method executes optimizations. A key optimization is **Literal Fusion**: if the compiler detects adjacent Lit nodes in a sequence (e.g., Lit('a') followed by Lit('b')), it merges them into a single Lit('ab').
+  - _Input:_ Seq(\[Lit('a'), Lit('b')\])
+  - Output: Lit('ab')  
+    This optimization 6 ensures that the high modularity of the DSL (where users might concatenate many small strings) does not result in inefficient regex generation (e.g., a(?:b) vs ab). This mirrors the internal optimizations of SNOBOL4 implementations, which would merge concatenated string structures to speed up matching.5
+- **Feature Analysis:** The \_analyze_features method walks the IR tree to detect specific features like atomic_group, lookbehind, etc. This metadata is included in the final artifact, enabling the "Iron Law" check—ensuring that the generated pattern does not use features unsupported by the requested target engine.
 
 ### **6.3 The Emitter's Art (pcre2.py)**
 
 The PCRE2 emitter 6 acts as the final translator.
 
--   **Escaping:** The functions \_escape_literal and \_escape_class_char handle the intricate rules of regex syntax (e.g., escaping a \` prevents injection attacks and syntax errors that plagued manual string concatenation in SNOBOL scripts.
--   **Class Optimization:** The \_emit_class function optimizes character class output. If a class contains a single item that has a shorthand (e.g., digits), it emits \\d instead of \[\\d\]. If the class is negated and contains \\d, it emits \\D. This attention to detail ensures the output is idiomatic and as concise as a hand-written regex.
+- **Escaping:** The functions \_escape_literal and \_escape_class_char handle the intricate rules of regex syntax (e.g., escaping a \` prevents injection attacks and syntax errors that plagued manual string concatenation in SNOBOL scripts.
+- **Class Optimization:** The \_emit_class function optimizes character class output. If a class contains a single item that has a shorthand (e.g., digits), it emits \\d instead of \[\\d\]. If the class is negated and contains \\d, it emits \\D. This attention to detail ensures the output is idiomatic and as concise as a hand-written regex.
 
 ### **6.4 Verification Strategies (The 3-Test Standard)**
 
@@ -336,11 +336,11 @@ In summary, "Pattern Excellence" is not about inventing new matching algorithms;
 
 **Key Sources Referenced**
 
--   **SNOBOL4**: 1
--   **Icon**: 14
--   **STRling Architecture**: 6 (Nodes)6 (IR)6 (Compiler)6 (Emitter)6 (Architecture)6 (Semantics)
--   **STRling Testing**: 6 (Guidelines)6 (E2E)6 (Quantifiers)
--   **ReDoS/Security**: 13
+- **SNOBOL4**: 1
+- **Icon**: 14
+- **STRling Architecture**: 6 (Nodes)6 (IR)6 (Compiler)6 (Emitter)6 (Architecture)6 (Semantics)
+- **STRling Testing**: 6 (Guidelines)6 (E2E)6 (Quantifiers)
+- **ReDoS/Security**: 13
 
 #### **Works cited**
 

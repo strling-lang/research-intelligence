@@ -92,17 +92,17 @@ define my_packet \= s.struct({
 
 The strling CLI will be augmented with registry commands that wrap the host package manager, ensuring a unified developer experience regardless of the underlying language. This abstract layer hides the complexity of whether npm, yarn, pip, or poetry is being used under the hood.
 
--   strling search \<query\>: Queries a central index (hosted on a lightweight service mapping keywords to PyPI/NPM packages) to find relevant Validator Packages.
--   strling install \<package\>: Detects the environment (Node vs. Python) and runs the appropriate command (npm install or pip install). Crucially, it then runs a **post-install hook** to register the package in the local strling.lock manifest, ensuring reproducibility.
--   strling update \<package\>: Updates the underlying package and triggers a regeneration of any local pattern caches or bindings.
+- strling search \<query\>: Queries a central index (hosted on a lightweight service mapping keywords to PyPI/NPM packages) to find relevant Validator Packages.
+- strling install \<package\>: Detects the environment (Node vs. Python) and runs the appropriate command (npm install or pip install). Crucially, it then runs a **post-install hook** to register the package in the local strling.lock manifest, ensuring reproducibility.
+- strling update \<package\>: Updates the underlying package and triggers a regeneration of any local pattern caches or bindings.
 
 ### **2.3 Semantic Versioning of Patterns**
 
 Unlike code, where versioning often dictates API compatibility (function signatures), pattern versioning dictates **matching strictness and scope**. A change in a regex pattern can silently break data validation downstream, rejecting data that was previously valid or accepting data that should be invalid. Therefore, STRling enforces **Semantic Pattern Versioning**, distinct from standard SemVer.19
 
--   **Major (X.0.0): Contraction of Match Set.** This is a breaking change. If the pattern becomes _stricter_—meaning it matches a _subset_ of what it used to match—existing valid data in a database might now fail validation. For example, updating an email validator to strictly reject IP-address domains (which were previously allowed) is a Major change.
--   **Minor (0.Y.0): Expansion of Match Set.** This is a feature addition. If the pattern becomes _looser_—matching a _superset_ of what it used to match—it is backward compatible for existing data. New data formats are accepted; old valid data remains valid. An example is adding a new top-level domain (TLD) to a URL validator.
--   **Patch (0.0.Z): Optimization.** Internal refactoring that does not change the set of accepted strings. This might involve optimizing the regex for performance (e.g., removing catastrophic backtracking risks) without altering the matching behavior.20
+- **Major (X.0.0): Contraction of Match Set.** This is a breaking change. If the pattern becomes _stricter_—meaning it matches a _subset_ of what it used to match—existing valid data in a database might now fail validation. For example, updating an email validator to strictly reject IP-address domains (which were previously allowed) is a Major change.
+- **Minor (0.Y.0): Expansion of Match Set.** This is a feature addition. If the pattern becomes _looser_—matching a _superset_ of what it used to match—it is backward compatible for existing data. New data formats are accepted; old valid data remains valid. An example is adding a new top-level domain (TLD) to a URL validator.
+- **Patch (0.0.Z): Optimization.** Internal refactoring that does not change the set of accepted strings. This might involve optimizing the regex for performance (e.g., removing catastrophic backtracking risks) without altering the matching behavior.20
 
 This strict definition allows consumers to safely upgrade patterns. If a user needs strict stability for a legacy database, they pin the Major version. If they want to accept new valid formats (e.g., a new phone number format), they allow Minor updates. This nuance is often lost in standard library versioning but is critical for a validation authority.21
 
@@ -147,8 +147,8 @@ The s object (the Simply API) is extended with methods that define structural co
 
 2. s.set(pattern) & s.multiset(pattern):  
    Matches an array/list where order does not matter.
-    - **s.set**: Validates that the input is a list where all elements are unique and match the provided pattern.
-    - **s.multiset**: Validates that the input is a list where elements match the pattern, duplicates are allowed, and order is ignored. This corresponds to Egison's multiset matching.26
+   - **s.set**: Validates that the input is a list where all elements are unique and match the provided pattern.
+   - **s.multiset**: Validates that the input is a list where elements match the pattern, duplicates are allowed, and order is ignored. This corresponds to Egison's multiset matching.26
 3. s.list(pattern) / s.sequence(pattern):  
    Matches an ordered array (isomorphic to standard regex sequences). This enforces strict ordering, useful for tuple-like JSON arrays (e.g., \[x, y, z\] coordinates).
 
@@ -156,18 +156,18 @@ The s object (the Simply API) is extended with methods that define structural co
 
 To support these constructs, the Intermediate Representation (IR) defined in core/ir.py must be significantly augmented. Currently, the IR focuses on text atoms (IRLit, IRCharClass, IRAnchor).14 We introduce **Structural Nodes**:
 
--   **IRObject:**
-    -   properties: A map of key (string) \-\> value (IROp).
-    -   required: A list of strings denoting keys that must be present.
-    -   additionalProperties: A boolean (allow/deny) or an IROp defining the schema for allowed extra keys.
-    -   _Semantics:_ Validates that the input is a dictionary/object and satisfies the key constraints.
--   **IRCollection:**
-    -   item_schema: An IROp defining the valid shape of items in the collection.
-    -   collection_type: An enum (List, Set, Multiset).
-    -   min_items / max_items: Cardinality constraints.
-    -   _Semantics:_
-        -   List: Validates input is an array; order matters.
-        -   Set/Multiset: Validates input is an array. Uses **bipartite matching** or **flow network** logic (a simplified, deterministic version of Egison backtracking) to ensure every element in the input maps to a valid validation rule, independent of order.
+- **IRObject:**
+  - properties: A map of key (string) \-\> value (IROp).
+  - required: A list of strings denoting keys that must be present.
+  - additionalProperties: A boolean (allow/deny) or an IROp defining the schema for allowed extra keys.
+  - _Semantics:_ Validates that the input is a dictionary/object and satisfies the key constraints.
+- **IRCollection:**
+  - item_schema: An IROp defining the valid shape of items in the collection.
+  - collection_type: An enum (List, Set, Multiset).
+  - min_items / max_items: Cardinality constraints.
+  - _Semantics:_
+    - List: Validates input is an array; order matters.
+    - Set/Multiset: Validates input is an array. Uses **bipartite matching** or **flow network** logic (a simplified, deterministic version of Egison backtracking) to ensure every element in the input maps to a valid validation rule, independent of order.
 
 #### **3.2.3 The Hybrid Compilation Pipeline**
 
@@ -207,8 +207,8 @@ Egison's backtracking can be computationally expensive (exponential time) if pat
 
 This component analyzes the Structural IR before compilation. It checks for **ambiguous structural coverage**.
 
--   **Risk:** A pattern like s.multiset(s.digit() | s.int()). An input 1 matches both s.digit() (as a string char) and s.int() (as a value). If the list is long, the backtracking engine might branch excessively trying to assign inputs to overlapping types.
--   **Mitigation:** The Inspector enforces **determinism constraints** on s.set and s.multiset. It requires that the sub-patterns be disjoint (e.g., s.int() and s.string() are disjoint types) or that the complexity be capped. If ambiguity is detected, the compiler emits a warning or error, adhering to the "safety first" Prime Directive.
+- **Risk:** A pattern like s.multiset(s.digit() | s.int()). An input 1 matches both s.digit() (as a string char) and s.int() (as a value). If the list is long, the backtracking engine might branch excessively trying to assign inputs to overlapping types.
+- **Mitigation:** The Inspector enforces **determinism constraints** on s.set and s.multiset. It requires that the sub-patterns be disjoint (e.g., s.int() and s.string() are disjoint types) or that the complexity be capped. If ambiguity is detected, the compiler emits a warning or error, adhering to the "safety first" Prime Directive.
 
 ## ---
 
@@ -224,34 +224,34 @@ Analysis of "Falsehoods Programmers Believe" lists reveals a tension between **T
 
 29
 
--   **Falsehood:** Emails must contain a dot in the domain. (False: user@localhost is valid).
--   **Falsehood:** Emails are ASCII. (False: Internationalized Domain Names exist).
--   **Falsehood:** A comprehensive regex can validate an email. (False: Only sending an email validates it).
+- **Falsehood:** Emails must contain a dot in the domain. (False: user@localhost is valid).
+- **Falsehood:** Emails are ASCII. (False: Internationalized Domain Names exist).
+- **Falsehood:** A comprehensive regex can validate an email. (False: Only sending an email validates it).
 
 **STRling Solution: Strictness Tiers for s.email(mode=...)**
 
 1. **Mode: strict (RFC-Compliant):**
-    - Allows IP addresses in brackets.
-    - Allows quoted local parts with spaces.
-    - Allows comments ((comment)user@domain).
-    - _Use case:_ Compliance systems, low-level MTA software.
+   - Allows IP addresses in brackets.
+   - Allows quoted local parts with spaces.
+   - Allows comments ((comment)user@domain).
+   - _Use case:_ Compliance systems, low-level MTA software.
 2. **Mode: standard (Web-Pragmatic):**
-    - Requires user@domain.tld.
-    - Disallows IP addresses and comments.
-    - Disallows quoted strings.
-    - Allows \+ aliases (plus-addressing).
-    - _Use case:_ 99% of web registration forms.
+   - Requires user@domain.tld.
+   - Disallows IP addresses and comments.
+   - Disallows quoted strings.
+   - Allows \+ aliases (plus-addressing).
+   - _Use case:_ 99% of web registration forms.
 3. **Mode: lax (Sanity Check):**
-    - Pattern: .+@.+
-    - _Use case:_ Quick filtering where false negatives are unacceptable (e.g., login fields where the user might enter a username OR email).
+   - Pattern: .+@.+
+   - _Use case:_ Quick filtering where false negatives are unacceptable (e.g., login fields where the user might enter a username OR email).
 
 #### **4.1.2 The Name Fallacy**
 
 27
 
--   **Falsehood:** Names have a "First" and "Last" part.
--   **Falsehood:** Names contain only letters. (False: O'Neill, Nuñez, Hyphenated-Names).
--   **STRling Solution:** s.name() defaults to an ultra-permissive unicode match \\p{L}+(\[ \\-'\]\\p{L}+)\*. It offers specific localized patterns (e.g., s.name(locale='en_US')) only when explicitly requested, preventing the accidental exclusion of valid global names.
+- **Falsehood:** Names have a "First" and "Last" part.
+- **Falsehood:** Names contain only letters. (False: O'Neill, Nuñez, Hyphenated-Names).
+- **STRling Solution:** s.name() defaults to an ultra-permissive unicode match \\p{L}+(\[ \\-'\]\\p{L}+)\*. It offers specific localized patterns (e.g., s.name(locale='en_US')) only when explicitly requested, preventing the accidental exclusion of valid global names.
 
 ### **4.2 Cross-Format Compatibility Matrix**
 
@@ -263,22 +263,22 @@ This requires a rigorous mapping strategy, as not all systems support all strict
 
 JSON Schema validation varies in strictness (e.g., format: "email" is annotation-only in some implementations, meaning it might not validate at all).32
 
--   **Lax/Standard Modes:**
-    -   STRling s.email(mode='standard') \-\> JSON Schema {"type": "string", "format": "email"}.
-    -   _Note:_ We rely on the validator's built-in "email" format, accepting that different validators (Ajv, network-validator) might behave slightly differently. This maps "intent" rather than "implementation."
--   **Strict Mode / Custom Patterns:**
-    -   STRling s.email(mode='strict') \-\> JSON Schema {"type": "string", "pattern": "^(re_source)$"}.
-    -   _Mechanism:_ For strict compliance, STRling compiles the specific strict regex and embeds it directly into the pattern keyword, bypassing the vague format keyword to ensure consistent, rigorous enforcement across all JSON Schema validators.34
+- **Lax/Standard Modes:**
+  - STRling s.email(mode='standard') \-\> JSON Schema {"type": "string", "format": "email"}.
+  - _Note:_ We rely on the validator's built-in "email" format, accepting that different validators (Ajv, network-validator) might behave slightly differently. This maps "intent" rather than "implementation."
+- **Strict Mode / Custom Patterns:**
+  - STRling s.email(mode='strict') \-\> JSON Schema {"type": "string", "pattern": "^(re_source)$"}.
+  - _Mechanism:_ For strict compliance, STRling compiles the specific strict regex and embeds it directly into the pattern keyword, bypassing the vague format keyword to ensure consistent, rigorous enforcement across all JSON Schema validators.34
 
 #### **4.2.2 Mapping to OpenAPI (v3.1)**
 
 OpenAPI v3.1 fully supports JSON Schema draft 2020-12, simplifying the mapping.35 However, for v3.0 compatibility (which uses an extended Draft 00), specific adjustments are needed.
 
--   **Nullable Types:**
-    -   STRling s.optional(s.string()) \-\> OpenAPI 3.1 {"type": \["string", "null"\]}.
-    -   STRling s.optional(s.string()) \-\> OpenAPI 3.0 {"type": "string", "nullable": true}.
--   **Extensions:**
-    -   STRling-specific metadata (e.g., strictness levels) is exported as vendor extensions x-strling-strictness: "lax" to allow tooling to preserve intent and round-trip definitions.
+- **Nullable Types:**
+  - STRling s.optional(s.string()) \-\> OpenAPI 3.1 {"type": \["string", "null"\]}.
+  - STRling s.optional(s.string()) \-\> OpenAPI 3.0 {"type": "string", "nullable": true}.
+- **Extensions:**
+  - STRling-specific metadata (e.g., strictness levels) is exported as vendor extensions x-strling-strictness: "lax" to allow tooling to preserve intent and round-trip definitions.
 
 #### **4.2.3 Mapping to Protobuf**
 
@@ -286,11 +286,11 @@ OpenAPI v3.1 fully supports JSON Schema draft 2020-12, simplifying the mapping.3
 
 Protobuf is strictly typed but lacks native regex validation.
 
--   **Strings:** s.string() \-\> string.
--   **UUIDs:** s.uuid() \-\> string.
--   **Validation:** Since Protobuf definitions (.proto) cannot encode regex constraints natively, STRling exports these constraints as **Protoc Plugin Options** (specifically for protoc-gen-validate \[PGV\]).
-    -   _Example:_ string email \= 1 \[(validate.rules).string.email \= true\];
-    -   This bridges the gap between the interface definition and runtime validation, ensuring that the Protobuf layer enforces the same "Falsehood-Aware" truth as the JSON layer.
+- **Strings:** s.string() \-\> string.
+- **UUIDs:** s.uuid() \-\> string.
+- **Validation:** Since Protobuf definitions (.proto) cannot encode regex constraints natively, STRling exports these constraints as **Protoc Plugin Options** (specifically for protoc-gen-validate \[PGV\]).
+  - _Example:_ string email \= 1 \[(validate.rules).string.email \= true\];
+  - This bridges the gap between the interface definition and runtime validation, ensuring that the Protobuf layer enforces the same "Falsehood-Aware" truth as the JSON layer.
 
 ## ---
 
@@ -350,8 +350,8 @@ This schema allows precise modeling of JSON objects. It supports both fixed sche
 
 Testing these new capabilities requires a specific approach defined in the **Test Design Standard**:
 
--   **Negative Testing:** The test suite for s.name() and s.email() must explicitly include "Falsehood" cases (e.g., names with numbers, single-letter names, emails with comments) and assert they pass/fail _exactly_ according to the configured strictness tier. This validates the "Falsehood-Aware" logic.
--   **Format Consistency (Conformance):** Tests must verify that a pattern exported to Regex and JSON Schema accepts/rejects the exact same inputs. If s.email('strict') accepts comments in STRling, the generated JSON Schema pattern must also accept them. This ensures the "Source of Truth" guarantee holds across different tech stacks.
+- **Negative Testing:** The test suite for s.name() and s.email() must explicitly include "Falsehood" cases (e.g., names with numbers, single-letter names, emails with comments) and assert they pass/fail _exactly_ according to the configured strictness tier. This validates the "Falsehood-Aware" logic.
+- **Format Consistency (Conformance):** Tests must verify that a pattern exported to Regex and JSON Schema accepts/rejects the exact same inputs. If s.email('strict') accepts comments in STRling, the generated JSON Schema pattern must also accept them. This ensures the "Source of Truth" guarantee holds across different tech stacks.
 
 ## ---
 

@@ -48,22 +48,22 @@ Two primary patterns exist for implementing embedded language support within the
 
 In the Language Services pattern, the host language extension (e.g., the Python extension itself) imports the embedded language's logic as a library. When the host parser encounters an embedded region, it calls the library function directly.3
 
--   **Advantages:** Zero latency (in-process calls), shared memory state.
--   **Disadvantages:** High coupling. It effectively requires the Python extension maintainers to bundle STRling code. Given that STRling is an independent DSL, we cannot impose this requirement on the broader ecosystem. Furthermore, if STRling's logic is written in a language different from the host extension (e.g., Python vs. TypeScript), direct embedding becomes technically infeasible without complex bindings.
+- **Advantages:** Zero latency (in-process calls), shared memory state.
+- **Disadvantages:** High coupling. It effectively requires the Python extension maintainers to bundle STRling code. Given that STRling is an independent DSL, we cannot impose this requirement on the broader ecosystem. Furthermore, if STRling's logic is written in a language different from the host extension (e.g., Python vs. TypeScript), direct embedding becomes technically infeasible without complex bindings.
 
 #### **2.1.2 The Request Forwarding Pattern (Virtual Documents)**
 
 The Request Forwarding pattern creates a virtual abstraction layer. The STRling VS Code extension acts as a "Middleware." It intercepts LSP requests (like "Give me completions at line 10"), determines if the cursor is inside a STRling string, and if so, forwards the request to a separate, dedicated STRling Language Server. This forwarding is done by creating a **Virtual Document**—a temporary, in-memory file that contains only the relevant STRling code.3
 
--   **Mechanism:**
-    1. User types inside a Python string.
-    2. Middleware detects the context.
-    3. Middleware extracts the string content.
-    4. Middleware "projects" this content into a new URI: strling://python/file.py.strl.
-    5. Middleware asks the STRling Server to validate this virtual file.
-    6. The server responds with diagnostics.
-    7. Middleware maps the diagnostics back to the original Python file's coordinates.
--   **Strategic Alignment:** This pattern aligns perfectly with STRling's architecture. The STRling Server can run the exact same Python-based compiler logic used in the CLI.1 It doesn't need to know it's running inside VS Code or dealing with a Python host file. It simply receives a .strl document and compiles it. The complexity of "being embedded" is entirely contained within the Client Middleware.
+- **Mechanism:**
+  1. User types inside a Python string.
+  2. Middleware detects the context.
+  3. Middleware extracts the string content.
+  4. Middleware "projects" this content into a new URI: strling://python/file.py.strl.
+  5. Middleware asks the STRling Server to validate this virtual file.
+  6. The server responds with diagnostics.
+  7. Middleware maps the diagnostics back to the original Python file's coordinates.
+- **Strategic Alignment:** This pattern aligns perfectly with STRling's architecture. The STRling Server can run the exact same Python-based compiler logic used in the CLI.1 It doesn't need to know it's running inside VS Code or dealing with a Python host file. It simply receives a .strl document and compiles it. The complexity of "being embedded" is entirely contained within the Client Middleware.
 
 ### **2.2 The Iron Law of Emitters Applied to Tooling**
 
@@ -95,15 +95,15 @@ The lifecycle of a virtual document is tied to the user's interaction with the h
 
 1. **Creation (On Demand):** Virtual documents are not created proactively for every string in the workspace (which would be a performance disaster). They are created **lazily**. When the user opens a file, or when a specific LSP request (like semantic tokens or diagnostics) is triggered, the middleware scans the active viewport or file.
 2. **Addressing (The URI Scheme):** We must define a robust URI scheme that uniquely identifies a specific string literal within a specific version of a host file.
-    - **Proposed Scheme:** strling-embedded://\<host-lang\>/\<host-file-path\>@\<region-id\>.strl
-    - Example: strling-embedded://python/c:/users/dev/app.py@42.strl indicates the 42nd string literal in app.py.
-    - This strict addressing ensures that the LSP Server treats each string as a distinct file, maintaining separate compilation contexts/caches if necessary.3
+   - **Proposed Scheme:** strling-embedded://\<host-lang\>/\<host-file-path\>@\<region-id\>.strl
+   - Example: strling-embedded://python/c:/users/dev/app.py@42.strl indicates the 42nd string literal in app.py.
+   - This strict addressing ensures that the LSP Server treats each string as a distinct file, maintaining separate compilation contexts/caches if necessary.3
 3. **Synchronization (The Update Loop):**
-    - User types in app.py.
-    - VS Code sends textDocument/didChange for app.py to the Middleware.
-    - Middleware calculates the delta. If the change occurred within a known STRling island, the Middleware updates the content of the corresponding virtual document.
-    - Middleware sends textDocument/didChange for the _virtual URI_ to the STRling Server.
-    - STRling Server recompiles and pushes diagnostics.
+   - User types in app.py.
+   - VS Code sends textDocument/didChange for app.py to the Middleware.
+   - Middleware calculates the delta. If the change occurred within a known STRling island, the Middleware updates the content of the corresponding virtual document.
+   - Middleware sends textDocument/didChange for the _virtual URI_ to the STRling Server.
+   - STRling Server recompiles and pushes diagnostics.
 
 ### **3.2 State Management and Garbage Collection**
 
@@ -142,31 +142,31 @@ Python's f-strings (Formatted String Literals) introduced in PEP 498 4 present a
 
 An f-string looks like f"text {expression} text".
 
--   **The Problem:** The {expression} part is valid Python code but invalid STRling code. If we send the raw string text {expression} text to the STRling parser, it will likely choke on the braces or interpret them as a quantifier range {min,max}.1
--   **The Conflict:** STRling uses { for quantifiers ({3,5}). Python uses { for interpolation.
--   **Resolution:** The Middleware _must_ hide the Python interpolation from the STRling parser while preserving the _spatial_ integrity of the string.
+- **The Problem:** The {expression} part is valid Python code but invalid STRling code. If we send the raw string text {expression} text to the STRling parser, it will likely choke on the braces or interpret them as a quantifier range {min,max}.1
+- **The Conflict:** STRling uses { for quantifiers ({3,5}). Python uses { for interpolation.
+- **Resolution:** The Middleware _must_ hide the Python interpolation from the STRling parser while preserving the _spatial_ integrity of the string.
 
 #### **4.1.2 The Whitespace Masking Strategy**
 
 To preserve source coordinates (so that column 10 in the virtual doc maps to column 10 in the host string), we must replace the interpolation with a placeholder of exactly the same length.
 
--   **Strategy:** Replace every character of the interpolation (including the braces) with a space character.
--   **Example:**
-    -   **Host:** f"Start {variable \+ 1} End"
-    -   **Length:** {variable \+ 1} is 14 characters.
-    -   **Virtual:** "Start End" (14 spaces).
--   **Why Spaces?** STRling supports a free-spacing mode (%flags x) where whitespace is ignored.1 By treating the virtual document as implicitly having the x flag (or ensuring the parser tolerates spaces in these contexts), we render the interpolation invisible to the parser logic while keeping the End token at the exact same character offset.
--   **Constraint:** This requires the STRling parser to be robust against unexpected whitespace if the user hasn't explicitly enabled free-spacing mode. Alternatively, we can replace interpolations with a specific "Ignored Token" if we modify the grammar, but whitespace is the standard approach in the LSP ecosystem (e.g., how the HTML server handles PHP tags).3
+- **Strategy:** Replace every character of the interpolation (including the braces) with a space character.
+- **Example:**
+  - **Host:** f"Start {variable \+ 1} End"
+  - **Length:** {variable \+ 1} is 14 characters.
+  - **Virtual:** "Start End" (14 spaces).
+- **Why Spaces?** STRling supports a free-spacing mode (%flags x) where whitespace is ignored.1 By treating the virtual document as implicitly having the x flag (or ensuring the parser tolerates spaces in these contexts), we render the interpolation invisible to the parser logic while keeping the End token at the exact same character offset.
+- **Constraint:** This requires the STRling parser to be robust against unexpected whitespace if the user hasn't explicitly enabled free-spacing mode. Alternatively, we can replace interpolations with a specific "Ignored Token" if we modify the grammar, but whitespace is the standard approach in the LSP ecosystem (e.g., how the HTML server handles PHP tags).3
 
 #### **4.1.3 Handling Escape Sequences in Python**
 
 Python strings interpret backslashes. \\n is a single character (newline, byte 10). However, the LSP operates on the _source text_ view of the document.
 
--   **Scenario:** User types s.match("\\d+").
--   **File Content:** \\ followed by d.
--   **Python Memory:** Depending on whether it's a raw string r"", Python might see this differently.
--   **Virtual Document Requirement:** The STRling parser expects to see the literal source characters \\ and d. It does _not_ want the evaluated byte for escape sequences.
--   **Solution:** The extraction logic must pull the _raw text_ of the source code, not the evaluated string value from the Python runtime. We access the text buffer of the editor, which gives us the raw source. This simplifies mapping significantly: one character in the editor buffer equals one character in the virtual buffer.11
+- **Scenario:** User types s.match("\\d+").
+- **File Content:** \\ followed by d.
+- **Python Memory:** Depending on whether it's a raw string r"", Python might see this differently.
+- **Virtual Document Requirement:** The STRling parser expects to see the literal source characters \\ and d. It does _not_ want the evaluated byte for escape sequences.
+- **Solution:** The extraction logic must pull the _raw text_ of the source code, not the evaluated string value from the Python runtime. We access the text buffer of the editor, which gives us the raw source. This simplifies mapping significantly: one character in the editor buffer equals one character in the virtual buffer.11
 
 ### **4.2 The JavaScript Challenge: Template Literals**
 
@@ -192,17 +192,17 @@ The scanner must identify both forms.
 
 The strategy is identical to Python. We locate the ${...} sequence and replace it with spaces.
 
--   **Host:** \`Val: ${x}\`
--   **Masked:** \`Val: \`
--   **Offset Integrity:** Preserved.
+- **Host:** \`Val: ${x}\`
+- **Masked:** \`Val: \`
+- **Offset Integrity:** Preserved.
 
 ### **4.3 Scanner Implementation**
 
 To implement the **Extraction** phase, we need a robust scanner. We cannot rely on simple Regex because of nested braces (e.g., f"{ {x:1} }").
 
--   **Recommendation:** Use **TextMate Grammars** or **Tree-sitter**.
--   **Tree-sitter:** VS Code is moving towards Tree-sitter (via the vscode-anycode or similar initiatives). A WASM-compiled Tree-sitter parser for Python and JS running in the extension host is the most robust way to identify string boundaries and interpolation ranges accurately, handling edge cases like nested strings and comments correctly.8
--   **Fallback:** For the MVP (Minimum Viable Product), a carefully crafted stack-based Lexer (or a recursive regex where supported) can suffice, but Tree-sitter is the "Principled Engineering" choice for long-term scalability.
+- **Recommendation:** Use **TextMate Grammars** or **Tree-sitter**.
+- **Tree-sitter:** VS Code is moving towards Tree-sitter (via the vscode-anycode or similar initiatives). A WASM-compiled Tree-sitter parser for Python and JS running in the extension host is the most robust way to identify string boundaries and interpolation ranges accurately, handling edge cases like nested strings and comments correctly.8
+- **Fallback:** For the MVP (Minimum Viable Product), a carefully crafted stack-based Lexer (or a recursive regex where supported) can suffice, but Tree-sitter is the "Principled Engineering" choice for long-term scalability.
 
 ## ---
 
@@ -214,8 +214,8 @@ The **Source Map** is the mathematical bridge between the two documents. It tran
 
 LSP positions are Line:Character pairs.
 
--   **Host Position:** Absolute position in app.py.
--   **Virtual Position:** Relative position in the projected .strl file.
+- **Host Position:** Absolute position in app.py.
+- **Virtual Position:** Relative position in the projected .strl file.
 
 ### **5.2 The Mapping Algorithm**
 
@@ -243,11 +243,11 @@ It is computationally more efficient to map **Linear Offsets** (character index 
 1. **Input:** Virtual Position (0, 5).
 2. **Step 1:** Convert to Virtual Offset 5\.
 3. **Step 2:** Look up Offset 5 in the Mapping Table.
-    - Since we use **Whitespace Masking** (replacing interpolation with spaces of equal length), the mapping is often a simple linear shift: HostOffset \= VirtualOffset \+ StartIndexOfString.
-    - _Correction:_ This assumes the virtual document starts at the beginning of the string content.
-    - If the virtual document contains the _entire_ host file content with non-STRling parts masked out (another valid strategy), the offset delta is zero. However, this is inefficient for the STRling parser.
-    - **Decision:** The Virtual Document contains _only_ the string content.
-    - **Formula:** HostOffset \= VirtualOffset \+ IslandStartOffset.
+   - Since we use **Whitespace Masking** (replacing interpolation with spaces of equal length), the mapping is often a simple linear shift: HostOffset \= VirtualOffset \+ StartIndexOfString.
+   - _Correction:_ This assumes the virtual document starts at the beginning of the string content.
+   - If the virtual document contains the _entire_ host file content with non-STRling parts masked out (another valid strategy), the offset delta is zero. However, this is inefficient for the STRling parser.
+   - **Decision:** The Virtual Document contains _only_ the string content.
+   - **Formula:** HostOffset \= VirtualOffset \+ IslandStartOffset.
 
 #### **5.2.2 Handling Multiline Strings**
 
@@ -261,26 +261,26 @@ s.match("""
  End  
 """)
 
--   **Virtual Doc:** Must preserve the newlines. The content should be extracted exactly as is.
--   **Indentation:** Often, multiline strings are indented.  
-    Python  
-    def func():  
-     s.match("""  
-     pattern  
-     """)
+- **Virtual Doc:** Must preserve the newlines. The content should be extracted exactly as is.
+- **Indentation:** Often, multiline strings are indented.  
+  Python  
+  def func():  
+   s.match("""  
+   pattern  
+   """)
 
-    The whitespace before pattern is part of the string content in Python (unless textwrap.dedent is used). The STRling parser handles whitespace (especially in %flags x). Therefore, we should extract the indentation _as is_ into the virtual document. This preserves the column numbers exactly. If the user creates an invalid pattern because of indentation, the error should be shown at that indentation level.
+  The whitespace before pattern is part of the string content in Python (unless textwrap.dedent is used). The STRling parser handles whitespace (especially in %flags x). Therefore, we should extract the indentation _as is_ into the virtual document. This preserves the column numbers exactly. If the user creates an invalid pattern because of indentation, the error should be shown at that indentation level.
 
 ### **5.3 Diagnostic Re-Mapping**
 
 When the STRling Server returns a diagnostic:
 
--   **Diagnostic:** Error: Invalid range at 0:5 \- 0:10.
--   **Middleware Action:**
-    1. Convert 0:5 to Host Position (e.g., 105:12).
-    2. Convert 0:10 to Host Position (e.g., 105:17).
-    3. Create a VS Code Diagnostic object with the mapped range.
-    4. Push to the DiagnosticCollection for app.py.
+- **Diagnostic:** Error: Invalid range at 0:5 \- 0:10.
+- **Middleware Action:**
+  1. Convert 0:5 to Host Position (e.g., 105:12).
+  2. Convert 0:10 to Host Position (e.g., 105:17).
+  3. Create a VS Code Diagnostic object with the mapped range.
+  4. Push to the DiagnosticCollection for app.py.
 
 ## ---
 
@@ -290,25 +290,25 @@ When the STRling Server returns a diagnostic:
 
 Python f-strings are notoriously complex due to nesting and format specifiers.
 
--   **Nesting:** f"result: {f'nested {x}'}".
--   **Format Specifiers:** f"value: {x:.2f}".
--   **Backslashes:** Prior to Python 3.12, backslashes were not allowed in f-string expressions. In 3.12, they are.4
+- **Nesting:** f"result: {f'nested {x}'}".
+- **Format Specifiers:** f"value: {x:.2f}".
+- **Backslashes:** Prior to Python 3.12, backslashes were not allowed in f-string expressions. In 3.12, they are.4
 
 ### **6.2 The Tokenization Requirement**
 
 To correctly mask {expr}, the scanner must understand Python tokenization. It must track opening and closing braces, ignoring braces inside strings or comments within the expression.
 
--   **Example:** f"pat { {'a':1} } tern". The scanner must identify { {'a':1} } as the interpolation block.
--   **Failure Mode:** A naive regex \\{.\*?\\} will fail on nested braces.
--   **Validation:** The Middleware must implement a bracket-counting scanner or use a parser combinator library to identify the exact span of the interpolation.
+- **Example:** f"pat { {'a':1} } tern". The scanner must identify { {'a':1} } as the interpolation block.
+- **Failure Mode:** A naive regex \\{.\*?\\} will fail on nested braces.
+- **Validation:** The Middleware must implement a bracket-counting scanner or use a parser combinator library to identify the exact span of the interpolation.
 
 ### **6.3 Raw String Interaction**
 
 In rf"pattern", the r prefix disables escape processing for the string literal, but _not_ for the interpolation parts.15
 
--   **Impact:** The virtual document extraction is straightforward—we take the raw source characters. The STRling parser handles the \\ characters.
--   **Note:** If the user does _not_ use r (e.g., f"\\d"), Python treats \\d as a valid escape (or invalid escape warning, depending on version). But importantly, \\d usually remains \\d in the string unless it's a known escape like \\n.
--   **Safety:** We should always project the _source code text_. If the source has \\\\, the virtual doc has \\\\. This maps 1:1 to what the user sees.
+- **Impact:** The virtual document extraction is straightforward—we take the raw source characters. The STRling parser handles the \\ characters.
+- **Note:** If the user does _not_ use r (e.g., f"\\d"), Python treats \\d as a valid escape (or invalid escape warning, depending on version). But importantly, \\d usually remains \\d in the string unless it's a known escape like \\n.
+- **Safety:** We should always project the _source code text_. If the source has \\\\, the virtual doc has \\\\. This maps 1:1 to what the user sees.
 
 ## ---
 
@@ -318,20 +318,20 @@ In rf"pattern", the r prefix disables escape processing for the string literal, 
 
 JS template literals support nesting ${ ${ } }.
 
--   **Scanner:** Needs to handle nested braces, similar to Python.
--   **Tagged Templates:** The s tag (e.g., s...\`\`) is a function call. The browser/node receives an array of strings and an array of values.
--   **Raw Property:** Tagged templates receive a raw property (e.g., strings.raw). This gives the exact source text, including backslashes. This confirms that accessing the raw source is the correct model for the runtime as well.
+- **Scanner:** Needs to handle nested braces, similar to Python.
+- **Tagged Templates:** The s tag (e.g., s...\`\`) is a function call. The browser/node receives an array of strings and an array of values.
+- **Raw Property:** Tagged templates receive a raw property (e.g., strings.raw). This gives the exact source text, including backslashes. This confirms that accessing the raw source is the correct model for the runtime as well.
 
 ### **7.2 Semantic Highlighting**
 
 In addition to validation, we can provide semantic highlighting. The STRling Server can return SemanticTokens.
 
--   **Workflow:**
-    1. VS Code requests semantic tokens for app.js.
-    2. Middleware calculates the range of the template literal.
-    3. Middleware requests tokens from STRling Server for the virtual doc.
-    4. Middleware shifts the returned tokens by the start offset of the literal.
-    5. Middleware merges these tokens with the tokens provided by the JS language server (if any).
+- **Workflow:**
+  1. VS Code requests semantic tokens for app.js.
+  2. Middleware calculates the range of the template literal.
+  3. Middleware requests tokens from STRling Server for the virtual doc.
+  4. Middleware shifts the returned tokens by the start offset of the literal.
+  5. Middleware merges these tokens with the tokens provided by the JS language server (if any).
 
 ## ---
 
@@ -389,7 +389,7 @@ To ensure performance, scanning should be incremental or scoped. However, for re
 | **JavaScript** | Regex                  | Low        | Medium                 | High        |
 | **JavaScript** | **Tree-sitter (WASM)** | **High**   | **High**               | **High**    |
 
--   **Decision:** The "Principled Engineering" choice is to invest in **Tree-sitter WASM** integration for the middleware. This ensures we correctly handle edge cases like comments inside interpolations or nested strings that would break regex approaches.14
+- **Decision:** The "Principled Engineering" choice is to invest in **Tree-sitter WASM** integration for the middleware. This ensures we correctly handle edge cases like comments inside interpolations or nested strings that would break regex approaches.14
 
 ## ---
 
@@ -399,21 +399,21 @@ To ensure performance, scanning should be incremental or scoped. However, for re
 
 If the user types an unclosed string s.match("..., the host syntax tree is broken.
 
--   **Behavior:** The Tree-sitter parser is error-tolerant. It will likely produce an "ERROR" node but may still identify the string start.
--   **Strategy:** If the scanner cannot definitively find the end of the string, it should **abort** processing for that specific island. Do not attempt to validate incomplete strings, as it leads to noisy, incorrect diagnostics. Wait for the user to close the quote.
+- **Behavior:** The Tree-sitter parser is error-tolerant. It will likely produce an "ERROR" node but may still identify the string start.
+- **Strategy:** If the scanner cannot definitively find the end of the string, it should **abort** processing for that specific island. Do not attempt to validate incomplete strings, as it leads to noisy, incorrect diagnostics. Wait for the user to close the quote.
 
 ### **9.2 Desynchronization**
 
 LSP is asynchronous. The user types a, the document updates, the middleware scans, the virtual doc updates, the server computes.
 
--   **Risk:** The user types b before the result for a returns.
--   **Mitigation:** VS Code handles cancellation tokens. The middleware must pass the cancellation token to the forwarded request. If the host cancels, the virtual request cancels. Furthermore, we must ensure we rely on document versions. Only update diagnostics if the document version matches the request version.
+- **Risk:** The user types b before the result for a returns.
+- **Mitigation:** VS Code handles cancellation tokens. The middleware must pass the cancellation token to the forwarded request. If the host cancels, the virtual request cancels. Furthermore, we must ensure we rely on document versions. Only update diagnostics if the document version matches the request version.
 
 ### **9.3 Performance Overheads**
 
 Creating a virtual document for every keystroke adds overhead.
 
--   **Optimization:** **Debounce** the onDidChangeTextDocument listener for the Virtual Document update logic. Wait 20-50ms after typing stops before pushing the update to the STRling Server. This prevents thrashing the parser during rapid typing.16
+- **Optimization:** **Debounce** the onDidChangeTextDocument listener for the Virtual Document update logic. Wait 20-50ms after typing stops before pushing the update to the STRling Server. This prevents thrashing the parser during rapid typing.16
 
 ## ---
 
@@ -435,15 +435,15 @@ Implementing this architecture elevates STRling from a "library" to a "language.
 
 **Source Citations:**
 
--   2 \- VS Code Embedded Languages & Virtual Documents
--   4 \- Python F-strings & Syntax Analysis
--   13 \- JS Template Literals
--   1 \- STRling Codebase & Specs
--   6 \- Island Grammar Theory
--   20 \- LSP Specifications
--   3 \- VS Code Middleware & APIs
--   17 \- pygls & LSP Implementation
--   14 \- Tree-sitter usage
+- 2 \- VS Code Embedded Languages & Virtual Documents
+- 4 \- Python F-strings & Syntax Analysis
+- 13 \- JS Template Literals
+- 1 \- STRling Codebase & Specs
+- 6 \- Island Grammar Theory
+- 20 \- LSP Specifications
+- 3 \- VS Code Middleware & APIs
+- 17 \- pygls & LSP Implementation
+- 14 \- Tree-sitter usage
 
 #### **Works cited**
 

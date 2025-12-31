@@ -12,28 +12,48 @@ By utilizing **Inquiry-Based Versioning**, we ensure that every feature added to
 
 We drive the evolution of the **Universal Pattern Engine** through a recursive intelligence cycle:
 
-1. **Ingest**: High-level technical/academic reports are synthesized into `/reports`.
-2. **Inquire**: Specific questions regarding pattern representability are tracked in `/inquiries`.
+1. **Inquire**: Specific questions regarding pattern representability are tracked as **Flat Focus Nodes** in `/inquiries/[focus-name]/`.
+2. **Research**: High-level technical/academic reports are **co-located** within their respective focus nodes, directly adjacent to the `index.md` that synthesizes them.
 3. **Prototype**: Theoretical pattern structures are validated in `/pattern-libraries`.
 4. **Strategize**: Research conclusions are converted into Feature Proposals for the main `strling` repository.
 
+**Key Principle:** Research reports and inquiry synthesis live together. This eliminates "Categorization Debt" and ensures that navigating to a focus node gives you complete context.
+
 ## 3. Repository Structure
 
-### 📂 /reports
+### 📂 /inquiries/[focus-name]/
 
-**Purpose**: The archive of external research ingestion.
-**Substructure**: Organized by **Knowledge Domain**.
+**Purpose**: The atomic unit of research organization. Each folder is a **Flat Focus Node** containing both the inquiry synthesis and its co-located research reports.
 
-- Contains summaries and "Key Takeaways" from papers on genomics, market fragility, AI black-box logic, etc.
-- Each report identifies a "Pattern Gap"—a structure that existing RegEx cannot effectively handle.
+**Structure**:
 
-### 📂 /inquiries
+```
+/inquiries/
+├── real-time-redos/
+│   ├── index.md                                    # Synthesizes the focus
+│   ├── Regex Backtracking and ReDoS Vulnerabilities.md
+│   └── STRling Linter Architecture_ Derivatives vs. Graph.md
+├── goal-directed-search/
+│   ├── index.md
+│   ├── STRling Pattern Evolution Research.md
+│   └── STRling Grammar Evolution Research.md
+├── validity-taxonomy/
+│   ├── index.md
+│   ├── STRling Standard Library Specification.md
+│   └── STRling Evolution - Registry & Structure.md
+├── tooling-void/
+│   ├── index.md
+│   ├── STRling LSP Island Grammar Research.md
+│   └── Regex Maintainability and Cognitive Cost.md
+├── adoption-psychology/
+│   ├── index.md
+│   └── RegEx vs. STRling Developer Adoption.md
+└── upe-roadmap/
+    ├── index.md
+    └── STRling as the Universal Pattern Engine (UPE).md
+```
 
-**Purpose**: The central library of strategic inquiries and "What If?" scenarios.
-**Substructure**: Organized via **Focus-Based Inquiry Nodes**.
-
-- Folders are named based on the research question (e.g., `inq-probabilistic-genomic-sequencing`).
-- Each node contains an `index.md` that synthesizes how the domain's complexity challenges current STRling syntax.
+**Hybrid Tagging**: Each `index.md` contains metadata tags (e.g., `#safety`, `#ux`, `#ai`) for multi-domain categorization without hierarchical nesting.
 
 ### 📂 /pattern-libraries
 
@@ -41,7 +61,7 @@ We drive the evolution of the **Universal Pattern Engine** through a recursive i
 **Substructure**: Organized via **Recursive Abstraction Layers**.
 
 - This is where the "Master Wielder" techniques are first drafted.
-- It maps high-level research (from `/reports`) into concrete STRling code blocks to test for "Wieldability" and "Maintainability."
+- It maps high-level research (from `/inquiries`) into concrete STRling code blocks to test for "Wieldability" and "Maintainability."
 
 ### 📂 /strategic-alignment
 
@@ -54,14 +74,30 @@ We drive the evolution of the **Universal Pattern Engine** through a recursive i
 
 The structure is designed to visualize where human knowledge is currently "unwieldable":
 
-- **Intelligence Gaps**: Domains in `/reports` without corresponding `/inquiries`.
+- **Intelligence Gaps**: Focus nodes in `/inquiries` without sufficient co-located research reports.
 - **Representability Gaps**: Inquiries that have identified a pattern we cannot yet represent in `/pattern-libraries`.
 - **Architectural Gaps**: Pattern-libraries that prove a concept but lack a corresponding feature in the **STRling Core**.
 
-## 5. Documentation Standards
+## 5. Hybrid Tagging System
+
+Focus nodes use **metadata tags** for multi-domain categorization:
+
+| Tag             | Domain                            | Example Focus                           |
+| --------------- | --------------------------------- | --------------------------------------- |
+| `#safety`       | Security & Reliability            | real-time-redos                         |
+| `#logic`        | Pattern Theory & Formal Methods   | goal-directed-search, validity-taxonomy |
+| `#ux`           | Developer Experience              | tooling-void, adoption-psychology       |
+| `#ai`           | AI Integration & Interpretability | upe-roadmap, tooling-void               |
+| `#architecture` | System Design                     | Most focus nodes                        |
+
+Tags enable cross-cutting queries without hierarchical folder nesting.
+
+## 6. Documentation Standards
 
 _**To simplify research report standards, we use Gemini or ChatGPT Deep Research reports.**_
 
-## 6. Research Constraints
+Reports are co-located with their synthesizing `index.md` in the relevant focus node.
+
+## 7. Research Constraints
 
 Unlimited potential! You can be as creative as you want in proposing new pattern structures. However, all proposals must be grounded in real-world research needs documented in `/reports`.
