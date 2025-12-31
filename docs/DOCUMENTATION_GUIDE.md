@@ -17,7 +17,7 @@ Inquiry nodes are the primary driver of project evolution. They use a **Flat Foc
 Every folder directly under `/inquiries/` represents a specific research focus and **must** contain:
 
 1. An `index.md` based on the `inquiry-index-template.md`
-2. All research reports that inform the inquiry (co-located, not in a separate `/reports/` directory)
+2. All research reports that inform the inquiry are co-located.
 
 **Key Principle:** No hierarchical nesting. Use **Metadata Tags** for multi-domain categorization.
 

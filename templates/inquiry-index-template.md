@@ -35,7 +35,7 @@ Define the purpose of this inquiry in the context of universal pattern handling.
 
 ## 2. Co-located Research Reports
 
-List all research reports that live in this focus node folder. Reports are co-located (not in a separate `/reports/` directory).
+List all research reports that live in this focus node folder.
 
 | Report                                | Focus                   | Key Contribution                            |
 | ------------------------------------- | ----------------------- | ------------------------------------------- |
