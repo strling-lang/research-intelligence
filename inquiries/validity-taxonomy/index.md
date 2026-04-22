@@ -53,6 +53,7 @@ This inquiry synthesizes findings from the following research dossiers:
 | -------------------------------------------------------------------------------------------------- | ------------------------- | ----------------------------------------------------------------------------------------- |
 | [STRling Standard Library Specification](STRling%20Standard%20Library%20Specification.md)          | Validation Framework      | Falsehoods Audit; Validation Taxonomy (Syntactic/Semantic/Existential); Mode parameters   |
 | [STRling Evolution: Registry & Structure](STRling%20Evolution%20-%20Registry%20%26%20Structure.md) | Distribution Architecture | Rosie Pattern Language analysis; Validator Package format; Structural matching extensions |
+| [Global Pattern Utility Audit](Global%20Pattern%20Utility%20Audit.md)                              | Utility Prioritization    | Empirical ranking of high-value patterns; candidate selection for STRling templates       |
 
 ---
 
