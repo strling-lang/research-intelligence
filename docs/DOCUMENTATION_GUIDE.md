@@ -1,123 +1,101 @@
-# STRling-RI Documentation Guide
+# Research Intelligence documentation guide
 
-## 1. Philosophical Foundation: Representability Abstraction
+This guide explains how to create and maintain Research Intelligence artifacts. The governing authority and method are defined in [Mission and Authority](MISSION_AND_AUTHORITY.md), [Research Method](RESEARCH_METHOD.md), [Evidence Standard](EVIDENCE_STANDARD.md), [Horizons and Maturity](HORIZONS_AND_MATURITY.md), and [Negative Knowledge](NEGATIVE_KNOWLEDGE.md).
 
-STRling-RI operates on the principle of **Representability Abstraction**. We document the "Patterns of the World" by decomposing complex research domains into increasingly **concretionary** (atomic) logic nodes.
+## Artifact roles
 
-We reject numerical indexing in favor of a **Fractal Hierarchy**. The filesystem itself reflects the structural complexity of the patterns we study, ensuring that our documentation remains as modular and maintainable as the STRling DSL.
+- A **program** is a stable area of investigation. Its README maps questions, boundaries, existing inquiries, and future work. It is not a roadmap stage.
+- An **inquiry** is the durable synthesis for one consequential question. Its `README.md` is the active interpretation of the evidence.
+- A **research report** is a bounded input to an inquiry. A report may be imported, historical, superseded, or provisional; it does not outrank its sources or the inquiry synthesis.
+- A **research artifact** is a small reproducible file directly supporting an inquiry, such as a probe, fixture, analysis script, or compact result. Production code belongs in its owning repository.
+- A **recommendation** is non-normative until a downstream authority accepts or implements it.
 
----
+## Creating an inquiry
 
-## 2. Research Inquiries (`/inquiries/[focus-name]/`)
+Create `inquiries/<stable-slug>/README.md` from [the inquiry template](../templates/inquiry-template.md). Keep inquiries flat: programs and metadata provide classification, so do not add category directories below `inquiries/`.
 
-Inquiry nodes are the primary driver of project evolution. They use a **Flat Focus Node** pattern where research reports are **co-located** with their synthesizing `index.md`.
+Use `reports/` only when the inquiry has supporting reports. Use `artifacts/` only for small, directly reproducible research material. Do not create empty inquiry directories for future questions; list those questions in the relevant program README instead.
 
-### The Flat Focus Node Architecture
+Choose a slug that describes the question rather than a proposed solution, implementation, campaign, or temporary status. A material change of question usually merits a new inquiry with explicit supersession rather than silently changing the old inquiry's meaning.
 
-Every folder directly under `/inquiries/` represents a specific research focus and **must** contain:
+## Framing the research question
 
-1. An `index.md` based on the `inquiry-index-template.md`
-2. All research reports that inform the inquiry are co-located.
+A useful research question is consequential, answerable enough to investigate, and explicit about the decision it could inform. Questions may concern architecture, semantics, correctness, compatibility, portability, evidence, conformance, safety, performance, validation, product design, human factors, adoption, standards, uncertainty, or future capabilities.
 
-**Key Principle:** No hierarchical nesting. Use **Metadata Tags** for multi-domain categorization.
+State the question, why it matters, current state, scope, and non-goals. A representability gap is one possible subject, not a required framing.
 
-### The Index Pattern
+## Method
 
-- **Breadcrumbs:** A link to the repository root (`[← Back to Inquiries](../README.md)`).
-- **Tags:** Metadata tags at the top of the file (e.g., `#safety`, `#logic`, `#ux`, `#ai`, `#architecture`).
-- **Co-located Reports Table:** A table listing all research reports in the folder with their focus and key contribution.
-- **The "Why" (Remarks):** The technical or scientific justification for the inquiry.
-- **Representability Gap:** A clear statement of the structural logic that current STRling or RegEx cannot elegantly describe.
-- **Strategic Delta:** A list of proposed changes to the **STRling Core** (e.g., new DSL keywords or emitter logic).
+Select methods that fit the claim. Examples include standards analysis, source and test inspection, literature review, controlled experiment, differential or metamorphic testing, prototype evaluation, usability study, interview, survey, comparative analysis, threat modeling, or formal reasoning.
 
----
+Record enough detail for another researcher to understand selection criteria, versions, environments, exclusions, and analytical steps. Separate what the method can establish from what it cannot.
 
-## 2.1 Tagging Standards
+## Source discovery and evidence quality
 
-Focus nodes use **hybrid metadata tags** to enable cross-cutting queries without folder nesting.
+Begin with the strongest applicable sources, not the easiest summary. Search standards bodies, official documentation, release notes, source repositories, test suites, original research, and reproducible evidence systems. Use secondary sources and AI tools to discover terminology, sources, and counterarguments, then verify consequential claims against the appropriate authority.
 
-### Standard Domain Tags
+Evidence precedence is claim-specific. Follow [the evidence standard](EVIDENCE_STANDARD.md); do not collapse documented behavior, observed execution, published scientific results, and STRling implementation status into one generic notion of “proof.”
 
-| Tag             | Domain                            | Description                                                   |
-| --------------- | --------------------------------- | ------------------------------------------------------------- |
-| `#safety`       | Security & Reliability            | ReDoS detection, input sanitization, vulnerability prevention |
-| `#logic`        | Pattern Theory & Formal Methods   | Automata theory, grammar construction, formal specifications  |
-| `#ux`           | Developer Experience              | IDE integration, cognitive cost reduction, adoption barriers  |
-| `#ai`           | AI Integration & Interpretability | Symbolic bridging, neural pattern auditing, hybrid logic      |
-| `#architecture` | System Design                     | Compiler passes, IR extensions, module specifications         |
+## Citations
 
-### Usage Guidelines
+Cite the source that actually supports the claim, preferably at the point of use. Include stable titles, authors or organizations, publication or release dates when available, exact versions or profiles when material, and durable links. For source code, tests, and repository evidence, identify the repository, path, and commit or tag when stability matters.
 
-1. **Header Placement:** Tags appear immediately after the title in the `index.md`
-2. **Format:** Backtick-wrapped tags separated by spaces: `` `#safety` `#logic` ``
-3. **Multiple Tags:** A focus node can have multiple tags (most have 2-3)
-4. **No Hierarchies:** Tags are flat; do not create sub-tags like `#safety/redos`
+Do not cite an AI-generated report as authority for its underlying claims. Cite the primary or otherwise controlling source found through it. If only provisional discovery material exists, say so.
 
----
+Imported reports should start with the fields in [research report metadata](../templates/research-report-metadata.md). Metadata describes provenance and review state; it does not certify the report.
 
-## 3. Pattern Libraries (`/pattern-libraries`)
+## Epistemic categories
 
-This directory serves as the "Operational Source of Truth" for complex pattern representation. It utilizes **Fractal Organization** to mirror the modularity of the STRling language.
+Use these labels when they materially improve clarity:
 
-- **Recursive Layers:** Folders represent pattern domains (e.g., `biology/genomics/markers`).
-- **The Index Pattern:** Every folder must contain an `index.md` that synthesizes the patterns at that level. Every sub-pattern listed in the index **must** correspond to a sub-folder.
-- **Wieldability Testing:** Every pattern library must include a `validation.strl` file to verify that the logic is parsable by the STRling Core.
-- **Source Reference:** Pattern libraries should reference the `/inquiries/[focus-name]/` node that provided the research foundation.
+- **Normative** — required or defined by a controlling standard, specification, or authority within its scope.
+- **Observed** — recorded by a stated empirical method in a stated environment.
+- **Published result** — a result reported by an identifiable publication and bounded by that work.
+- **Inference** — reasoning from cited facts.
+- **Recommendation** — a proposed course of action.
+- **Hypothesis** — a testable explanation or prediction not yet established.
+- **Speculation** — a possibility with limited supporting evidence.
 
----
+Do not label every sentence. Make category transitions visible where a reader might otherwise mistake one kind of claim for another.
 
-## 4. Strategic Alignment (`/strategic-alignment`)
+## AI-assisted research
 
-This is the bridge between **Research Intelligence** and the **STRling Roadmap**.
+AI may help discover sources, generate search terms, compare drafts, extract candidate claims, or produce provisional synthesis. Record material AI involvement in report metadata when it affects provenance.
 
-- **Formal Proposals:** Once an inquiry node identifies a critical need, a **Feature Specification** is drafted here.
-- **Traceability:** Every proposal must link directly back to the `/inquiries/[focus-name]/` node that provided the empirical evidence for the change.
+AI output is not authoritative evidence. Verify citations, quotations, technical claims, dates, and implementation statements independently. Preserve prompts or generated output only when it is necessary to understand a report's origin; do not treat fluency as source quality.
 
----
+## Uncertainty and negative knowledge
 
-## 5. Identifying Gaps (Negative Knowledge)
+Every substantive inquiry must report limits and uncertainty. Preserve unknowns, source conflicts, unsupported assumptions, counterexamples, failed hypotheses, abandoned approaches, empirical anomalies, and evidence that could change the conclusion. Follow [Negative Knowledge](NEGATIVE_KNOWLEDGE.md).
 
-The STRling-RI structure is designed to surface what we _cannot_ yet do:
+`Unknown` means the evidence does not establish the answer. `Unsupported` means evidence establishes that a capability or proposition does not hold in the stated scope. They are not interchangeable.
 
-1. **Intelligence Gaps:** A focus node in `/inquiries/` that lacks sufficient co-located research reports.
-2. **Representability Gaps:** An inquiry that identifies a pattern structure without a corresponding solution in `/pattern-libraries`.
-3. **Architectural Gaps:** A proven pattern library that lacks a corresponding feature implementation in the **STRling Core**.
+## Programs, horizons, and maturity
 
----
+Assign one or more programs in inquiry frontmatter. Link the inquiry from each assigned program README, and link back to those programs from the inquiry. Programs organize investigation; they do not commit STRling to a roadmap.
 
-## 6. Syntax & Technical Standards
+Choose exactly one horizon based on relevance: **Fourth Edition**, **Post-Fourth Edition**, or **Beyond Regex**. Reassess it when the active architecture or evidence changes.
 
-- **Junior First Voice:** Write for smart developers who are new to pattern theory. Define academic terms (e.g., "Stochastic Pattern," "Unification") upon first use.
-- **Visual Logic:** Use Mermaid.js to illustrate state machines or AST transitions.
-- **Mathematical Formalism:** Use LaTeX for metrics regarding pattern efficiency or complexity reduction:
+Choose the honest epistemic state: **Exploratory**, **Evidence-backed**, **Recommendation-ready**, **Resolved**, or **Superseded**. Historical imported reports do not make an inquiry evidence-backed unless their sources and claims have been reviewed under the current standard.
 
----
+Record downstream disposition separately: none, accepted, partially accepted, rejected, implemented, or superseded downstream. A recommendation-ready inquiry with no disposition is valid; a downstream implementation does not retroactively strengthen weak evidence.
 
-## 7. The Evolutionary Cycle (No Archive)
+## Supersession and downstream disposition
 
-We utilize Git version history as the temporal record of our research. **Do not create "Archive" or "Legacy" folders.**
+When a materially important conclusion changes, create or identify the successor, set `superseded-by` on the old inquiry, set `supersedes` on the new inquiry, and add a visible explanation. Do not erase the old reasoning. Correct broken facts in place only when the change does not alter the conclusion's identity or historical meaning.
 
-- If a pattern logic is refined, overwrite the current documentation.
-- If a research focus is concluded, mark the `index.md` as `🟢 CONCLUDED` but leave the folder in its natural place in the hierarchy to maintain context.
+Historical reports may retain obsolete language when their metadata and containing inquiry make their status unmistakable. Active synthesis must use current terminology and authority boundaries.
 
----
+Recommendations reach their owning downstream project through that project's decision process. Link to the accepted specification change, issue, decision record, campaign task, implementation commit, or product decision when one exists. Research Intelligence records the disposition but does not declare acceptance on behalf of another owner.
 
-## 8. Gemini Deep Report Formatting (Anchor Integrity)
+## Optional artifacts and navigation
 
-Deep Research exports often insert horizontal rules (`---`) that break hyperlink anchors. After importing a report, run the following regex replacement to collapse these dividers and keep headings anchorable:
-`(?<=##)\s---\n\n(?!#)` → `' '` (a single space).
+Artifacts must be small, reproducible, directly support the inquiry, and be linked from its README. Do not place production implementations, canonical knowledge tables, or conformance result stores here.
 
----
-
-## 9. Copilot Prompt for Inquiry Synthesis
-
-When a research focus generates actionable intelligence, use the following prompt to scaffold the `index.md` in accordance with the `inquiry-index-template.md`:
-
-```
-Generate an index.md for the {focus_name} inquiry. The focus node is located at /inquiries/{focus-name}/.
-Include:
-1. Hybrid tags at the top (e.g., `#safety` `#logic`)
-2. A table of co-located research reports with hyperlinks using '[Report Name](Report%20File.md)' syntax
-3. Synthesized findings from all co-located reports
-4. Architectural recommendations for the STRling Core
-```
+- Link every inquiry from [the inquiry hub](../inquiries/README.md).
+- Link every inquiry from each program named in its frontmatter.
+- Link every report and artifact from its inquiry README.
+- Prefer relative repository links and percent-encode spaces in Markdown destinations.
+- Update filesystem diagrams when paths change.
+- Run the repository link check before committing and manually inspect external authority links.
+- Keep every active file reachable from the root README, a framework document, a program, an inquiry, or a template index.
