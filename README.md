@@ -1,105 +1,102 @@
-# STRling Research Intelligence (RI)
+# STRling Research Intelligence
 
-### The strategic engine for knowledge-driven pattern discovery and language evolution.
+STRling Research Intelligence is the research synthesis and strategic reasoning layer of the STRling ecosystem. It investigates consequential unanswered questions, compares evidence and alternatives, preserves uncertainty and failed hypotheses, and produces non-normative recommendations.
 
-## 1. Overview
+> Research can recommend. Authority remains with the downstream repository, specification, evidence system, or product owner that accepts, rejects, or implements the recommendation.
 
-Research Intelligence (RI) is the "Think Tank" of the STRling ecosystem. It is a dedicated environment where we "brain-storm" the next architectural requirements for the STRling language.
+## Mission
 
-By utilizing **Inquiry-Based Versioning**, we ensure that every feature added to the STRling core is a direct response to a real-world research necessity.
+Research Intelligence connects standards, official documentation, implementation evidence, academic research, controlled observations, product context, and prior STRling work. It is designed for durable reasoning: not only conclusions, but also source conflicts, limits, counterexamples, abandoned approaches, and review triggers remain visible.
 
-## 2. The Strategic Loop
+Read [Mission and Authority](docs/MISSION_AND_AUTHORITY.md) for the governing boundary.
 
-We drive the evolution of the **Universal Pattern Engine** through a recursive intelligence cycle:
+## What Research Intelligence owns
 
-1. **Inquire**: Specific questions regarding pattern representability are tracked as **Flat Focus Nodes** in `/inquiries/[focus-name]/`.
-2. **Research**: High-level technical/academic reports are **co-located** within their respective focus nodes, directly adjacent to the `index.md` that synthesizes them.
-3. **Prototype**: Theoretical pattern structures are validated in `/pattern-libraries`.
-4. **Strategize**: Research conclusions are converted into Feature Proposals for the main `strling` repository.
+- research questions and methods;
+- synthesis across applicable evidence classes;
+- comparisons, inferences, hypotheses, and recommendations;
+- inquiry and report provenance;
+- uncertainty, negative knowledge, and supersession; and
+- traceable records of downstream disposition.
 
-**Key Principle:** Research reports and inquiry synthesis live together. This eliminates "Categorization Debt" and ensures that navigating to a focus node gives you complete context.
+## What it does not own
 
-## 3. Repository Structure
+This repository does not define STRling semantics or architecture, implement the compiler or public products, maintain a shadow engineering roadmap, duplicate canonical regex knowledge, or publish a competing conformance evidence store. A prototype here is only a small research artifact. A recommendation here is not an accepted product commitment.
 
-Explore the centralized [Research Inquiry Hub](inquiries/index.md) for more details.
+## Ecosystem responsibility map
 
-### 📂 /inquiries/[focus-name]/
+| System | Primary responsibility | Relationship to Research Intelligence |
+| --- | --- | --- |
+| [`strling-lang/strling`](https://github.com/strling-lang/strling) | Product repository: specification, architecture, implementation, campaign, tests, adapters, and tooling | Governs current STRling status and accepts or rejects implementation-facing recommendations. |
+| [STRling Regex Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230e?pvs=204) | Canonical researched regex concepts, profiles, capabilities, relations, normative evidence, and gaps | Supplies knowledge context; is not duplicated here. |
+| [`strling-lang/regex-conformance`](https://github.com/strling-lang/regex-conformance) | Reproducible controlled executions, observations, provenance, findings, and certification | Supplies empirical evidence; Research Intelligence may study method and implications. |
+| [`strling-lang/website`](https://github.com/strling-lang/website) | Public organization, product, documentation, and interactive-tool surface | Owns implementation and publication of researched public experiences. |
+| `strling-lang/.github` | Organization-level orientation and genuinely shared canonical material | Outside this repository's scope. |
 
-**Purpose**: The atomic unit of research organization. Each folder is a **Flat Focus Node** containing both the inquiry synthesis and its co-located research reports.
+## Research programs
 
-**Structure**:
+[Programs](programs/README.md) are stable areas of investigation, not roadmap stages:
 
+- [Fourth Edition Architecture](programs/fourth-edition-architecture/README.md)
+- [Regex Knowledge Architecture](programs/regex-knowledge-architecture/README.md)
+- [Regex Conformance Science](programs/regex-conformance-science/README.md)
+- [Portability & Compatibility](programs/portability-compatibility/README.md)
+- [Regex Analysis & Explanation](programs/regex-analysis-explanation/README.md)
+- [Regex Reference](programs/regex-reference/README.md)
+- [Regex Lab](programs/regex-lab/README.md)
+- [Adoption & Ergonomics](programs/adoption-ergonomics/README.md)
+- [Beyond Regex](programs/beyond-regex/README.md)
+
+## Research inquiries
+
+[Inquiries](inquiries/README.md) are durable investigations of specific questions. Each inquiry has a stable flat slug, lightweight metadata, active synthesis, links to supporting reports, negative knowledge, and downstream disposition. Reports are inputs; the inquiry README is the current synthesis.
+
+## Horizons and maturity
+
+Horizons are metadata: **Fourth Edition**, **Post-Fourth Edition**, or **Beyond Regex**. Maturity is separately epistemic: **Exploratory**, **Evidence-backed**, **Recommendation-ready**, **Resolved**, or **Superseded**. Neither implies engineering schedule or adoption. See [Horizons and Maturity](docs/HORIZONS_AND_MATURITY.md).
+
+## Evidence
+
+Evidence authority depends on the claim. Specifications govern normative claims; certified controlled observations govern what exact executions observed; the active STRling repository governs current implementation status; original papers govern their published scientific results. AI may assist discovery, but generated reports are not evidence authorities. See [Evidence Standard](docs/EVIDENCE_STANDARD.md).
+
+## Negative knowledge
+
+Unknowns, conflicts, unsupported assumptions, counterexamples, failed hypotheses, anomalies, limitations, and evidence that could change a conclusion are first-class research output.
+
+> Unknown is not unsupported.
+
+See [Negative Knowledge](docs/NEGATIVE_KNOWLEDGE.md).
+
+## Repository structure
+
+```text
+research-intelligence/
+├── README.md
+├── docs/                 # Mission, method, evidence, maturity, and authoring guidance
+├── programs/             # Stable areas of investigation
+│   └── <program>/README.md
+├── inquiries/            # Flat, question-centered research
+│   ├── README.md
+│   └── <stable-slug>/
+│       ├── README.md      # Active synthesis
+│       ├── reports/       # Optional research inputs
+│       └── artifacts/     # Optional small reproducible support
+└── templates/            # Inquiry and report metadata templates
 ```
-/inquiries/
-├── real-time-redos/
-│   ├── index.md                                    # Synthesizes the focus
-│   ├── Regex Backtracking and ReDoS Vulnerabilities.md
-│   └── STRling Linter Architecture_ Derivatives vs. Graph.md
-├── goal-directed-search/
-│   ├── index.md
-│   ├── STRling Pattern Evolution Research.md
-│   └── STRling Grammar Evolution Research.md
-├── validity-taxonomy/
-│   ├── index.md
-│   ├── STRling Standard Library Specification.md
-│   └── STRling Evolution - Registry & Structure.md
-├── tooling-void/
-│   ├── index.md
-│   ├── STRling LSP Island Grammar Research.md
-│   └── Regex Maintainability and Cognitive Cost.md
-├── adoption-psychology/
-│   ├── index.md
-│   └── RegEx vs. STRling Developer Adoption.md
-└── upe-roadmap/
-    ├── index.md
-    └── STRling as the Universal Pattern Engine (UPE).md
-```
 
-**Hybrid Tagging**: Each `index.md` contains metadata tags (e.g., `#safety`, `#ux`, `#ai`) for multi-domain categorization without hierarchical nesting.
+Optional directories appear only when they contain material. Production code, canonical knowledge databases, conformance observations, and roadmaps belong to their owners.
 
-### 📂 /pattern-libraries
+## How recommendations reach downstream projects
 
-**Purpose**: The experimental proving ground for complex data structures.
-**Substructure**: Organized via **Recursive Abstraction Layers**.
+An inquiry identifies the owning downstream authority and makes a scoped recommendation. The owner evaluates it through its own decision process. Research Intelligence then records none, accepted, partially accepted, rejected, implemented, or superseded downstream, linked to the actual decision or implementation. Publication here never substitutes for that decision.
 
-- This is where the "Master Wielder" techniques are first drafted.
-- It maps high-level research (from `/inquiries`) into concrete STRling code blocks to test for "Wieldability" and "Maintainability."
+## Research framework
 
-### 📂 /strategic-alignment
+- [Research Method](docs/RESEARCH_METHOD.md)
+- [Documentation Guide](docs/DOCUMENTATION_GUIDE.md)
+- [Inquiry template](templates/inquiry-template.md)
+- [Research report metadata](templates/research-report-metadata.md)
 
-**Purpose**: The bridge between research and the project roadmap.
-**Substructure**: Contains Feature Specifications and Roadmap Proposals.
+## Historical redesign note
 
-- When an inquiry proves that a new language feature (e.g., fuzzy matching) is required for a domain, the formal proposal is drafted here before being moved to the core `strling` repository.
-
-## 4. Identifying Gaps
-
-The structure is designed to visualize where human knowledge is currently "unwieldable":
-
-- **Intelligence Gaps**: Focus nodes in `/inquiries` without sufficient co-located research reports.
-- **Representability Gaps**: Inquiries that have identified a pattern we cannot yet represent in `/pattern-libraries`.
-- **Architectural Gaps**: Pattern-libraries that prove a concept but lack a corresponding feature in the **STRling Core**.
-
-## 5. Hybrid Tagging System
-
-Focus nodes use **metadata tags** for multi-domain categorization:
-
-| Tag             | Domain                            | Example Focus                           |
-| --------------- | --------------------------------- | --------------------------------------- |
-| `#safety`       | Security & Reliability            | real-time-redos                         |
-| `#logic`        | Pattern Theory & Formal Methods   | goal-directed-search, validity-taxonomy |
-| `#ux`           | Developer Experience              | tooling-void, adoption-psychology       |
-| `#ai`           | AI Integration & Interpretability | upe-roadmap, tooling-void               |
-| `#architecture` | System Design                     | Most focus nodes                        |
-
-Tags enable cross-cutting queries without hierarchical folder nesting.
-
-## 6. Documentation Standards
-
-_**To simplify research report standards, we use Gemini or ChatGPT Deep Research reports.**_
-
-Reports are co-located with their synthesizing `index.md` in the relevant focus node.
-
-## 7. Research Constraints
-
-Unlimited potential! You can be as creative as you want in proposing new pattern structures. However, all proposals must be grounded in real-world research needs documented in `/inquiries/*.md` reports.
+The repository originally organized every topic as a representability-focused node intended to feed a Universal Pattern Engine roadmap. That material remains accessible as historical research input, but its terminology and proposed architectures no longer carry active authority. Current inquiry READMEs identify obsolete assumptions and the focused revalidation still required.
