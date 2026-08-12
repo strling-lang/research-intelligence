@@ -18,22 +18,21 @@ Conformance evidence may inform target profiles, portability reasoning, compiler
 
 ## Current evidence boundary
 
-[`regex-conformance`](https://github.com/strling-lang/regex-conformance) is in repository bootstrap as reviewed 2026-08-12; it states that no repository observation is yet a certified result and no production evidence campaign is authorized merely by repository existence. Its foundation and program remain the authority for exact status.
+[`regex-conformance`](https://github.com/strling-lang/regex-conformance) is in repository bootstrap as reviewed 2026-08-12; it states that no repository observation is yet a certified result and no production evidence campaign is authorized merely by repository existence. Its foundation and program govern exact status.
 
 ## Related existing inquiries
 
-Historical ReDoS and analysis reports may motivate future experiments, but they are not conformance observations.
+- [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
+- [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
+
+These inquiries may motivate future experiments; their reports are not conformance observations.
 
 ## Future research opportunities
 
-- oracle design and triangulation;
-- minimized counterexamples and discrepancy taxonomies;
-- environment identity and replication independence;
-- completeness metrics under applicability and unavailable versions; and
-- certification criteria for findings and datasets.
+Oracle design, minimized counterexamples, discrepancy taxonomies, environment identity, replication independence, completeness under applicability, and certification criteria.
 
 ## Explicit non-goals
 
-This program does not store probes, runtime profiles, attempts, observations, evidence objects, or certified results and does not run a shadow conformance campaign.
+This program does not store probes, profiles, attempts, observations, evidence objects, or certified results and does not run a shadow conformance campaign.
 
 [← Programs](../README.md)

@@ -7,7 +7,7 @@ Research what portability and compatibility rigorously mean across syntax, seman
 ## Important research questions
 
 - Which dimensions must be equal, preserved, translated, constrained, or explicitly unknown for a portability claim?
-- How should source intent, emitted artifact behavior, host API behavior, and replacement semantics be compared?
+- How should source intent, emitted behavior, host API behavior, and replacement semantics be compared?
 - What evidence supports native, rewritten, unsupported, unresolved, or partially compatible outcomes?
 - How should witnesses and counterexamples communicate profile-specific differences?
 
@@ -17,19 +17,18 @@ The Fourth Edition compiler owns its normative portability contracts and profile
 
 ## Current evidence boundary
 
-The active compiler repository already distinguishes exact target profiles, factual capability evaluation, portability planning, and evidence-bound rewrites. Regex Knowledge owns researched profile facts; Regex Conformance owns controlled observations. This program synthesizes implications without copying either dataset.
+The active compiler distinguishes exact target profiles, factual capability evaluation, portability planning, and evidence-bound rewrites. Regex Knowledge owns researched profile facts; Regex Conformance owns controlled observations. This program synthesizes implications without copying either dataset.
 
 ## Related existing inquiries
 
-The migrated safety, analysis, validation, and adoption material contains portability claims requiring focused revalidation. Links will be added as those inquiries are established.
+- [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
+- [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
+- [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
+- [Developer adoption pathways](../../inquiries/developer-adoption-pathways/README.md)
 
 ## Future research opportunities
 
-- a multidimensional portability vocabulary;
-- capture and replacement equivalence;
-- Unicode and host-operation compatibility;
-- counterexample generation and explanation; and
-- version-transition and migration semantics.
+A multidimensional portability vocabulary; capture and replacement equivalence; Unicode and host-operation compatibility; counterexample generation; and version-transition semantics.
 
 ## Explicit non-goals
 

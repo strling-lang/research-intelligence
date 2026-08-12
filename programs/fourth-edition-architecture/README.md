@@ -17,20 +17,18 @@ This program may analyze and recommend. The [`strling` product repository](https
 
 ## Current evidence boundary
 
-As reviewed 2026-08-12, the active product work contains a Rust compiler kernel, canonical semantic contracts, normalization and analyses, structured diagnostics, profile-aware capability and portability work, a regex-compatible frontend, and target-family work for PCRE2, ECMAScript, and Python `re`. Exact completion changes rapidly; consult the active branch and campaign rather than treating this summary as a status tracker. Semantic STRling and full adapter convergence remain architecture directions unless their downstream authorities record implementation.
+As reviewed 2026-08-12, active product work contains a Rust compiler kernel, canonical semantic contracts, normalization and analyses, structured diagnostics, profile-aware capability and portability work, a regex-compatible frontend, and target-family work for PCRE2, ECMAScript, and Python `re`. Exact completion changes rapidly; consult the active branch and campaign. Semantic STRling and full adapter convergence remain directions unless downstream authority records implementation.
 
 ## Related existing inquiries
 
-Historical safety, analysis, tooling, and validation reports are being migrated into focused inquiries and will be linked here after their active syntheses are established.
+- [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
+- [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
+- [Embedded regex tooling](../../inquiries/embedded-regex-tooling/README.md)
+- [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
 
 ## Future research opportunities
 
-- compiler-stage property and proof strategy;
-- diagnostic explanation quality and uncertainty projection;
-- target-profile completeness and evolution;
-- cross-frontend semantic equivalence;
-- adapter conformance and compiler-backed tooling architecture; and
-- structured artifact consumption and round-trip evidence.
+Compiler-stage proof strategy, diagnostic explanation quality, target-profile completeness, cross-frontend equivalence, adapter conformance, compiler-backed tooling, and structured artifact consumption.
 
 ## Explicit non-goals
 

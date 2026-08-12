@@ -10,7 +10,6 @@ Research static and dynamic analysis, safety, complexity, equivalence, containme
 - How can tools explain findings with evidence, uncertainty, witnesses, and remediation choices?
 - How should complexity and exploitability remain distinct?
 - Which equivalence, containment, differential, derivative, graph, symbolic, or runtime methods combine effectively?
-- How should migration and repair preserve semantics across exact target profiles?
 
 ## Relationship to STRling
 
@@ -18,22 +17,21 @@ Research can inform compiler analyses, diagnostics, Audit, Evaluate, Compare, an
 
 ## Current evidence boundary
 
-Existing reports discuss ReDoS, derivatives, graph analysis, maintainability, and AI verification, but their broad guarantees and architecture selections have not been revalidated under the current evidence standard. Active STRling safety analysis is implementation evidence, not proof of universal immunity or performance.
+Existing reports discuss ReDoS, derivatives, graph analysis, maintainability, validation, and AI verification, but broad guarantees and architecture selections have not been revalidated. Active STRling safety analysis is implementation evidence, not proof of universal immunity or performance.
 
 ## Related existing inquiries
 
-Historical regex safety, analysis-technique, and semantic-validation material is being migrated into focused inquiries and will be linked after their active syntheses are established.
+- [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
+- [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
+- [Regex cognitive ergonomics](../../inquiries/regex-cognitive-ergonomics/README.md)
+- [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
 
 ## Future research opportunities
 
-- soundness envelopes for safety and complexity analyses;
-- exploitability evidence and runtime context;
-- minimal witnesses, counterexamples, and why-no-match explanations;
-- repair ranking and equivalence evidence; and
-- human evaluation of explanation usefulness.
+Soundness envelopes, exploitability context, minimal witnesses, why-no-match explanations, repair ranking, equivalence evidence, and human evaluation of explanations.
 
 ## Explicit non-goals
 
-This program does not promise universal safety, universal linear time, or complete decidability; select an analysis architecture; or implement production analysis services.
+This program does not promise universal safety or performance, select an analysis architecture, or implement production analysis services.
 
 [← Programs](../README.md)

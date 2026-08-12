@@ -9,11 +9,11 @@ Research the information architecture of a definitive public regex reference der
 - How should users navigate concepts, syntax, engines, profiles, versions, semantics, Unicode, APIs, replacement behavior, compatibility, and evidence?
 - How can normative, observed, inferred, unknown, and conflicting claims remain distinguishable?
 - Which comparison and provenance views serve novice, expert, migration, and audit tasks?
-- How should generated projections remain synchronized with their canonical sources?
+- How should generated projections remain synchronized with canonical sources?
 
 ## Relationship to STRling
 
-Regex Reference is a long-term public product direction. Research Intelligence studies user needs and information architecture; the website owns public implementation, and Regex Knowledge and Regex Conformance retain their respective source authority.
+Regex Reference is a long-term public product direction. Research Intelligence studies user needs and information architecture; the website owns implementation, while Regex Knowledge and Regex Conformance retain their source authority.
 
 ## Current evidence boundary
 
@@ -21,15 +21,15 @@ The current website is the public documentation surface and labels Fourth Editio
 
 ## Related existing inquiries
 
-No dedicated inquiry has begun. Historical registry, tooling, cognitive-cost, and portability material may later inform a properly scoped inquiry.
+- [Regex cognitive ergonomics](../../inquiries/regex-cognitive-ergonomics/README.md)
+- [Developer adoption pathways](../../inquiries/developer-adoption-pathways/README.md)
+- [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
+
+No dedicated reference inquiry has begun.
 
 ## Future research opportunities
 
-- task-oriented taxonomy and search;
-- profile/version comparison views;
-- evidence and uncertainty presentation;
-- accessible explanation layers; and
-- generation, freshness, and correction workflows.
+Task-oriented taxonomy and search, version comparisons, uncertainty presentation, accessible explanation layers, generation, freshness, and correction workflows.
 
 ## Explicit non-goals
 
