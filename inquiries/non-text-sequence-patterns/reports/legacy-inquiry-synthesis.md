@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: Multi-Modal Ingestion
 
 **Tags:** `#genomics` `#telemetry` `#binary` `#data-streams` `#performance`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -90,7 +92,7 @@ For packed genomic data, [Myers Algorithm and BitPal](Stream-Agnostic%20Parser%2
 
 ### Correlations
 
-This inquiry directly enables the performance requirements for [real-time-redos](../real-time-redos/index.md) stream analysis and provides the ingestion layer for [stochastic-pattern-logic](../stochastic-pattern-logic/index.md) fuzzy matching on noisy binary data.
+This inquiry directly enables the performance requirements for [real-time-redos](../../regex-safety-and-complexity/README.md) stream analysis and provides the ingestion layer for [stochastic-pattern-logic](../../weighted-and-approximate-patterns/README.md) fuzzy matching on noisy binary data.
 
 ## 4. Architectural Recommendations
 
@@ -308,6 +310,6 @@ For systems where $T_{\text{copy}} \gg T_{\text{match}}$ (typical for simple pat
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [stochastic-pattern-logic](../stochastic-pattern-logic/index.md) | [real-time-redos](../real-time-redos/index.md) | [validity-taxonomy](../validity-taxonomy/index.md)
+**Related Focus Nodes:** [stochastic-pattern-logic](../../weighted-and-approximate-patterns/README.md) | [real-time-redos](../../regex-safety-and-complexity/README.md) | [validity-taxonomy](../../semantic-validation-and-domain-libraries/README.md)
 
 **Main Repo Impact:** Parser Rewrite Required (Stream-Agnostic Core) / New IR Node Types (`IRField`, `IRBitPattern`, `IRPackedSeq`, `IRSAXPattern`) / New DSL Keywords (`bit_match`, `struct_match`, `gene_seq`, `trend_match`)

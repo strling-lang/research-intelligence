@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: Universal Pattern Engine (UPE) Roadmap
 
 **Tags:** `#ai` `#architecture` `#logic`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -132,6 +134,6 @@ By becoming the UPE, STRling shatters the barriers of modularity and accessibili
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [goal-directed-search](../goal-directed-search/index.md), [validity-taxonomy](../validity-taxonomy/index.md)
+**Related Focus Nodes:** [goal-directed-search](../../goal-directed-pattern-evaluation/README.md), [validity-taxonomy](../../semantic-validation-and-domain-libraries/README.md)
 
 **Main Repo Impact:** Architectural Evolution / New IR Extensions / AI Integration Module

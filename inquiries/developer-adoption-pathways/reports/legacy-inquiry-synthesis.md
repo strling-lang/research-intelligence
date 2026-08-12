@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: Developer Adoption Psychology
 
 **Tags:** `#ux` `#logic`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -124,6 +126,6 @@ By framing as infrastructure rather than convenience, STRling escapes the "micro
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [tooling-void](../tooling-void/index.md), [validity-taxonomy](../validity-taxonomy/index.md)
+**Related Focus Nodes:** [tooling-void](../../embedded-regex-tooling/README.md), [validity-taxonomy](../../semantic-validation-and-domain-libraries/README.md)
 
 **Main Repo Impact:** Documentation / Marketing Positioning / Enterprise Features

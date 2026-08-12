@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: Real-Time ReDoS Detection
 
 **Tags:** `#safety` `#logic` `#architecture`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -51,7 +53,7 @@ This inquiry synthesizes findings from the following research dossiers:
 | Report                                                                                                                | Focus                 | Key Contribution                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------- |
 | [Regex Backtracking and ReDoS Vulnerabilities](Regex%20Backtracking%20and%20ReDoS%20Vulnerabilities.md)               | Threat Landscape      | Taxonomy of vulnerable patterns (NQ, QOD, QOA); mechanics of catastrophic backtracking |
-| [STRling Linter Architecture: Derivatives vs. Graph](STRling%20Linter%20Architecture_%20Derivatives%20vs.%20Graph.md) | Solution Architecture | Feasibility analysis of Symbolic Derivative-based static analysis; SAI specification   |
+| [STRling Linter Architecture: Derivatives vs. Graph](../../regex-analysis-techniques/reports/STRling%20Linter%20Architecture%20-%20Derivatives%20vs.%20Graph.md) | Solution Architecture | Feasibility analysis of Symbolic Derivative-based static analysis; SAI specification   |
 
 ---
 
@@ -113,6 +115,6 @@ $$\text{Latency Reduction: } \frac{O(m^3)_{\text{graph}}}{O(m \cdot k)_{\text{de
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [validity-taxonomy](../validity-taxonomy/index.md), [tooling-void](../tooling-void/index.md)
+**Related Focus Nodes:** [validity-taxonomy](../../semantic-validation-and-domain-libraries/README.md), [tooling-void](../../embedded-regex-tooling/README.md)
 
 **Main Repo Impact:** Compiler Pass Required / SAI Module Implementation

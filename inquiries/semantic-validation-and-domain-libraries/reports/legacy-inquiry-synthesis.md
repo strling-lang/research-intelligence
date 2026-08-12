@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: The Validation Taxonomy & Semantic Registry
 
 **Tags:** `#logic` `#ux` `#architecture`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -130,6 +132,6 @@ By auditing falsehoods and providing graduated modes, STRling minimizes both fal
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [real-time-redos](../real-time-redos/index.md), [adoption-psychology](../adoption-psychology/index.md)
+**Related Focus Nodes:** [real-time-redos](../../regex-safety-and-complexity/README.md), [adoption-psychology](../../developer-adoption-pathways/README.md)
 
 **Main Repo Impact:** Standard Library Implementation / Registry Infrastructure / New DSL Constructs

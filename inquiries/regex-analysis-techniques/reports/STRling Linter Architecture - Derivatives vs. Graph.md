@@ -1,3 +1,5 @@
+> **Historical research input** — Origin: pre-redesign, AI-assisted Research Intelligence material; exact generation context unverified. Source verification: unreviewed under the current evidence standard. Last reviewed: 2026-08-12. Active authority resides in the containing inquiry README.
+
 # **Linter Architecture Spec: Feasibility of Symbolic Derivative-Based Static Analysis for ReDoS Detection**
 
 ## **1\. Executive Summary**

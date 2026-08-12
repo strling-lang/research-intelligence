@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: The Tooling Void & LSP Island Grammars
 
 **Tags:** `#ux` `#architecture` `#ai`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -52,7 +54,7 @@ This inquiry synthesizes findings from the following research dossiers:
 | Report                                                                                          | Focus           | Key Contribution                                                              |
 | ----------------------------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------- |
 | [STRling LSP Island Grammar Research](STRling%20LSP%20Island%20Grammar%20Research.md)           | IDE Integration | Virtual Document pattern; Request Forwarding architecture; Coordinate mapping |
-| [Regex Maintainability and Cognitive Cost](Regex%20Maintainability%20and%20Cognitive%20Cost.md) | Human Factors   | Cognitive Load Theory; Deciphering Penalty; Context Switching Tax             |
+| [Regex Maintainability and Cognitive Cost](../../regex-cognitive-ergonomics/reports/Regex%20Maintainability%20and%20Cognitive%20Cost.md) | Human Factors   | Cognitive Load Theory; Deciphering Penalty; Context Switching Tax             |
 
 ---
 
@@ -138,6 +140,6 @@ $$\text{Context Switch Time: } T_{\text{external tool}} \rightarrow T_{\text{inl
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [real-time-redos](../real-time-redos/index.md), [adoption-psychology](../adoption-psychology/index.md)
+**Related Focus Nodes:** [real-time-redos](../../regex-safety-and-complexity/README.md), [adoption-psychology](../../developer-adoption-pathways/README.md)
 
 **Main Repo Impact:** LSP Server Implementation / VS Code Extension / Source Map Generation

@@ -1,3 +1,5 @@
+> **Historical research input** — Origin: pre-redesign, AI-assisted Research Intelligence material; exact generation context unverified. Source verification: unreviewed under the current evidence standard. Last reviewed: 2026-08-12. Active authority resides in the containing inquiry README.
+
 # **STRling Evolution: The Archeology of Pattern Excellence \- Lessons from SNOBOL4 and Icon on First-Class Modularity and Goal-Directed Search**
 
 ## **1\. Introduction: The Lost Civilization of String Processing**

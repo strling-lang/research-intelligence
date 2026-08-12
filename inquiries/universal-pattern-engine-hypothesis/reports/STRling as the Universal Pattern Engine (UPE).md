@@ -1,3 +1,5 @@
+> **Historical research input** — Origin: pre-redesign, AI-assisted Research Intelligence material; exact generation context unverified. Source verification: unreviewed under the current evidence standard. Last reviewed: 2026-08-12. Active authority resides in the containing inquiry README.
+
 This report synthesizes the strategic evolution of **STRling** from a production-ready regex alternative into a **Universal Pattern Engine (UPE)**. It outlines the path from the current certified `3.0.0-alpha` state to a future where STRling serves as the symbolic bridge for AI and a master-level pedagogical framework for pattern theory.
 
 ---

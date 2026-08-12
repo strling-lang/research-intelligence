@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: Goal-Directed Search & Generator Semantics
 
 **Tags:** `#logic` `#architecture` `#ux`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -55,7 +57,7 @@ This inquiry synthesizes findings from the following research dossiers:
 | Report                                                                            | Focus                 | Key Contribution                                                          |
 | --------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------- |
 | [STRling Pattern Evolution Research](STRling%20Pattern%20Evolution%20Research.md) | Historical Archeology | SNOBOL4/Icon paradigms; first-class patterns; FENCE/FAIL/ABORT primitives |
-| [STRling Grammar Evolution Research](STRling%20Grammar%20Evolution%20Research.md) | Grammar Architecture  | Raku cursor model; LPeg VM; Grammar braiding; Island resolution           |
+| [STRling Grammar Evolution Research](../../recursive-pattern-and-grammar-systems/reports/STRling%20Grammar%20Evolution%20Research.md) | Grammar Architecture  | Raku cursor model; LPeg VM; Grammar braiding; Island resolution           |
 
 ---
 
@@ -123,6 +125,6 @@ By adopting recursive patterns and grammar braiding, STRling transcends the theo
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [tooling-void](../tooling-void/index.md), [upe-roadmap](../upe-roadmap/index.md)
+**Related Focus Nodes:** [tooling-void](../../embedded-regex-tooling/README.md), [upe-roadmap](../../universal-pattern-engine-hypothesis/README.md)
 
 **Main Repo Impact:** Parser Redesign / VM Implementation / New DSL Keywords

@@ -1,3 +1,5 @@
+> **Historical research input** — Origin: pre-redesign, AI-assisted Research Intelligence material; exact generation context unverified. Source verification: unreviewed under the current evidence standard. Last reviewed: 2026-08-12. Active authority resides in the containing inquiry README.
+
 # **Regex Backtracking and ReDoS Vulnerabilities: The Architectural Debt of Backtracking**
 
 **Subtitle:** _Catastrophic Performance and the ReDoS Vulnerability_

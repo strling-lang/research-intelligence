@@ -1,3 +1,5 @@
+> **Historical research input** — Origin: pre-redesign, AI-assisted Research Intelligence material; exact generation context unverified. Source verification: unreviewed under the current evidence standard. Last reviewed: 2026-08-12. Active authority resides in the containing inquiry README.
+
 # **STRling LSP Architecture Specification: The Island Grammar Resolution via Virtual Document Projection**
 
 ## **1\. The Strategic Imperative of Embedded Tooling**

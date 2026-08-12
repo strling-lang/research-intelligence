@@ -25,6 +25,7 @@ Existing reports discuss ReDoS, derivatives, graph analysis, maintainability, va
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
 - [Regex cognitive ergonomics](../../inquiries/regex-cognitive-ergonomics/README.md)
 - [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
+- [AI-assisted pattern synthesis and verification](../../inquiries/ai-assisted-pattern-synthesis-and-verification/README.md)
 
 ## Future research opportunities
 

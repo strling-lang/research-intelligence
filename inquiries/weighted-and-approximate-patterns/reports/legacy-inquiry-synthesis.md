@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: Stochastic Pattern Logic
 
 **Tags:** `#probability` `#logic` `#fuzzy-matching` `#math`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -94,7 +96,7 @@ The research demonstrates how [weighted alternation](Stochastic%20Pattern%20Lang
 
 ### Correlations
 
-This inquiry directly enables noise-tolerant matching for [real-time-redos](../real-time-redos/index.md) analysis and provides the mathematical foundation for [goal-directed-search](../goal-directed-search/index.md) optimization via weighted path selection.
+This inquiry directly enables noise-tolerant matching for [real-time-redos](../../regex-safety-and-complexity/README.md) analysis and provides the mathematical foundation for [goal-directed-search](../../goal-directed-pattern-evaluation/README.md) optimization via weighted path selection.
 
 ## 4. Architectural Recommendations
 
@@ -249,6 +251,6 @@ $$
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [real-time-redos](../real-time-redos/index.md) | [goal-directed-search](../goal-directed-search/index.md) | [validity-taxonomy](../validity-taxonomy/index.md)
+**Related Focus Nodes:** [real-time-redos](../../regex-safety-and-complexity/README.md) | [goal-directed-search](../../goal-directed-pattern-evaluation/README.md) | [validity-taxonomy](../../semantic-validation-and-domain-libraries/README.md)
 
 **Main Repo Impact:** IR Extension Required (Weighted Transitions) / New DSL Keywords (`%confidence`, `maybe`, `weight`, `fuzzy`) / Runtime Algorithm Addition (Viterbi, Beam Search)

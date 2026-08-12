@@ -1,3 +1,5 @@
+> **Historical synthesis** — Superseded on 2026-08-12. Preserved for provenance; active authority resides in the containing inquiry README.
+
 # STRling Inquiry: Symbolic-Neural Interface
 
 **Tags:** `#ai` `#symbolic-logic` `#interpretability` `#safety`  
@@ -5,7 +7,7 @@
 
 ---
 
-[← Back to Inquiries](../index.md)
+[← Back to Inquiries](../../README.md)
 
 ---
 
@@ -44,7 +46,7 @@ The optimal state is a generation pipeline where the LLM acts as a "high-level i
 
 | Report                                                                                                    | Focus                                   | Key Contribution                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [STRling Copilot - Neuro-Symbolic AI Research](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md) | Neuro-Symbolic Integration Architecture | Comprehensive analysis of constrained decoding, bidirectional deconstruction, and formal verification via Brzozowski derivatives |
+| [STRling Copilot - Neuro-Symbolic AI Research](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md) | Neuro-Symbolic Integration Architecture | Comprehensive analysis of constrained decoding, bidirectional deconstruction, and formal verification via Brzozowski derivatives |
 
 ## 3. Pattern Synthesis
 
@@ -62,13 +64,13 @@ Current constraint mechanisms exhibit critical deficiencies when applied to patt
 
 | Constraint Type | Limitation                                                                                                                                                   | STRling Solution                                                 |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| JSON Schema     | [Opaque string content](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#21-the-inadequacy-of-json-schema-for-logic) — cannot model regex grammar   | Elevates constraint target from string literal to structured DSL |
-| FSM/Regex       | [Cannot represent recursion or backreferences](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#22-the-recursive-deficiency-in-regular-constraints) | Grammar-first approach with recursive descent parser             |
-| GBNF/CFG        | [Syntax-only validation](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#23-gbnf-and-the-context-free-limit) — cannot enforce semantic rules       | Two-stage verification: constrained sampling + parser validation |
+| JSON Schema     | [Opaque string content](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#21-the-inadequacy-of-json-schema-for-logic) — cannot model regex grammar   | Elevates constraint target from string literal to structured DSL |
+| FSM/Regex       | [Cannot represent recursion or backreferences](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#22-the-recursive-deficiency-in-regular-constraints) | Grammar-first approach with recursive descent parser             |
+| GBNF/CFG        | [Syntax-only validation](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#23-gbnf-and-the-context-free-limit) — cannot enforce semantic rules       | Two-stage verification: constrained sampling + parser validation |
 
 ### Hallucination Detection Patterns
 
-The [Bidirectional Deconstruction](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#4-bidirectional-deconstruction-validating-intent) pipeline exposes LLM hallucinations as structural anomalies in the AST:
+The [Bidirectional Deconstruction](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#4-bidirectional-deconstruction-validating-intent) pipeline exposes LLM hallucinations as structural anomalies in the AST:
 
 - **Redundant Quantifiers:** `Quant → Quant` nesting (e.g., `(a+)+`) flagged as ReDoS vectors
 - **Contradictory Logic:** Lookahead assertions incompatible with subsequent literals
@@ -76,7 +78,7 @@ The [Bidirectional Deconstruction](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%2
 
 ### Correlations
 
-This inquiry directly enables the safety guarantees explored in [real-time-redos](../real-time-redos/index.md) and provides the interpretability layer required for the [tooling-void](../tooling-void/index.md) LSP integration.
+This inquiry directly enables the safety guarantees explored in [real-time-redos](../../regex-safety-and-complexity/README.md) and provides the interpretability layer required for the [tooling-void](../../embedded-regex-tooling/README.md) LSP integration.
 
 ## 4. Architectural Recommendations
 
@@ -111,12 +113,12 @@ We recommend integrating a **Constraint Injection Layer** into the STRling compi
 **Implementation Components:**
 
 1. **GBNF Transpiler:** Automated conversion from `dsl.ebnf` to `strling.gbnf` for llama.cpp integration
-2. **Critic Module:** IR-level static analyzer implementing [Brzozowski derivative verification](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#52-brzozowski-derivatives-as-a-verification-tool)
+2. **Critic Module:** IR-level static analyzer implementing [Brzozowski derivative verification](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#52-brzozowski-derivatives-as-a-verification-tool)
 3. **Repair Agent:** Feedback loop that returns symbolic error messages to the LLM for self-correction
 
 ### The Iron Law as Stability Guarantee
 
-The [Iron Law of Emitters](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#71-the-iron-law-of-emitters) provides the foundational stability required for AI integration:
+The [Iron Law of Emitters](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#71-the-iron-law-of-emitters) provides the foundational stability required for AI integration:
 
 1. **Deterministic:** `emit(IR, Config)` always yields identical output
 2. **Side-Effect Free:** No external state dependencies
@@ -126,7 +128,7 @@ This establishes a **Chain of Trust**: if the Critic verifies IR safety, the Emi
 
 ### Justification
 
-The [Component Readiness Assessment](STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#72-component-readiness) confirms high feasibility:
+The [Component Readiness Assessment](../../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md#72-component-readiness) confirms high feasibility:
 
 - Recursive descent parsers implemented for Python/JS
 - IR normalized and serializable for Critic consumption
@@ -165,6 +167,6 @@ $$
 
 **Status:** 🟠 IN-PROGRESS
 
-**Related Focus Nodes:** [real-time-redos](../real-time-redos/index.md) | [tooling-void](../tooling-void/index.md) | [goal-directed-search](../goal-directed-search/index.md)
+**Related Focus Nodes:** [real-time-redos](../../regex-safety-and-complexity/README.md) | [tooling-void](../../embedded-regex-tooling/README.md) | [goal-directed-search](../../goal-directed-pattern-evaluation/README.md)
 
 **Main Repo Impact:** Compiler Extension Required (Critic Module) / New Tooling Utility (GBNF Transpiler)

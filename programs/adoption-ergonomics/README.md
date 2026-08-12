@@ -8,8 +8,8 @@ Research maintainability, cognitive cost, developer workflow, embedded tooling, 
 
 - Where does regex remain the clearest and lowest-cost tool, and where do maintenance or portability costs change the decision?
 - Which authoring, explanation, migration, and editor workflows reduce real user effort?
-- What adoption barriers arise from dependencies, ecosystem fit, trust, performance, familiarity, and interoperability?
-- How should benefits be measured without relying on deficit framing or universal developer stereotypes?
+- What barriers arise from dependencies, ecosystem fit, trust, performance, familiarity, and interoperability?
+- How should benefits be measured without deficit framing or universal developer stereotypes?
 
 ## Relationship to STRling
 
@@ -17,19 +17,18 @@ Findings may inform Simply APIs, Semantic STRling, adapters, CLI/LSP/editor work
 
 ## Current evidence boundary
 
-Existing reports identify plausible cognitive, workflow, and adoption issues, but rely heavily on secondary synthesis and overbroad rhetoric. They require focused source verification and empirical user research. Regex remains an excellent tool for many simple tasks.
+Existing reports identify plausible cognitive, workflow, and adoption issues but rely heavily on secondary synthesis and overbroad rhetoric. They require focused source verification and empirical user research. Regex remains an excellent tool for many simple tasks.
 
 ## Related existing inquiries
 
-Historical adoption, cognitive-cost, and embedded-tooling reports are being migrated into separate question-centered inquiries.
+- [Embedded regex tooling](../../inquiries/embedded-regex-tooling/README.md)
+- [Regex cognitive ergonomics](../../inquiries/regex-cognitive-ergonomics/README.md)
+- [Developer adoption pathways](../../inquiries/developer-adoption-pathways/README.md)
+- [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
 
 ## Future research opportunities
 
-- task-based usability studies;
-- maintenance and comprehension measures;
-- migration and dependency-friction studies;
-- embedded-language tooling evaluations; and
-- discoverability and explanation experiments.
+Task-based usability studies, maintenance and comprehension measures, migration and dependency-friction studies, embedded-language tooling evaluations, and discoverability experiments.
 
 ## Explicit non-goals
 

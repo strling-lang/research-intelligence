@@ -1,3 +1,5 @@
+> **Historical research input** — Origin: pre-redesign, AI-assisted Research Intelligence material; exact generation context unverified. Source verification: unreviewed under the current evidence standard. Last reviewed: 2026-08-12. Active authority resides in the containing inquiry README.
+
 # **STRling Standard Library Specification: The Falsehoods Audit and Validation Taxonomy**
 
 ## **1\. Architectural Preamble: The Philosophy of Validation**
@@ -40,7 +42,7 @@ To design the s.email() validator, we must confront the falsehoods ingrained in 
 
 #### **Falsehood \#1: "An email address contains only letters, numbers, and standard punctuation."**
 
-**Reality:** The local part of an email address (before the @) is a chaotic landscape. RFC 5322 allows a plethora of special characters: \! \# $ % & ' \* \+ \- / \=? ^ \_ { | } \~.\[span_6\](start_span)\[span_6\](end_span)\[span_7\](start_span)\[span_7\](end_span) While john.doe@example.comis standard,user+tag@example.comis valid and common. More drastically,o'reilly@example.comis valid. A strict regex that rejects these alienates legitimate users. Furthermore, if enclosed in quotes, the local part can contain spaces, commas, and almost any ASCII character:"very.unusual.@.unusual.com"@example.com\` is syntactically valid.
+**Reality:** The local part of an email address (before the @) is a chaotic landscape. RFC 5322 allows a plethora of special characters: \! \# $ % & ' \* \+ \- / \=? ^ \_ { | } \~.[unresolved imported citation marker: span_6][unresolved imported citation marker: span_7] While john.doe@example.comis standard,user+tag@example.comis valid and common. More drastically,o'reilly@example.comis valid. A strict regex that rejects these alienates legitimate users. Furthermore, if enclosed in quotes, the local part can contain spaces, commas, and almost any ASCII character:"very.unusual.@.unusual.com"@example.com\` is syntactically valid.
 
 #### **Falsehood \#2: "There is exactly one @ symbol."**
 

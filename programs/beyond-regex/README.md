@@ -15,23 +15,25 @@ Inclusion in this program does not imply product commitment.
 
 ## Relationship to STRling
 
-Research may reveal future opportunities or reasons not to expand. Any product or architecture decision belongs to `strling` and its owners. No virtual machine, grammar engine, probabilistic model, multimodal system, or AI architecture is selected here.
+Research may reveal future opportunities or reasons not to expand. Any product or architecture decision belongs to `strling` and its owners. No virtual machine, grammar engine, probabilistic model, non-text system, or AI architecture is selected here.
 
 ## Current evidence boundary
 
-The repository preserves several broad historical reports as discovery inputs. Most were AI-assisted, mix distinct problem classes, and predate the Fourth Edition architecture. Their citations and conclusions require focused revalidation.
+The repository preserves broad historical reports as discovery inputs. Most were AI-assisted, mix distinct problem classes, and predate Fourth Edition. Their citations and conclusions require focused revalidation.
 
 ## Related existing inquiries
 
-Historical goal-directed, grammar, non-text, weighted, AI, neuro-symbolic, and universal-engine material is being separated into focused inquiries.
+- [Goal-directed pattern evaluation](../../inquiries/goal-directed-pattern-evaluation/README.md)
+- [Recursive pattern and grammar systems](../../inquiries/recursive-pattern-and-grammar-systems/README.md)
+- [Non-text sequence patterns](../../inquiries/non-text-sequence-patterns/README.md)
+- [Weighted and approximate patterns](../../inquiries/weighted-and-approximate-patterns/README.md)
+- [AI-assisted pattern synthesis and verification](../../inquiries/ai-assisted-pattern-synthesis-and-verification/README.md)
+- [Neuro-symbolic pattern systems](../../inquiries/neuro-symbolic-pattern-systems/README.md)
+- [Universal Pattern Engine hypothesis](../../inquiries/universal-pattern-engine-hypothesis/README.md)
 
 ## Future research opportunities
 
-- formal boundary maps among pattern-system classes;
-- interoperable result and explanation models;
-- feasibility and cost comparisons against specialized systems;
-- safety and verification boundaries; and
-- criteria for product relevance versus independent tooling.
+Formal boundary maps, interoperable result and explanation models, comparisons against specialized systems, safety and verification boundaries, and criteria for product relevance.
 
 ## Explicit non-goals
 
