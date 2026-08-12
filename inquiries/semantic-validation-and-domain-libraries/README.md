@@ -78,9 +78,9 @@ The historical Standard Library document is not a specification. Its API, defaul
 
 | Report | Role | Current status |
 | --- | --- | --- |
-| [STRling Standard Library Specification](reports/STRling%20Standard%20Library%20Specification.md) | Historical proposal | Preserved as non-normative input. |
-| [STRling Evolution — Registry & Structure](reports/STRling%20Evolution%20-%20Registry%20%26%20Structure.md) | Historical architecture proposal | Preserved; registry/distribution and structural claims need separate revalidation. |
-| [Global Pattern Utility Audit](reports/Global%20Pattern%20Utility%20Audit.md) | Historical research input | Preserved; rankings and source claims require revalidation. |
+| [STRling Standard Library Specification](reports/standard-library.md) | Historical proposal | Preserved as non-normative input. |
+| [STRling Evolution — Registry & Structure](reports/semantic-registry-structure.md) | Historical architecture proposal | Preserved; registry/distribution and structural claims need separate revalidation. |
+| [Global Pattern Utility Audit](reports/global-pattern-utilities.md) | Historical research input | Preserved; rankings and source claims require revalidation. |
 | [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) | Historical synthesis | Superseded by this README. |
 
 ## Sources

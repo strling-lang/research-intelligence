@@ -70,7 +70,7 @@ A single “stochastic pattern logic” that collapses distance, weights, score,
 
 ## Reports
 
-- [Stochastic Pattern Language Research](reports/Stochastic%20Pattern%20Language%20Research.md) — historical research input; terminology and architecture require revalidation.
+- [Stochastic Pattern Language Research](reports/stochastic-pattern-language.md) — historical research input; terminology and architecture require revalidation.
 - [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) — superseded synthesis.
 
 ## Sources

@@ -74,7 +74,7 @@ The old binding-specific LSP dependency direction is obsolete. Virtual-document 
 
 | Report | Role | Current status |
 | --- | --- | --- |
-| [STRling LSP Island Grammar Research](reports/STRling%20LSP%20Island%20Grammar%20Research.md) | Historical architecture input | Preserved; host API and current architecture claims need revalidation. |
+| [STRling LSP Island Grammar Research](reports/lsp-island-grammar.md) | Historical architecture input | Preserved; host API and current architecture claims need revalidation. |
 | [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) | Historical cross-cutting synthesis | Superseded; cognitive-cost research now has a separate inquiry. |
 
 ## Sources

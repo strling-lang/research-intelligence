@@ -82,7 +82,7 @@ The categorical claim that STRling eliminates ReDoS is abandoned. Nested quantif
 | Report | Role | Current status |
 | --- | --- | --- |
 | [Regular-Expression Computational Safety for STRling](reports/regex-safety-and-complexity.md) | Modern active research input | Partially verified; supersedes obsolete technical conclusions in the historical report for current synthesis. |
-| [Regex Backtracking and ReDoS Vulnerabilities](reports/Regex%20Backtracking%20and%20ReDoS%20Vulnerabilities.md) | Historical research input | Preserved for historical methods and references; runtime and categorical conclusions require revalidation. |
+| [Regex Backtracking and ReDoS Vulnerabilities](reports/backtracking-redos-vulnerabilities.md) | Historical research input | Preserved for historical methods and references; runtime and categorical conclusions require revalidation. |
 | [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) | Historical synthesis | Superseded by this README; obsolete guarantees remain non-authoritative. |
 
 ## Sources

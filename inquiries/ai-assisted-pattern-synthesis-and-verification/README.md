@@ -71,7 +71,7 @@ Unsupported claims that a derivative critic, grammar constraint, or compiler pas
 
 ## Reports
 
-- [STRling Copilot — Neuro-Symbolic AI Research](reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md) — historical input shared conceptually with the neuro-symbolic inquiry, but stored only here; requires revalidation.
+- [STRling Copilot — Neuro-Symbolic AI Research](reports/neuro-symbolic-ai-copilot.md) — historical input shared conceptually with the neuro-symbolic inquiry, but stored only here; requires revalidation.
 
 ## Sources
 

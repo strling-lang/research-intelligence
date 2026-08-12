@@ -70,7 +70,7 @@ The old roadmap, “Green Wall” status, independent emitter framing, universal
 
 ## Reports
 
-- [STRling as the Universal Pattern Engine](reports/STRling%20as%20the%20Universal%20Pattern%20Engine%20%28UPE%29.md) — historical vision material; obsolete assumptions retained for provenance.
+- [STRling as the Universal Pattern Engine](reports/universal-pattern-engine.md) — historical vision material; obsolete assumptions retained for provenance.
 - [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) — superseded historical roadmap synthesis.
 
 ## Sources

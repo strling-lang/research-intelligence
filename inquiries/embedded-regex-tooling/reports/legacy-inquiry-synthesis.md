@@ -53,8 +53,8 @@ This inquiry synthesizes findings from the following research dossiers:
 
 | Report                                                                                          | Focus           | Key Contribution                                                              |
 | ----------------------------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------- |
-| [STRling LSP Island Grammar Research](STRling%20LSP%20Island%20Grammar%20Research.md)           | IDE Integration | Virtual Document pattern; Request Forwarding architecture; Coordinate mapping |
-| [Regex Maintainability and Cognitive Cost](../../regex-cognitive-ergonomics/reports/Regex%20Maintainability%20and%20Cognitive%20Cost.md) | Human Factors   | Cognitive Load Theory; Deciphering Penalty; Context Switching Tax             |
+| [STRling LSP Island Grammar Research](lsp-island-grammar.md)           | IDE Integration | Virtual Document pattern; Request Forwarding architecture; Coordinate mapping |
+| [Regex Maintainability and Cognitive Cost](../../regex-cognitive-ergonomics/reports/regex-maintainability-cognitive-cost.md) | Human Factors   | Cognitive Load Theory; Deciphering Penalty; Context Switching Tax             |
 
 ---
 

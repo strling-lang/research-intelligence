@@ -73,7 +73,7 @@ Universal “write-only” framing and a single rewrite threshold are abandoned 
 
 | Report | Role | Current status |
 | --- | --- | --- |
-| [Regex Maintainability and Cognitive Cost](reports/Regex%20Maintainability%20and%20Cognitive%20Cost.md) | Historical research input | Preserved; empirical and causal claims require revalidation. |
+| [Regex Maintainability and Cognitive Cost](reports/regex-maintainability-cognitive-cost.md) | Historical research input | Preserved; empirical and causal claims require revalidation. |
 
 ## Sources
 

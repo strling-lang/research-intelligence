@@ -70,7 +70,7 @@ The proposed LPeg-style VM, operator mappings, phased implementation, and gramma
 
 ## Reports
 
-- [STRling Grammar Evolution Research](reports/STRling%20Grammar%20Evolution%20Research.md) — historical Raku/LPeg research input; requires revalidation.
+- [STRling Grammar Evolution Research](reports/grammar-evolution.md) — historical Raku/LPeg research input; requires revalidation.
 
 ## Sources
 

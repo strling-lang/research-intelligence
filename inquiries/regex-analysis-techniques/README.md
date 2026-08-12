@@ -73,7 +73,7 @@ The historical report's derivative engine is not an accepted architecture. A sin
 
 | Report | Role | Current status |
 | --- | --- | --- |
-| [STRling Linter Architecture — Derivatives vs. Graph](reports/STRling%20Linter%20Architecture%20-%20Derivatives%20vs.%20Graph.md) | Historical comparative proposal | Preserved; architecture and performance claims require revalidation. |
+| [STRling Linter Architecture — Derivatives vs. Graph](reports/linter-derivatives-vs-graph.md) | Historical comparative proposal | Preserved; architecture and performance claims require revalidation. |
 
 ## Sources
 

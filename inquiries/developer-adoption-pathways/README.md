@@ -80,7 +80,7 @@ The “Stockholm Syndrome” thesis, universal “write-only” framing, replace
 | Report | Role | Current status |
 | --- | --- | --- |
 | [STRling Before STRling Syntax](reports/developer-adoption-pathways.md) | Modern active research input | Partially verified; published evidence is separated from STRling-specific hypotheses. |
-| [RegEx vs. STRling Developer Adoption](reports/RegEx%20vs.%20STRling%20Developer%20Adoption.md) | Historical research input | Preserved; loaded framing and population-level claims remain non-authoritative. |
+| [RegEx vs. STRling Developer Adoption](reports/regex-strling-adoption.md) | Historical research input | Preserved; loaded framing and population-level claims remain non-authoritative. |
 | [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) | Historical synthesis | Superseded by this README. |
 
 ## Sources

@@ -52,7 +52,7 @@ This inquiry synthesizes findings from the following research dossiers:
 
 | Report                                                                                  | Focus             | Key Contribution                                                                               |
 | --------------------------------------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------------- |
-| [RegEx vs. STRling Developer Adoption](RegEx%20vs.%20STRling%20Developer%20Adoption.md) | Adoption Barriers | Ubiquity Trap analysis; Stockholm Syndrome phenomenon; Complexity Tipping Point identification |
+| [RegEx vs. STRling Developer Adoption](regex-strling-adoption.md) | Adoption Barriers | Ubiquity Trap analysis; Stockholm Syndrome phenomenon; Complexity Tipping Point identification |
 
 ---
 

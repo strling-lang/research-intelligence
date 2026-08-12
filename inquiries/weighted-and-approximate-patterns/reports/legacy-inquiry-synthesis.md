@@ -46,7 +46,7 @@ The optimal state is a pattern function that returns not a boolean predicate $M(
 
 | Report                                                                                | Focus                                      | Key Contribution                                                                                                                                    |
 | ------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Stochastic Pattern Language Research](Stochastic%20Pattern%20Language%20Research.md) | WFA Theory & Fuzzy Matching Implementation | Comprehensive analysis of semiring algebra, Levenshtein automata compilation, weighted branching semantics, and confidence normalization strategies |
+| [Stochastic Pattern Language Research](stochastic-pattern-language.md) | WFA Theory & Fuzzy Matching Implementation | Comprehensive analysis of semiring algebra, Levenshtein automata compilation, weighted branching semantics, and confidence normalization strategies |
 
 ## 3. Pattern Synthesis
 
@@ -61,7 +61,7 @@ The research identifies four atomic components for stochastic pattern matching:
 
 ### The Semiring Foundation
 
-The choice of [algebraic semiring](Stochastic%20Pattern%20Language%20Research.md#22-algebraic-semirings-the-logic-of-weights) determines the entire behavior of the stochastic engine:
+The choice of [algebraic semiring](stochastic-pattern-language.md#22-algebraic-semirings-the-logic-of-weights) determines the entire behavior of the stochastic engine:
 
 | Semiring        | Operations                         | Use Case                                     |
 | --------------- | ---------------------------------- | -------------------------------------------- |
@@ -74,7 +74,7 @@ The **Tropical Semiring** provides the intuitive "cost accumulation" semantics r
 
 ### Fuzzy Distance Compilation
 
-The [fuzzy matching syntax](Stochastic%20Pattern%20Language%20Research.md#3-fuzzy-syntax-and-distance-metrics-codifying-ambiguity) compiles high-level constructs into Levenshtein Automata:
+The [fuzzy matching syntax](stochastic-pattern-language.md#3-fuzzy-syntax-and-distance-metrics-codifying-ambiguity) compiles high-level constructs into Levenshtein Automata:
 
 | Operation        | WFA Edge                                             | Weight    |
 | ---------------- | ---------------------------------------------------- | --------- |
@@ -83,11 +83,11 @@ The [fuzzy matching syntax](Stochastic%20Pattern%20Language%20Research.md#3-fuzz
 | **Deletion**     | $q_i \xrightarrow{\epsilon:c} q_{i+1}$               | $C_{del}$ |
 | **Insertion**    | $q_i \xrightarrow{\Sigma:\epsilon} q_i$              | $C_{ins}$ |
 
-Advanced metrics like [Damerau-Levenshtein](Stochastic%20Pattern%20Language%20Research.md#33-advanced-metrics-damerau-levenshtein-and-jaro-winkler) require auxiliary states for transposition, while Jaro-Winkler is implemented as a rescoring function over N-best lists.
+Advanced metrics like [Damerau-Levenshtein](stochastic-pattern-language.md#33-advanced-metrics-damerau-levenshtein-and-jaro-winkler) require auxiliary states for transposition, while Jaro-Winkler is implemented as a rescoring function over N-best lists.
 
 ### Weighted Branches and Prior Resolution
 
-The research demonstrates how [weighted alternation](Stochastic%20Pattern%20Language%20Research.md#4-weighted-branches-expressing-priors-and-alternatives) resolves ambiguity using domain knowledge:
+The research demonstrates how [weighted alternation](stochastic-pattern-language.md#4-weighted-branches-expressing-priors-and-alternatives) resolves ambiguity using domain knowledge:
 
 - Input "invo" matching against `("invoice" @ 0.8) | ("inv" @ 0.1)`
 - Path A ("invoice"): Prior 0.22 + Deletion(3) = **3.22**
@@ -141,7 +141,7 @@ pattern = s.fuzzy("pattern",
 
 ### IR Requirement: Weighted State Transitions
 
-The Intermediate Representation must be extended to support [WFA serialization](Stochastic%20Pattern%20Language%20Research.md#24-intermediate-representation-ir-for-the-dsl):
+The Intermediate Representation must be extended to support [WFA serialization](stochastic-pattern-language.md#24-intermediate-representation-ir-for-the-dsl):
 
 ```
 # Source  Dest  Input  Output  Weight
@@ -173,7 +173,7 @@ interface IRConfidenceConfig {
 
 ### Compiler Pipeline Extension
 
-The [implementation architecture](Stochastic%20Pattern%20Language%20Research.md#71-compiler-pipeline) requires a multi-stage extension:
+The [implementation architecture](stochastic-pattern-language.md#71-compiler-pipeline) requires a multi-stage extension:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -208,7 +208,7 @@ The transition from boolean to stochastic logic is demanded by modern data reali
 - ASR word error rates of 5-15% require fuzzy tolerance
 - Legacy data formats exhibit systematic drift patterns
 
-The [Viterbi Algorithm](Stochastic%20Pattern%20Language%20Research.md#61-the-viterbi-algorithm) provides $O(T \times |S|^2)$ complexity, while [Beam Search](Stochastic%20Pattern%20Language%20Research.md#62-beam-search-for-real-time-performance) enables sub-50ms latency for production workloads.
+The [Viterbi Algorithm](stochastic-pattern-language.md#61-the-viterbi-algorithm) provides $O(T \times |S|^2)$ complexity, while [Beam Search](stochastic-pattern-language.md#62-beam-search-for-real-time-performance) enables sub-50ms latency for production workloads.
 
 ### Mathematical Delta: Noise-Tolerance Improvement
 

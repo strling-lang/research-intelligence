@@ -50,7 +50,7 @@ This inquiry synthesizes findings from the following research dossiers:
 
 | Report                                                                                                            | Focus           | Key Contribution                                          |
 | ----------------------------------------------------------------------------------------------------------------- | --------------- | --------------------------------------------------------- |
-| [STRling as the Universal Pattern Engine (UPE)](STRling%20as%20the%20Universal%20Pattern%20Engine%20%28UPE%29.md) | Vision Document | Three pillars; Strategic roadmap; AI bridge specification |
+| [STRling as the Universal Pattern Engine (UPE)](universal-pattern-engine.md) | Vision Document | Three pillars; Strategic roadmap; AI bridge specification |
 
 ---
 

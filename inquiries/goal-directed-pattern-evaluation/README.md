@@ -70,7 +70,7 @@ The old report's Python compiler, node, and per-target emitter sketches are not 
 
 ## Reports
 
-- [STRling Pattern Evolution Research](reports/STRling%20Pattern%20Evolution%20Research.md) — historical SNOBOL/Icon research input; requires revalidation.
+- [STRling Pattern Evolution Research](reports/pattern-evolution.md) — historical SNOBOL/Icon research input; requires revalidation.
 - [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) — superseded synthesis; grammar research moved to a separate inquiry.
 
 ## Sources

@@ -71,7 +71,7 @@ The assumption that combining an LLM and compiler automatically creates a commit
 ## Reports
 
 - [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) — superseded historical synthesis preserved here.
-- The shared historical report is linked, not copied: [STRling Copilot — Neuro-Symbolic AI Research](../ai-assisted-pattern-synthesis-and-verification/reports/STRling%20Copilot%20-%20Neuro-Symbolic%20AI%20Research.md).
+- The shared historical report is linked, not copied: [STRling Copilot — Neuro-Symbolic AI Research](../ai-assisted-pattern-synthesis-and-verification/reports/neuro-symbolic-ai-copilot.md).
 
 ## Sources
 

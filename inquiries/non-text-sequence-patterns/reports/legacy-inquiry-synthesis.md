@@ -46,7 +46,7 @@ The optimal state is a **Stream-Agnostic Parser** where the atomic unit of match
 
 | Report                                                                                | Focus                                          | Key Contribution                                                                                                                                                   |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Stream-Agnostic Parser Deep Research](Stream-Agnostic%20Parser%20Deep%20Research.md) | Zero-Copy Architecture & Multi-Modal Alphabets | Comprehensive analysis of Hyperscan/Ragel streaming models, SAX discretization for numerics, bit-parallel genomic algorithms, and the `Sequence<T>` IR abstraction |
+| [Stream-Agnostic Parser Deep Research](stream-agnostic-parser.md) | Zero-Copy Architecture & Multi-Modal Alphabets | Comprehensive analysis of Hyperscan/Ragel streaming models, SAX discretization for numerics, bit-parallel genomic algorithms, and the `Sequence<T>` IR abstraction |
 
 ## 3. Pattern Synthesis
 
@@ -54,14 +54,14 @@ The optimal state is a **Stream-Agnostic Parser** where the atomic unit of match
 
 The research identifies four critical inefficiencies in the String-First paradigm:
 
-1. **Transcoding Overhead:** [Deserialize-then-scan](Stream-Agnostic%20Parser%20Deep%20Research.md#11-the-computational-cost-of-transcoding-and-deserialization) models introduce latency orders of magnitude higher than matching itself
-2. **Null-Byte Fallacy:** Binary protocols treat [0x00 as valid data](Stream-Agnostic%20Parser%20Deep%20Research.md#12-the-null-byte-fallacy-and-encoding-constraints), breaking C-string assumptions and forcing costly escape encoding
-3. **Structural Flattening:** Regex cannot express [offset-based field access](Stream-Agnostic%20Parser%20Deep%20Research.md#13-structural-vs-linear-representation), requiring complex workarounds for simple binary queries
-4. **Memory Wall:** Genomic data expands [400% when converted to ASCII](Stream-Agnostic%20Parser%20Deep%20Research.md#14-comparison-of-representational-efficiency), saturating memory controllers before CPUs reach throughput limits
+1. **Transcoding Overhead:** [Deserialize-then-scan](stream-agnostic-parser.md#11-the-computational-cost-of-transcoding-and-deserialization) models introduce latency orders of magnitude higher than matching itself
+2. **Null-Byte Fallacy:** Binary protocols treat [0x00 as valid data](stream-agnostic-parser.md#12-the-null-byte-fallacy-and-encoding-constraints), breaking C-string assumptions and forcing costly escape encoding
+3. **Structural Flattening:** Regex cannot express [offset-based field access](stream-agnostic-parser.md#13-structural-vs-linear-representation), requiring complex workarounds for simple binary queries
+4. **Memory Wall:** Genomic data expands [400% when converted to ASCII](stream-agnostic-parser.md#14-comparison-of-representational-efficiency), saturating memory controllers before CPUs reach throughput limits
 
 ### The Sequence<T> Abstraction
 
-The [Sequence<T> Intermediate Representation](Stream-Agnostic%20Parser%20Deep%20Research.md#31-the-sequencet-intermediate-representation) decouples pattern logic from data encoding:
+The [Sequence<T> Intermediate Representation](stream-agnostic-parser.md#31-the-sequencet-intermediate-representation) decouples pattern logic from data encoding:
 
 | Stream Type     | Element Type       | Example Alphabet                      |
 | --------------- | ------------------ | ------------------------------------- |
@@ -78,13 +78,13 @@ The research validates three zero-copy architectures:
 
 | Engine        | Key Capability                                                                                                               | STRling Integration                                            |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Hyperscan** | [Vectored Mode](Stream-Agnostic%20Parser%20Deep%20Research.md#211-streaming-block-and-vectored-modes) for scatter-gather I/O | Match patterns spanning non-contiguous buffers without copying |
-| **Ragel**     | [Embedded Actions](Stream-Agnostic%20Parser%20Deep%20Research.md#221-embedding-actions-in-transitions) in state transitions  | Parse length-prefixed binary structures                        |
-| **Wuffs**     | [Compile-time bounds checking](Stream-Agnostic%20Parser%20Deep%20Research.md#23-wuffs-verified-safety-in-untrusted-parsing)  | Zero-copy slice access with memory safety                      |
+| **Hyperscan** | [Vectored Mode](stream-agnostic-parser.md#211-streaming-block-and-vectored-modes) for scatter-gather I/O | Match patterns spanning non-contiguous buffers without copying |
+| **Ragel**     | [Embedded Actions](stream-agnostic-parser.md#221-embedding-actions-in-transitions) in state transitions  | Parse length-prefixed binary structures                        |
+| **Wuffs**     | [Compile-time bounds checking](stream-agnostic-parser.md#23-wuffs-verified-safety-in-untrusted-parsing)  | Zero-copy slice access with memory safety                      |
 
 ### Bit-Parallel Genomic Algorithms
 
-For packed genomic data, [Myers Algorithm and BitPal](Stream-Agnostic%20Parser%20Deep%20Research.md#52-bit-parallel-algorithms-myers--bitpal) enable massive parallelism:
+For packed genomic data, [Myers Algorithm and BitPal](stream-agnostic-parser.md#52-bit-parallel-algorithms-myers--bitpal) enable massive parallelism:
 
 - Myers encodes edit-distance computation into bit vectors
 - BitPal processes packed words directly, achieving 7-25× speedup
@@ -144,7 +144,7 @@ pattern = s.packet_seq(
 
 ### The Stream-Agnostic Parser Architecture
 
-Building on the [architectural synthesis](Stream-Agnostic%20Parser%20Deep%20Research.md#6-synthesis-the-strling-stream-agnostic-parser-architecture), we propose:
+Building on the [architectural synthesis](stream-agnostic-parser.md#6-synthesis-the-strling-stream-agnostic-parser-architecture), we propose:
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
@@ -246,7 +246,7 @@ The String-First paradigm imposes unconscionable overhead on modern data pipelin
 - Binary protocol parsing requires brittle escape-encoding workarounds
 - Numeric trend matching is impossible without external preprocessing
 
-The [Hyperscan Vectored Mode](Stream-Agnostic%20Parser%20Deep%20Research.md#211-streaming-block-and-vectored-modes) proves that high-performance engines can operate on non-contiguous memory. The [Ragel action model](Stream-Agnostic%20Parser%20Deep%20Research.md#221-embedding-actions-in-transitions) proves that FSMs can handle context-sensitive binary structures. STRling must synthesize these capabilities into a unified, accessible DSL.
+The [Hyperscan Vectored Mode](stream-agnostic-parser.md#211-streaming-block-and-vectored-modes) proves that high-performance engines can operate on non-contiguous memory. The [Ragel action model](stream-agnostic-parser.md#221-embedding-actions-in-transitions) proves that FSMs can handle context-sensitive binary structures. STRling must synthesize these capabilities into a unified, accessible DSL.
 
 ### Mathematical Delta: UTF-8 Overhead Elimination
 

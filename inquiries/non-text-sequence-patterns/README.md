@@ -70,7 +70,7 @@ The stream-agnostic parser and universal `Sequence<T>` compiler layers are not a
 
 ## Reports
 
-- [Stream-Agnostic Parser Deep Research](reports/Stream-Agnostic%20Parser%20Deep%20Research.md) — historical discovery and architecture input; requires domain-specific revalidation.
+- [Stream-Agnostic Parser Deep Research](reports/stream-agnostic-parser.md) — historical discovery and architecture input; requires domain-specific revalidation.
 - [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) — superseded synthesis.
 
 ## Sources

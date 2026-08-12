@@ -52,8 +52,8 @@ This inquiry synthesizes findings from the following research dossiers:
 
 | Report                                                                                                                | Focus                 | Key Contribution                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------- |
-| [Regex Backtracking and ReDoS Vulnerabilities](Regex%20Backtracking%20and%20ReDoS%20Vulnerabilities.md)               | Threat Landscape      | Taxonomy of vulnerable patterns (NQ, QOD, QOA); mechanics of catastrophic backtracking |
-| [STRling Linter Architecture: Derivatives vs. Graph](../../regex-analysis-techniques/reports/STRling%20Linter%20Architecture%20-%20Derivatives%20vs.%20Graph.md) | Solution Architecture | Feasibility analysis of Symbolic Derivative-based static analysis; SAI specification   |
+| [Regex Backtracking and ReDoS Vulnerabilities](backtracking-redos-vulnerabilities.md)               | Threat Landscape      | Taxonomy of vulnerable patterns (NQ, QOD, QOA); mechanics of catastrophic backtracking |
+| [STRling Linter Architecture: Derivatives vs. Graph](../../regex-analysis-techniques/reports/linter-derivatives-vs-graph.md) | Solution Architecture | Feasibility analysis of Symbolic Derivative-based static analysis; SAI specification   |
 
 ---
 

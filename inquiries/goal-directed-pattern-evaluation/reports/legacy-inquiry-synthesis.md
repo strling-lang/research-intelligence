@@ -56,8 +56,8 @@ This inquiry synthesizes findings from the following research dossiers:
 
 | Report                                                                            | Focus                 | Key Contribution                                                          |
 | --------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------- |
-| [STRling Pattern Evolution Research](STRling%20Pattern%20Evolution%20Research.md) | Historical Archeology | SNOBOL4/Icon paradigms; first-class patterns; FENCE/FAIL/ABORT primitives |
-| [STRling Grammar Evolution Research](../../recursive-pattern-and-grammar-systems/reports/STRling%20Grammar%20Evolution%20Research.md) | Grammar Architecture  | Raku cursor model; LPeg VM; Grammar braiding; Island resolution           |
+| [STRling Pattern Evolution Research](pattern-evolution.md) | Historical Archeology | SNOBOL4/Icon paradigms; first-class patterns; FENCE/FAIL/ABORT primitives |
+| [STRling Grammar Evolution Research](../../recursive-pattern-and-grammar-systems/reports/grammar-evolution.md) | Grammar Architecture  | Raku cursor model; LPeg VM; Grammar braiding; Island resolution           |
 
 ---
 
