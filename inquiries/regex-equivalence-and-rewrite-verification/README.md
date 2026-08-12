@@ -91,5 +91,6 @@ This inquiry rejects a single Boolean equivalence flag, capture-blind algebraic 
 - [Alive2](https://alive2.llvm.org/)
 - [Regex Analysis & Explanation program](../../programs/regex-analysis-explanation/README.md)
 - [Portability & Compatibility program](../../programs/portability-compatibility/README.md)
+- [Regex safety and complexity](../regex-safety-and-complexity/README.md)
 
 [← Inquiries](../README.md)

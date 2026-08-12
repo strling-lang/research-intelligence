@@ -87,5 +87,6 @@ A generic “Run” result that conflates static and executed evidence, executio
 - [STRling architecture at `9991575`](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/docs/architecture.md)
 - [Regex Conformance at `f8c603a`](https://github.com/strling-lang/regex-conformance/tree/f8c603a1a4f5f827247f8a5bed61c85f483857f8)
 - [Regex Lab program](../../programs/regex-lab/README.md)
+- [Developer adoption pathways](../developer-adoption-pathways/README.md)
 
 [← Inquiries](../README.md)

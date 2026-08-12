@@ -88,5 +88,6 @@ Boolean support tables as canonical truth, engine names as behavioral identity, 
 - [Unicode Technical Standard #18](https://www.unicode.org/reports/tr18/)
 - [PCRE2 documentation](https://www.pcre.org/current/doc/html/)
 - [Regex Reference program](../../programs/regex-reference/README.md)
+- [Developer adoption pathways](../developer-adoption-pathways/README.md)
 
 [← Inquiries](../README.md)

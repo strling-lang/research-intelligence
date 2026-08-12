@@ -21,15 +21,14 @@ Audit, Evaluate, Compare, Playground, and their umbrella are research/product co
 
 ## Related existing inquiries
 
+- [Regex Lab interaction model](../../inquiries/regex-lab-interaction-model/README.md)
 - [Embedded regex tooling](../../inquiries/embedded-regex-tooling/README.md)
 - [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
 
-No dedicated Lab inquiry has begun.
-
 ## Future research opportunities
 
-User-job and interaction research, operation-specific result schemas, execution isolation, provenance, witness visualization, and handoff between imported regex and semantic authoring.
+User validation of capability boundaries and naming, execution isolation, witness visualization, privacy, and handoff between imported regex and semantic authoring.
 
 ## Explicit non-goals
 

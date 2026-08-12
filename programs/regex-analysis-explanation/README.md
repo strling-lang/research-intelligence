@@ -22,6 +22,7 @@ Existing reports discuss ReDoS, derivatives, graph analysis, maintainability, va
 ## Related existing inquiries
 
 - [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
+- [Regex equivalence and rewrite verification](../../inquiries/regex-equivalence-and-rewrite-verification/README.md)
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
 - [Regex cognitive ergonomics](../../inquiries/regex-cognitive-ergonomics/README.md)
 - [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
@@ -29,7 +30,7 @@ Existing reports discuss ReDoS, derivatives, graph analysis, maintainability, va
 
 ## Future research opportunities
 
-Soundness envelopes, exploitability context, minimal witnesses, why-no-match explanations, repair ranking, equivalence evidence, and human evaluation of explanations.
+Soundness envelopes, exploitability context, why-no-match explanations, repair ranking, and human evaluation of witnesses and explanations.
 
 ## Explicit non-goals
 

@@ -17,12 +17,20 @@ The structure is flat. Programs and metadata classify inquiries without duplicat
 
 | Inquiry | Horizon | Maturity | Focus |
 | --- | --- | --- | --- |
+| [Canonical semantic compiler architecture](canonical-semantic-compiler-architecture/README.md) | Fourth Edition | Exploratory | Singular semantic authority across frontends, adapters, and tooling. |
+| [Semantic IR and target lowering](semantic-ir-and-target-lowering/README.md) | Fourth Edition | Exploratory | Information placement, legalization, Target IR, and artifacts. |
+| [Regex portability semantics](regex-portability-semantics/README.md) | Fourth Edition | Exploratory | Observable, profile-bound meaning of portability claims. |
+| [Regex equivalence and rewrite verification](regex-equivalence-and-rewrite-verification/README.md) | Fourth Edition | Exploratory | Typed relations, containment, witnesses, bounded verification, and proof provenance. |
 | [Regex safety and complexity](regex-safety-and-complexity/README.md) | Fourth Edition | Exploratory | Complexity, runtime sensitivity, exploitability, and bounded safety claims. |
+| [Regex validation testing methods](regex-validation-testing-methods/README.md) | Fourth Edition | Exploratory | Generators, oracles, properties, differential testing, and reduction. |
 | [Regex analysis techniques](regex-analysis-techniques/README.md) | Fourth Edition | Exploratory | Derivative, graph, symbolic, empirical, and hybrid analysis methods. |
 | [Embedded regex tooling](embedded-regex-tooling/README.md) | Fourth Edition | Exploratory | Host embedding, projection, coordinates, and compiler-backed editor intelligence. |
 | [Semantic validation and domain libraries](semantic-validation-and-domain-libraries/README.md) | Fourth Edition | Exploratory | Validation guarantees, domain helpers, provenance, registry, and distribution. |
 | [Regex cognitive ergonomics](regex-cognitive-ergonomics/README.md) | Post-Fourth Edition | Exploratory | Measurable comprehension and maintenance costs. |
 | [Developer adoption pathways](developer-adoption-pathways/README.md) | Post-Fourth Edition | Exploratory | Task-specific adoption, coexistence, migration, and trust. |
+| [Regex Conformance evidence methodology](regex-conformance-evidence-methodology/README.md) | Post-Fourth Edition | Exploratory | Provenance, attempts, reproducibility, replication, correction, and certification method. |
+| [Regex Reference information architecture](regex-reference-information-architecture/README.md) | Post-Fourth Edition | Exploratory | Public organization and projection of authoritative regex knowledge. |
+| [Regex Lab interaction model](regex-lab-interaction-model/README.md) | Post-Fourth Edition | Exploratory | Typed interactive capabilities, sessions, evidence boundaries, and execution trust. |
 | [AI-assisted pattern synthesis and verification](ai-assisted-pattern-synthesis-and-verification/README.md) | Post-Fourth Edition | Exploratory | Bounded AI assistance under deterministic verification authority. |
 | [Goal-directed pattern evaluation](goal-directed-pattern-evaluation/README.md) | Beyond Regex | Exploratory | Resumable search, generators, state restoration, and first-class patterns. |
 | [Recursive pattern and grammar systems](recursive-pattern-and-grammar-systems/README.md) | Beyond Regex | Exploratory | Recursive patterns, PEGs, tree captures, and grammar interoperability. |

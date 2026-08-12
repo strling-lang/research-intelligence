@@ -21,6 +21,9 @@ As reviewed 2026-08-12, active product work contains a Rust compiler kernel, can
 
 ## Related existing inquiries
 
+- [Canonical semantic compiler architecture](../../inquiries/canonical-semantic-compiler-architecture/README.md)
+- [Semantic IR and target lowering](../../inquiries/semantic-ir-and-target-lowering/README.md)
+- [Regex validation testing methods](../../inquiries/regex-validation-testing-methods/README.md)
 - [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
 - [Embedded regex tooling](../../inquiries/embedded-regex-tooling/README.md)
@@ -28,7 +31,7 @@ As reviewed 2026-08-12, active product work contains a Rust compiler kernel, can
 
 ## Future research opportunities
 
-Compiler-stage proof strategy, diagnostic explanation quality, target-profile completeness, cross-frontend equivalence, adapter conformance, compiler-backed tooling, and structured artifact consumption.
+Diagnostic explanation quality, target-profile completeness, adapter conformance, compiler-backed tooling, and empirical evaluation of the active compiler, frontend, lowering, and validation inquiries.
 
 ## Explicit non-goals
 

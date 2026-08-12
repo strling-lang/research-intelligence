@@ -21,15 +21,14 @@ The current website is the public documentation surface and labels Fourth Editio
 
 ## Related existing inquiries
 
+- [Regex Reference information architecture](../../inquiries/regex-reference-information-architecture/README.md)
 - [Regex cognitive ergonomics](../../inquiries/regex-cognitive-ergonomics/README.md)
 - [Developer adoption pathways](../../inquiries/developer-adoption-pathways/README.md)
 - [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
 
-No dedicated reference inquiry has begun.
-
 ## Future research opportunities
 
-Task-oriented taxonomy and search, version comparisons, uncertainty presentation, accessible explanation layers, generation, freshness, and correction workflows.
+User validation of task-oriented taxonomy and search, accessible explanation layers, generated-projection freshness, and correction workflows.
 
 ## Explicit non-goals
 

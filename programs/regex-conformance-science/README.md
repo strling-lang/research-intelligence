@@ -22,6 +22,8 @@ Conformance evidence may inform target profiles, portability reasoning, compiler
 
 ## Related existing inquiries
 
+- [Regex Conformance evidence methodology](../../inquiries/regex-conformance-evidence-methodology/README.md)
+- [Regex validation testing methods](../../inquiries/regex-validation-testing-methods/README.md)
 - [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
 
@@ -29,7 +31,7 @@ These inquiries may motivate future experiments; their reports are not conforman
 
 ## Future research opportunities
 
-Oracle design, minimized counterexamples, discrepancy taxonomies, environment identity, replication independence, completeness under applicability, and certification criteria.
+Early-campaign evaluation of discrepancy taxonomies, environment identity, replication independence, completeness under applicability, correction propagation, and certification criteria.
 
 ## Explicit non-goals
 
