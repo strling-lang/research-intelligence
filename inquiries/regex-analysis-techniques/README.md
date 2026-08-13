@@ -7,76 +7,96 @@ horizon: Fourth Edition
 maturity: Exploratory
 last-reviewed: 2026-08-12
 review-triggers:
-  - New comparative evidence for derivative, graph, symbolic, or hybrid analyzers
-  - Expansion of STRling analysis or explanation requirements
+  - New comparative or reproduced evidence for a portfolio technique
+  - STRling ratifies an analysis query/result or entitlement contract
+  - Expansion of supported semantic envelopes or observable relations
 ---
 
 # Regex analysis techniques
 
 ## Research question
 
-Which combinations of derivative, automata-graph, symbolic, abstract-interpretation, empirical, and hybrid methods best support bounded STRling analyses and explanations?
+How should STRling select and combine derivative, automata, symbolic, relational, abstract, constraint, operational, empirical, and hybrid techniques for specific analysis properties and semantic envelopes?
 
 ## Motivation / decision informed
 
-This inquiry may inform method selection for safety, equivalence, containment, witnesses, counterexamples, why-no-match, repair, and editor latency.
+The answer may inform future method selection for nullability, safety, ambiguity, equivalence, containment, witnesses, counterexamples, why-no-match, repair, portability, and editor-latency queries.
 
 ## Current state
 
-One historical report recommends symbolic derivatives for a real-time linter and sketches an implementation. Current STRling already has a canonical Rust analysis pipeline, so the report's assumed IR, schedule, and component architecture are obsolete as authority.
+The modern report replaces the historical two-technique framing with a property-specific portfolio. At reviewed commit [`6ff362a`](https://github.com/strling-lang/strling/tree/6ff362ac261d38aff282173c08a8841d3c5704cf/core), the Rust core exposes canonical semantic, structural, and safety analyses with typed uncertainty and complexity limits. This is useful implementation evidence, not adoption of the report’s dispatcher, semantic envelopes, guarantee matrix, or derived-view portfolio.
 
 ## Scope
 
-Analysis method properties, supported feature envelopes, complexity, caching, witness production, explanation, incremental use, and composability with controlled execution.
+Technique applicability by property, semantic feature envelope, observable relation, soundness/completeness requirement, target scope, budget, witness and proof production, caching, refusal, and composition with controlled execution.
 
 ## Non-goals
 
-This inquiry does not select a production architecture, prove one technique universally superior, or conflate structural ambiguity detection with practical exploitability.
+This inquiry does not redefine equivalence, safety, validation, portability, or explanation requirements. It consumes those inquiries’ questions and owns method selection and composition. It does not select a production architecture or canonical automaton.
 
 ## Research method
 
-The current work preserves and reframes the existing comparative input. A future review should reproduce representative algorithms, define common corpora and claims, and compare soundness, completeness, performance, witness quality, and implementation cost by feature subset.
+The modern AI-assisted report surveyed formal and practical technique families, defined semantic envelopes, proposed a property-to-technique dispatch matrix, and compared epistemic result categories. The historical derivative-versus-graph report remains context for an earlier architecture proposal. Current STRling analysis files were inspected, but no comparative prototype or benchmark was run.
 
 ## Evidence and source quality
 
-The historical report cites academic and technical sources but remains unverified as a whole. Its benchmark expectations and architecture fit require reproduction against current compiler contracts.
+Current compiler facts are verified against a pinned repository revision. The modern report cites relevant primary papers and official tool documentation, but its opaque citation mapping was removed and the comparative guarantee/performance matrix has not been reproduced. Maturity therefore remains exploratory.
 
 ## Findings
 
-Derivatives and graph techniques expose different useful representations; neither should be selected from conceptual elegance alone. Method choice depends on the exact property, feature subset, proof obligation, latency budget, and explanation needs. Hybrid staged analysis is a live alternative.
+- No single representation is appropriate for every analysis property or observable relation.
+- Method entitlement depends on the query property, modeled semantics, supported feature envelope, requested guarantee, target scope, resource budget, and explanation need.
+- Canonical Semantic IR should remain semantic authority; residual expressions, NFAs/DFAs, symbolic automata, tagged models, search trees, constraints, and executions are derived views.
+- Cheap shared semantic and structural facts can discharge queries or constrain heavier methods without becoming proof for unsupported properties.
+- Language acceptance, selected span, captures, iteration, operation behavior, and target behavior are distinct observables and may require different analyzers.
+- A staged portfolio can combine exact decision procedures, sound abstractions, bounded witness search, and concrete validation if each stage keeps a typed epistemic role.
+- Result states must distinguish proven, refuted by a valid witness, unknown/resource-exhausted, unsupported/refused, and empirical evidence only.
 
 ## Limits, uncertainty, and negative knowledge
 
-Comparative accuracy, worst-case growth, backreference/lookaround handling, incremental performance, and witness minimality remain unresolved. The report's suggested milestone sequence and “real-time” threshold are not current project commitments.
+The report does not establish comparative performance, implementation cost, proof-object checking, cache stability, witness minimality, or sound handling of every lookaround, capture, backreference, recursion, priority, or replacement behavior. No shared corpus or prototype has validated dispatch thresholds. Failure, timeout, bounded search, and no found counterexample are not proofs.
 
 ## Alternatives considered
 
-Symbolic derivatives, partial derivatives, Thompson-style constructions, graph ambiguity checks, abstract interpretation, bounded execution, fuzzing, differential testing, and portfolio analysis.
+A universal derivative engine, canonical Thompson NFA or DFA, symbolic automata, tagged automata, graph ambiguity checks, abstract interpretation, SMT/constraint solving, operational search models, fuzzing, differential execution, and staged portfolios were compared.
 
 ## Implications for STRling
 
-The compiler can expose stable semantic facts and evidence identities while allowing property-specific analyzers. Analysis outputs should state their supported envelope and uncertainty.
+The existing canonical facts and typed uncertainty can form inputs to future property-specific analyzers. A query contract could prevent tools from asking an analyzer to make claims outside its semantic entitlement while preserving evidence and explanations across stages.
 
 ## Recommendations
 
-Build a claim-centered evaluation matrix before any architecture decision. Include adversarial inputs, unsupported constructs, counterexample quality, resource bounds, and integration with canonical Semantic IR.
+The report recommends a candidate entitlement-aware dispatcher over shared facts and disposable derived views. Before adoption, define representative property/observable queries, build small competing prototypes, require checkable witnesses or proof artifacts where applicable, and measure accuracy, unknown rates, latency, memory, and explanation quality under explicit budgets.
 
 ## Rejected or abandoned alternatives
 
-The historical report's derivative engine is not an accepted architecture. A single analyzer for all properties is not assumed.
+The historical recommendation to make symbolic derivatives the linter architecture is not current authority. Reject one canonical automaton, silent fallback from proof to testing, unsupported-feature erasure, and negative conclusions inferred from budget exhaustion.
 
 ## Downstream disposition
 
 **Disposition:** none.
 
+No portfolio dispatcher or technique selection from this inquiry is recorded as adopted.
+
 ## Reports
 
 | Report | Role | Current status |
 | --- | --- | --- |
-| [STRling Linter Architecture — Derivatives vs. Graph](reports/linter-derivatives-vs-graph.md) | Historical comparative proposal | Preserved; architecture and performance claims require revalidation. |
+| [STRling Semantic Regex Analysis](reports/regex-analysis-architecture.md) | Modern primary research input | Active input; partially verified and not prototyped. |
+| [STRling Linter Architecture — Derivatives vs. Graph](reports/linter-derivatives-vs-graph.md) | Historical comparative proposal | Historical context; architecture and performance claims require revalidation. |
+
+## Related inquiries
+
+- [Regex equivalence and rewrite verification](../regex-equivalence-and-rewrite-verification/README.md)
+- [Regex safety and complexity](../regex-safety-and-complexity/README.md)
+- [Regex validation testing methods](../regex-validation-testing-methods/README.md)
+- [Evidence-aware regex explanation](../evidence-aware-regex-explanation/README.md)
 
 ## Sources
 
-See the report bibliography pending focused verification.
+- [`strling` core](https://github.com/strling-lang/strling/tree/6ff362ac261d38aff282173c08a8841d3c5704cf/core), reviewed commit `6ff362a`.
+- Brzozowski, [Derivatives of Regular Expressions](https://doi.org/10.1145/321239.321249), 1964.
+- Antimirov, [Partial Derivatives of Regular Expressions and Finite Automaton Constructions](https://doi.org/10.1016/0304-0208(95)00011-G), 1996.
+- [Rust `regex-automata` documentation](https://docs.rs/regex-automata/).
 
 [← Inquiries](../README.md)

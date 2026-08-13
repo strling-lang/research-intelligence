@@ -8,77 +8,99 @@ horizon: Fourth Edition
 maturity: Exploratory
 last-reviewed: 2026-08-12
 review-triggers:
-  - Material change to STRling LSP or editor architecture
-  - New host-language embedded-language APIs or standards
+  - STRling ratifies canonical compiler, source, diagnostic, or protocol contracts
+  - A host integration prototype validates or falsifies the projection model
+  - Material change to host-language embedded-language APIs
 ---
 
 # Embedded regex tooling
 
 ## Research question
 
-How can compiler-backed regex or STRling intelligence operate accurately inside host-language literals and templates while preserving host syntax, coordinates, escapes, and authority boundaries?
+How can canonical compiler intelligence operate accurately inside host-language literals, templates, builders, macros, and source files while preserving host syntax, provenance, coordinates, edit safety, and semantic authority?
 
 ## Motivation / decision informed
 
-The answer may inform LSP/editor integrations, virtual-document projection, diagnostics, completion, semantic highlighting, and migration workflows.
+The answer may inform future LSP/editor integrations, host plugins, diagnostics, completion, navigation, refactoring, migration, and Lab handoff without creating binding-specific semantic implementations.
 
 ## Current state
 
-A historical report studies island grammars and virtual documents for Python strings and JavaScript templates. The active product repository contains LSP and editor history, while the Fourth Edition direction requires tooling to consume the canonical compiler rather than a binding-specific semantic implementation.
+The modern report supersedes the inquiry’s earlier universal-looking virtual-document framing. STRling’s [ratified architecture](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md) requires tooling to consume one canonical compiler, but says binding-to-core convergence and exact source, diagnostic, and protocol contracts remain later work. Existing LSP/editor code is transitional. No proposed projection contract or host pilot is adopted.
 
 ## Scope
 
-Host-language discovery, literal applicability, decoding and coordinate mapping, incremental synchronization, diagnostics, completions, security boundaries, and compiler-backed projection.
+Host-source discovery and classification, host-authoritative parsing and decoding, immutable snapshots, semantic-node provenance, coordinate conversion, non-bijective mappings, partial and malformed source, incremental state, cancellation, safe edit inversion, security, transport choices, and mapping conformance.
 
 ## Non-goals
 
-This inquiry does not implement an editor extension, define host parsers, promise support for every language or embedding, or give tooling independent semantic authority.
+This inquiry does not define regex or STRling semantics, reimplement host parsers, implement an editor extension, promise every host, or make an editor protocol authoritative. It consumes canonical compiler and [explanation](../evidence-aware-regex-explanation/README.md) contracts and owns host-source projection and editor integration.
 
 ## Research method
 
-The current synthesis inventories the report. Later work should inspect current editor APIs and host parsers, prototype bounded projections, and test malformed syntax, escapes, Unicode coordinates, interpolation, and incremental edits.
+The modern report surveyed host compiler/IDE APIs and embedded-language mechanisms, analyzed coordinate and provenance failure modes, and proposed falsification-oriented pilots. The historical island-grammar and legacy syntheses remain as prior inputs. No prototype or cross-host conformance suite was run.
 
 ## Evidence and source quality
 
-The report is historical and partly implementation-prescriptive. Source claims and API behavior require versioned verification. Current architecture comes from `strling`, not the report.
+Current architecture is verified against a pinned STRling revision. Official host and editor APIs provide relevant precedents, but the report’s opaque citation map was removed, versions were not exhaustively rechecked, and the mapping model has not been implemented or fuzzed.
 
 ## Findings
 
-Embedded tooling requires a deliberate mapping among host source, decoded pattern source, canonical compiler coordinates, and editor coordinates. Virtual documents are one viable pattern, but direct embedded-language APIs and host AST integrations are alternatives. Compiler results must remain canonical while tooling owns presentation and projection.
+- Semantic authority can remain singular while source provenance varies across raw regex, strings, templates, concatenations, builders, and macros.
+- Host integrations should use authoritative host AST, token, symbol, literal-decoding, and recovery machinery; regex-based host parsing creates a shadow parser.
+- A constant offset or width-preserving mask cannot model escapes, elisions, holes, concatenations, macros, or synthetic semantic nodes generally.
+- Mappings need immutable host snapshots, explicit coordinate units, relation/transform kinds, multiple origins, and editability; non-bijective mappings are normal.
+- Diagnostics may map to one or more host ranges. Safe fixes require reverse mapping and stale-snapshot rejection.
+- Virtual documents, direct compiler calls, language-service plugins, IDE injection, lexical grammars, and explicit STRling files are replaceable integration mechanisms, not universal architecture.
+- Static tooling must not execute builders or host code to discover semantics.
+- Incremental caching should key stable syntax/semantic identities and support cancellation rather than compiling every embedded unit after every keystroke.
 
 ## Limits, uncertainty, and negative knowledge
 
-The report covers only selected Python and JavaScript cases and does not establish cross-language feasibility, latency, recovery quality, or maintenance cost. Escape handling and malformed host syntax are major correctness boundaries.
+No evidence establishes one projection schema across all hosts. Malformed source, macro provenance, interpolations, generated values, multiple coordinate systems, host API stability, latency, memory, and safe edit inversion remain unvalidated. TextMate recognition is not semantic evidence, and virtual-document success in a width-preserving case does not generalize.
 
 ## Alternatives considered
 
-Virtual documents, direct middleware, host AST plugins, tagged-template integrations, language injection APIs, build-time extraction, and explicit STRling files.
+Virtual documents, direct compiler invocation, host-language service plugins, Roslyn/PSI-style integrations, lexical injection, host AST extraction, build-time extraction, explicit STRling files, and a shared provenance core were compared.
 
 ## Implications for STRling
 
-A stable compiler protocol and provenance-preserving diagnostics can support several editor strategies without duplicating semantic logic.
+A future compiler may accept canonical source or semantic-node inputs with provenance and return canonical results that adapters project into host snapshots. This preserves one semantic authority while allowing host-specific acquisition and presentation.
 
 ## Recommendations
 
-Define a language-neutral projection contract and evaluate it on a small set of materially different hosts before expanding. Treat coordinate round trips and malformed-source behavior as hard correctness tests.
+The report recommends a candidate projection/provenance core behind replaceable host and editor adapters. Before implementation commitment, build headless mapping fixtures and independent TypeScript, C#, and adversarial Python pilots; test escapes, Unicode positions, holes, malformed syntax, concatenation, stale edits, and cancellation. Evaluate virtual documents only behind the projection abstraction.
 
 ## Rejected or abandoned alternatives
 
-The old binding-specific LSP dependency direction is obsolete. Virtual-document projection is not declared the only valid architecture.
+Reject regex-based host parsing, one global `offset`, constant-delta mapping, independent string decoding, name-only API detection, executing builders, flattening holes or origins, editor-side semantic diagnostics, and virtual URI identity based on ordinal occurrence.
 
 ## Downstream disposition
 
 **Disposition:** none.
 
+No projection model, pilot sequence, or integration mechanism from this inquiry is recorded as adopted.
+
 ## Reports
 
 | Report | Role | Current status |
 | --- | --- | --- |
-| [STRling LSP Island Grammar Research](reports/lsp-island-grammar.md) | Historical architecture input | Preserved; host API and current architecture claims need revalidation. |
-| [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) | Historical cross-cutting synthesis | Superseded; cognitive-cost research now has a separate inquiry. |
+| [Projecting Canonical STRling Compiler Intelligence into Host-Language Source](reports/embedded-compiler-intelligence.md) | Modern primary research input | Active input; partially verified and not prototyped. |
+| [STRling LSP Island Grammar Research](reports/lsp-island-grammar.md) | Historical architecture input | Historical context; virtual projection is not universally selected. |
+| [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) | Historical cross-cutting synthesis | Historical input; active framing replaced. |
+
+## Related inquiries
+
+- [Canonical semantic compiler architecture](../canonical-semantic-compiler-architecture/README.md)
+- [Evidence-aware regex explanation](../evidence-aware-regex-explanation/README.md)
+- [Regex analysis techniques](../regex-analysis-techniques/README.md)
+- [Regex Lab interaction model](../regex-lab-interaction-model/README.md)
 
 ## Sources
 
-See report bibliography pending focused verification.
+- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md), reviewed commit `6ff362a`.
+- [Language Server Protocol 3.17](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/).
+- [VS Code embedded-language guidance](https://code.visualstudio.com/api/language-extensions/embedded-languages).
+- [TypeScript language-service plugin guidance](https://github.com/microsoft/TypeScript/wiki/Writing-a-Language-Service-Plugin).
+- [Python AST documentation](https://docs.python.org/3/library/ast.html).
 
 [← Inquiries](../README.md)
