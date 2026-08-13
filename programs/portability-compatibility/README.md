@@ -22,6 +22,9 @@ The active compiler distinguishes exact target profiles, factual capability eval
 ## Related existing inquiries
 
 - [Regex portability semantics](../../inquiries/regex-portability-semantics/README.md)
+- [Regex execution and target profiles](../../inquiries/regex-execution-and-target-profiles/README.md)
+- [Regex operation and result semantics](../../inquiries/regex-operation-and-result-semantics/README.md)
+- [Unicode and text semantics](../../inquiries/unicode-and-text-semantics/README.md)
 - [Regex equivalence and rewrite verification](../../inquiries/regex-equivalence-and-rewrite-verification/README.md)
 - [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
@@ -30,7 +33,7 @@ The active compiler distinguishes exact target profiles, factual capability eval
 
 ## Future research opportunities
 
-Empirical evaluation of the candidate portability dimensions; capture and replacement relations; Unicode and host-operation compatibility; and version-transition semantics.
+Empirically evaluate which candidate profile, operation/result, and Unicode/text dimensions materially affect preservation claims; validate version transitions and cross-profile witnesses.
 
 ## Explicit non-goals
 

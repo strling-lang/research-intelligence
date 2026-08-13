@@ -25,7 +25,7 @@ The answer may inform future LSP/editor integrations, host plugins, diagnostics,
 
 ## Current state
 
-The modern report supersedes the inquiry’s earlier universal-looking virtual-document framing. STRling’s [ratified architecture](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md) requires tooling to consume one canonical compiler, but says binding-to-core convergence and exact source, diagnostic, and protocol contracts remain later work. Existing LSP/editor code is transitional. No proposed projection contract or host pilot is adopted.
+The modern report supersedes the inquiry’s earlier universal-looking virtual-document framing. STRling’s [ratified architecture](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md) requires tooling to consume one canonical compiler, but says binding-to-core convergence and exact source, diagnostic, and protocol contracts remain later work. Existing LSP/editor code is transitional. No proposed projection contract or host pilot is adopted.
 
 ## Scope
 
@@ -97,7 +97,7 @@ No projection model, pilot sequence, or integration mechanism from this inquiry 
 
 ## Sources
 
-- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md), reviewed commit `6ff362a`.
+- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md), reviewed commit `9991575`.
 - [Language Server Protocol 3.17](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/).
 - [VS Code embedded-language guidance](https://code.visualstudio.com/api/language-extensions/embedded-languages).
 - [TypeScript language-service plugin guidance](https://github.com/microsoft/TypeScript/wiki/Writing-a-Language-Service-Plugin).

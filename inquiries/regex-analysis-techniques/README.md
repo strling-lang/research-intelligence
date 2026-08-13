@@ -24,7 +24,7 @@ The answer may inform future method selection for nullability, safety, ambiguity
 
 ## Current state
 
-The modern report replaces the historical two-technique framing with a property-specific portfolio. At reviewed commit [`6ff362a`](https://github.com/strling-lang/strling/tree/6ff362ac261d38aff282173c08a8841d3c5704cf/core), the Rust core exposes canonical semantic, structural, and safety analyses with typed uncertainty and complexity limits. This is useful implementation evidence, not adoption of the report’s dispatcher, semantic envelopes, guarantee matrix, or derived-view portfolio.
+The modern report replaces the historical two-technique framing with a property-specific portfolio. At reviewed commit [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a/core), the Rust core exposes canonical semantic, structural, and safety analyses with typed uncertainty and complexity limits. This is useful implementation evidence, not adoption of the report’s dispatcher, semantic envelopes, guarantee matrix, or derived-view portfolio.
 
 ## Scope
 
@@ -94,7 +94,7 @@ No portfolio dispatcher or technique selection from this inquiry is recorded as 
 
 ## Sources
 
-- [`strling` core](https://github.com/strling-lang/strling/tree/6ff362ac261d38aff282173c08a8841d3c5704cf/core), reviewed commit `6ff362a`.
+- [`strling` core](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a/core), reviewed commit `9991575`.
 - Brzozowski, [Derivatives of Regular Expressions](https://doi.org/10.1145/321239.321249), 1964.
 - Antimirov, [Partial Derivatives of Regular Expressions and Finite Automaton Constructions](https://doi.org/10.1016/0304-0208(95)00011-G), 1996.
 - [Rust `regex-automata` documentation](https://docs.rs/regex-automata/).

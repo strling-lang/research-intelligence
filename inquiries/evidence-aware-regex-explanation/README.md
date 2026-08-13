@@ -97,7 +97,7 @@ No explanation schema or vocabulary from this inquiry is recorded as adopted.
 
 ## Sources
 
-- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md), reviewed commit `6ff362a`.
+- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md), reviewed commit `9991575`.
 - [Language Server Protocol 3.17](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/).
 - [SARIF 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html).
 - [Rust compiler diagnostics guidance](https://rustc-dev-guide.rust-lang.org/diagnostics.html).

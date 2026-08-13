@@ -94,7 +94,7 @@ No operation or result schema from this inquiry is recorded as adopted.
 
 ## Sources
 
-- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md), reviewed commit `6ff362a`.
+- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md), reviewed commit `9991575`.
 - [`regex-conformance` adapter protocol boundary](https://github.com/strling-lang/regex-conformance/blob/57672519e899f986d94b7d1256ffe0aa90f1b26d/protocol/README.md).
 - [`website` Fourth Edition content rules](https://github.com/strling-lang/website/blob/7c7042f3d4418533f5dc0283537546529633b081/README.md), reviewed commit `7c7042f`.
 

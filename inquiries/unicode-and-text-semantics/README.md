@@ -99,6 +99,6 @@ No candidate Unicode/text policy from this inquiry is recorded as adopted.
 - [UAX #15: Unicode Normalization Forms](https://www.unicode.org/reports/tr15/).
 - [UAX #29: Unicode Text Segmentation](https://www.unicode.org/reports/tr29/).
 - [UAX #44: Unicode Character Database](https://www.unicode.org/reports/tr44/).
-- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md), reviewed commit `6ff362a`.
+- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md), reviewed commit `9991575`.
 
 [← Inquiries](../README.md)

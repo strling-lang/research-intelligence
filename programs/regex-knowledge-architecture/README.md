@@ -21,13 +21,14 @@ The [Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230
 
 ## Related existing inquiries
 
+- [Regex Knowledge–Conformance architecture](../../inquiries/regex-knowledge-conformance-architecture/README.md)
+- [Regex execution and target profiles](../../inquiries/regex-execution-and-target-profiles/README.md)
+- [Unicode and text semantics](../../inquiries/unicode-and-text-semantics/README.md)
 - [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md) contains historical registry material, but does not define a canonical regex knowledge model.
-
-No dedicated inquiry has begun.
 
 ## Future research opportunities
 
-Authority-preserving Knowledge–Conformance linkage, stable identifiers, schema evolution, completeness, conflict resolution, storage tradeoffs, and public query requirements.
+Verify the proposed cross-authority identity and revision lifecycle against live schemas; evaluate storage, resolver, query, and derived-projection tradeoffs without resuming or copying the Knowledge corpus.
 
 ## Explicit non-goals
 

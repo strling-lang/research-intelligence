@@ -17,21 +17,24 @@ This program may analyze and recommend. The [`strling` product repository](https
 
 ## Current evidence boundary
 
-As reviewed 2026-08-12, active product work contains a Rust compiler kernel, canonical semantic contracts, normalization and analyses, structured diagnostics, profile-aware capability and portability work, a regex-compatible frontend, and target-family work for PCRE2, ECMAScript, and Python `re`. Exact completion changes rapidly; consult the active branch and campaign. Semantic STRling and full adapter convergence remain directions unless downstream authority records implementation.
+As reviewed at [`strling` commit `9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a), active product work contains a Rust compiler kernel and semantic, structural, safety, capability, portability, and target-family work. The ratified architecture still identifies exact source, Semantic IR, diagnostic, compiler-protocol, target-profile, and TargetArtifact contracts as later work. Semantic STRling and full adapter convergence remain directions unless downstream authority records implementation.
 
 ## Related existing inquiries
 
 - [Canonical semantic compiler architecture](../../inquiries/canonical-semantic-compiler-architecture/README.md)
 - [Semantic IR and target lowering](../../inquiries/semantic-ir-and-target-lowering/README.md)
+- [Regex execution and target profiles](../../inquiries/regex-execution-and-target-profiles/README.md)
+- [Unicode and text semantics](../../inquiries/unicode-and-text-semantics/README.md)
 - [Regex validation testing methods](../../inquiries/regex-validation-testing-methods/README.md)
 - [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
+- [Evidence-aware regex explanation](../../inquiries/evidence-aware-regex-explanation/README.md)
 - [Embedded regex tooling](../../inquiries/embedded-regex-tooling/README.md)
 - [Semantic validation and domain libraries](../../inquiries/semantic-validation-and-domain-libraries/README.md)
 
 ## Future research opportunities
 
-Diagnostic explanation quality, target-profile completeness, adapter conformance, compiler-backed tooling, and empirical evaluation of the active compiler, frontend, lowering, and validation inquiries.
+Prototype and empirically evaluate the candidate profile, text, analysis-dispatch, explanation, and host-projection contracts; measure adapter conformance and active compiler behavior without treating these inquiry recommendations as ratified architecture.
 
 ## Explicit non-goals
 

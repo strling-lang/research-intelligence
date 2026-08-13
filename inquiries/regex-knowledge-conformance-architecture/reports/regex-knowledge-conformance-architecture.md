@@ -1,11 +1,11 @@
 # Authority-Preserving Architecture for STRling Regex Knowledge and Regex Conformance
 
-Role: Research report  
-Origin: OpenAI deep-research session commissioned for STRling Research Intelligence  
-Generated: 2026-08-12  
-Imported: 2026-08-12  
-Source verification: Partially verified  
-Last reviewed: 2026-08-12  
+Role: Research report
+Origin: OpenAI deep-research session commissioned for STRling Research Intelligence
+Generated: 2026-08-12
+Imported: 2026-08-12
+Source verification: Partially verified
+Last reviewed: 2026-08-12
 Current status: Active input
 
 ## Source verification gaps

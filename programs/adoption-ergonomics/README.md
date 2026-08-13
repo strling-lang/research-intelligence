@@ -28,7 +28,7 @@ Existing reports identify plausible cognitive, workflow, and adoption issues but
 
 ## Future research opportunities
 
-Task-frequency and usability studies, maintenance and comprehension measures, migration and dependency-friction studies, and experiments that distinguish tool adoption from authoring adoption.
+Task-frequency and usability studies, maintenance and comprehension measures, migration and dependency-friction studies, and host-projection pilots that distinguish tool adoption from authoring adoption.
 
 ## Explicit non-goals
 

@@ -23,6 +23,9 @@ Conformance evidence may inform target profiles, portability reasoning, compiler
 ## Related existing inquiries
 
 - [Regex Conformance evidence methodology](../../inquiries/regex-conformance-evidence-methodology/README.md)
+- [Regex Knowledge–Conformance architecture](../../inquiries/regex-knowledge-conformance-architecture/README.md)
+- [Regex execution and target profiles](../../inquiries/regex-execution-and-target-profiles/README.md)
+- [Regex operation and result semantics](../../inquiries/regex-operation-and-result-semantics/README.md)
 - [Regex validation testing methods](../../inquiries/regex-validation-testing-methods/README.md)
 - [Regex safety and complexity](../../inquiries/regex-safety-and-complexity/README.md)
 - [Regex analysis techniques](../../inquiries/regex-analysis-techniques/README.md)
@@ -31,7 +34,7 @@ These inquiries may motivate future experiments; their reports are not conforman
 
 ## Future research opportunities
 
-Early-campaign evaluation of discrepancy taxonomies, environment identity, replication independence, completeness under applicability, correction propagation, and certification criteria.
+Before a production campaign, validate profile materiality, operation vectors, discrepancy and correction lifecycles, cross-authority linkage, replication independence, completeness under applicability, and certification criteria.
 
 ## Explicit non-goals
 

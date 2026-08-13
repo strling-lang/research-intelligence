@@ -26,7 +26,7 @@ The answer may inform future STRling target selection and artifacts, Regex Knowl
 
 ## Current state
 
-STRling’s [ratified architecture](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md) requires versioned target profiles and separates host languages from target engines, but explicitly leaves exact profile identity and schema to later contract work. Conformance defines execution profiles as behaviorally relevant component graphs and has a profile-registry boundary, but has no certified observations. The report’s concrete fields are recommendations, not implemented contracts.
+STRling’s [ratified architecture](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md) requires versioned target profiles and separates host languages from target engines, but explicitly leaves exact profile identity and schema to later contract work. Conformance defines execution profiles as behaviorally relevant component graphs and has a profile-registry boundary, but has no certified observations. The report’s concrete fields are recommendations, not implemented contracts.
 
 ## Scope
 
@@ -95,7 +95,7 @@ No target-profile schema or execution-profile model from this inquiry is recorde
 
 ## Sources
 
-- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/6ff362ac261d38aff282173c08a8841d3c5704cf/governance/architecture.md), reviewed commit `6ff362a`.
+- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md), reviewed commit `9991575`.
 - [`regex-conformance` program status](https://github.com/strling-lang/regex-conformance/blob/57672519e899f986d94b7d1256ffe0aa90f1b26d/README.md), reviewed commit `5767251`.
 - [`regex-conformance` profile registry boundary](https://github.com/strling-lang/regex-conformance/blob/57672519e899f986d94b7d1256ffe0aa90f1b26d/registries/profiles/README.md).
 
