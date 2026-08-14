@@ -1,0 +1,40 @@
+name: Evidence, citation, or conclusion correction
+description: Report a source, citation, claim-strength, uncertainty, supersession, or disposition problem
+title: "[Correction]: "
+body:
+  - type: input
+    id: artifact
+    attributes:
+      label: Affected artifact
+      description: Link the exact inquiry, report, section, source, or metadata record.
+    validations:
+      required: true
+  - type: dropdown
+    id: concern_type
+    attributes:
+      label: Concern type
+      options:
+        - Broken or incorrect citation
+        - Source does not support the claim
+        - Version, profile, date, or scope mismatch
+        - Claim strength or epistemic category
+        - Missing conflict, uncertainty, or negative knowledge
+        - Supersession or historical-status problem
+        - Downstream disposition problem
+        - Other research-method defect
+    validations:
+      required: true
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern and evidence
+      description: Explain the problem and provide the strongest applicable correcting source or reasoning.
+    validations:
+      required: true
+  - type: textarea
+    id: treatment
+    attributes:
+      label: Proposed treatment
+      description: State whether this is a bounded correction, explicit uncertainty, or a material conclusion requiring supersession.
+    validations:
+      required: true

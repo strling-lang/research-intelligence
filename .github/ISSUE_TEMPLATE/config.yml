@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/strling-lang/.github/blob/main/SECURITY.md
+    about: Report vulnerabilities privately under the organization security policy.
+  - name: STRling support and issue routing
+    url: https://github.com/strling-lang/.github/blob/main/SUPPORT.md
+    about: Route compiler, conformance, website, and general questions correctly.

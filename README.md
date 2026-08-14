@@ -4,6 +4,14 @@ STRling Research Intelligence is the research synthesis and strategic reasoning 
 
 > Research can recommend. Authority remains with the downstream repository, specification, evidence system, or product owner that accepts, rejects, or implements the recommendation.
 
+## Repository status
+
+This is an active research corpus. Inquiry maturity is epistemic, not a release
+or implementation schedule. Every inquiry identifies its horizon, current
+maturity, review triggers, and downstream disposition; exploratory material and
+historical reports do not become canonical product commitments by being stored
+here.
+
 ## Mission
 
 Research Intelligence connects standards, official documentation, implementation evidence, academic research, controlled observations, product context, and prior STRling work. It is designed for durable reasoning: not only conclusions, but also source conflicts, limits, counterexamples, abandoned approaches, and review triggers remain visible.
@@ -100,3 +108,19 @@ An inquiry identifies the owning downstream authority and makes a scoped recomme
 ## Historical redesign note
 
 The repository originally organized every topic as a representability-focused node intended to feed a Universal Pattern Engine roadmap. That material remains accessible as historical research input, but its terminology and proposed architectures no longer carry active authority. Current inquiry READMEs identify obsolete assumptions and the focused revalidation still required.
+
+## Contributing, security, and support
+
+- Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before proposing an inquiry,
+  changing a synthesis, importing a report, or recording downstream
+  disposition.
+- Follow the organization
+  [Code of Conduct](https://github.com/strling-lang/.github/blob/main/CODE_OF_CONDUCT.md).
+- Report suspected vulnerabilities privately under the organization
+  [security policy](https://github.com/strling-lang/.github/blob/main/SECURITY.md).
+- Use the organization [support and issue-routing guide](https://github.com/strling-lang/.github/blob/main/SUPPORT.md)
+  when a question belongs to the compiler, conformance system, website, or
+  another STRling authority.
+
+Repository content is licensed under the [Apache License 2.0](LICENSE).
+Copyright 2026 STRling Team.

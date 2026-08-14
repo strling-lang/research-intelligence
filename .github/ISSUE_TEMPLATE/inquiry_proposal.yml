@@ -1,0 +1,41 @@
+name: Research inquiry proposal
+description: Propose a consequential, scoped question for Research Intelligence
+title: "[Inquiry]: "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: Frame a question that evidence can bear on without assuming a preferred answer.
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision or understanding informed
+      description: Explain why the question matters and identify the downstream authority it could inform.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and non-goals
+      description: Identify relevant systems, versions, populations, claims, time boundaries, and excluded work.
+    validations:
+      required: true
+  - type: textarea
+    id: prior
+    attributes:
+      label: Prior work and candidate evidence
+      description: Link existing inquiries, decisions, standards, official documentation, source, tests, publications, or empirical evidence.
+  - type: dropdown
+    id: horizon
+    attributes:
+      label: Initial horizon
+      options:
+        - Fourth Edition
+        - Post-Fourth Edition
+        - Beyond Regex
+        - Unsure
+    validations:
+      required: true

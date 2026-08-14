@@ -1,0 +1,34 @@
+name: Repository or documentation defect
+description: Report broken navigation, metadata, templates, formatting, or research-repository behavior
+title: "[Repository]: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Affected path or page
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction or validation details
+      description: Include the exact link, command, environment, or metadata needed to verify the defect.
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Public-reporting check
+      options:
+        - label: I have not included sensitive personal data or a suspected undisclosed vulnerability.
+          required: true
