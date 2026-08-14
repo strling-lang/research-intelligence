@@ -69,6 +69,11 @@ Unsupported claims that a derivative critic, grammar constraint, or compiler pas
 
 **Disposition:** none.
 
+## Related research
+
+- [Automatic Discovery](../automatic-discovery-of-symbolic-patterns-in-data/README.md) owns bounded hypothesis search beyond model-specific AI assistance and requires candidate replay through ordinary matching semantics.
+- [Meaningfulness and False Discovery](../meaningfulness-compression-recurrence-and-false-discovery/README.md) owns the evidence required before generated or discovered candidates receive stronger scientific or semantic claims.
+
 ## Reports
 
 - [STRling Copilot — Neuro-Symbolic AI Research](reports/neuro-symbolic-ai-copilot.md) — historical input shared conceptually with the neuro-symbolic inquiry, but stored only here; requires revalidation.

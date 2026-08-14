@@ -68,6 +68,11 @@ The proposed LPeg-style VM, operator mappings, phased implementation, and gramma
 
 **Disposition:** none.
 
+## Related research
+
+- [Relational Pattern Algebra](../relational-pattern-algebra-for-sequences-and-structured-values/README.md) stops before user recursion and general parsing; this inquiry retains recursive grammar, ordered-choice, and tree-capture semantics.
+- [Computational Boundaries](../computational-models-and-complexity-limits-of-symbolic-matching-and-discovery/README.md) owns algorithm and complexity classification across recursive and relational combinations.
+
 ## Reports
 
 - [STRling Grammar Evolution Research](reports/grammar-evolution.md) — historical Raku/LPeg research input; requires revalidation.

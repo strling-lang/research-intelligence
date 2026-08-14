@@ -68,6 +68,11 @@ The old report's Python compiler, node, and per-target emitter sketches are not 
 
 **Disposition:** none.
 
+## Related research
+
+- [Relational Pattern Algebra](../relational-pattern-algebra-for-sequences-and-structured-values/README.md) owns the bounded declarative structure/relation boundary; goal-directed state restoration and resumable search remain distinct evaluation semantics.
+- [Computational Boundaries](../computational-models-and-complexity-limits-of-symbolic-matching-and-discovery/README.md) owns classification of any interaction among generators, captures, recursion, and relational constraints.
+
 ## Reports
 
 - [STRling Pattern Evolution Research](reports/pattern-evolution.md) — historical SNOBOL/Icon research input; requires revalidation.

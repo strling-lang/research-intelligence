@@ -13,7 +13,10 @@ Programs are stable areas of investigation. They group related questions and inq
 | [Regex Lab](regex-lab/README.md) | Public Audit, Evaluate, Compare, and Playground research. |
 | [Adoption & Ergonomics](adoption-ergonomics/README.md) | Maintainability, workflow, embedded tooling, adoption, and migration. |
 | [Beyond Regex](beyond-regex/README.md) | Long-range generalized pattern questions without product commitment. |
+| [Beyond Patterns](beyond-patterns/README.md) | Focused symbolic representation, relational matching, bounded discovery, evidence, and computational-boundary research. |
 
 An inquiry may belong to multiple programs. Each assignment appears in inquiry frontmatter and in the related program READMEs. Future questions stay in program READMEs until actual inquiry work begins.
+
+Beyond Regex remains the broad umbrella for grammar, recursive, approximate, AI, goal-directed, non-text, and generalized-system questions. Beyond Patterns is a focused program within that long-range space; it does not supersede Beyond Regex or create an implementation sequence.
 
 [← Research Intelligence](../README.md)

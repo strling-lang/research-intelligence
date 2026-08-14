@@ -6,6 +6,10 @@ Investigate long-range capabilities adjacent to or beyond conventional regex: go
 
 Inclusion in this program does not imply product commitment.
 
+## Relationship to Beyond Patterns
+
+[Beyond Patterns](../beyond-patterns/README.md) is the focused program for symbolic observations and projections, relational pattern algebra, matching/discovery separation, evidence-backed induction, and computational classification. Beyond Regex remains the broader umbrella for grammars, recursive systems, approximation, AI, goal-directed evaluation, non-text sequences, and generalized systems. The focused program does not imply one IR, runtime, product, or roadmap.
+
 ## Important research questions
 
 - Which problems are meaningfully related to STRling's semantic compiler strengths, and which require separate systems?
@@ -30,6 +34,7 @@ The repository preserves broad historical reports as discovery inputs. Most were
 - [AI-assisted pattern synthesis and verification](../../inquiries/ai-assisted-pattern-synthesis-and-verification/README.md)
 - [Neuro-symbolic pattern systems](../../inquiries/neuro-symbolic-pattern-systems/README.md)
 - [Universal Pattern Engine hypothesis](../../inquiries/universal-pattern-engine-hypothesis/README.md)
+- [Symbolic pattern architecture synthesis](../../inquiries/symbolic-pattern-architecture-synthesis/README.md) — the current cross-inquiry assessment; detailed focused inquiries are indexed by Beyond Patterns rather than duplicated here.
 
 ## Future research opportunities
 

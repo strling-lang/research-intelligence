@@ -54,6 +54,9 @@ This repository does not define STRling semantics or architecture, implement the
 - [Regex Lab](programs/regex-lab/README.md)
 - [Adoption & Ergonomics](programs/adoption-ergonomics/README.md)
 - [Beyond Regex](programs/beyond-regex/README.md)
+- [Beyond Patterns](programs/beyond-patterns/README.md)
+
+[Beyond Regex](programs/beyond-regex/README.md) is the broad umbrella for long-range regex-adjacent research. [Beyond Patterns](programs/beyond-patterns/README.md) is its focused symbolic-representation, relational matching, bounded-discovery, evidence, and computational-boundary program. Neither is a roadmap, and Beyond Patterns does not replace Beyond Regex.
 
 ## Research inquiries
 

@@ -68,6 +68,11 @@ The assumption that combining an LLM and compiler automatically creates a commit
 
 **Disposition:** none.
 
+## Related research
+
+- [Automatic Discovery](../automatic-discovery-of-symbolic-patterns-in-data/README.md) provides a broader bounded-search baseline against which any neuro-symbolic advantage must be tested.
+- [Symbolic Pattern Architecture Synthesis](../symbolic-pattern-architecture-synthesis/README.md) preserves specialized learned providers and verification systems rather than inferring one neuro-symbolic core.
+
 ## Reports
 
 - [Legacy inquiry synthesis](reports/legacy-inquiry-synthesis.md) — superseded historical synthesis preserved here.

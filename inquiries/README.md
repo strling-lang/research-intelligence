@@ -42,7 +42,16 @@ The structure is flat. Programs and metadata classify inquiries without duplicat
 | [Non-text sequence patterns](non-text-sequence-patterns/README.md) | Beyond Regex | Exploratory | Bits, bytes, structured sequences, biological alphabets, and symbolic numeric sequences. |
 | [Weighted and approximate patterns](weighted-and-approximate-patterns/README.md) | Beyond Regex | Exploratory | Distance, weights, scoring, probability, and calibrated confidence. |
 | [Neuro-symbolic pattern systems](neuro-symbolic-pattern-systems/README.md) | Beyond Regex | Exploratory | Whether broader neuro-symbolic models add value beyond tool orchestration. |
-| [Universal Pattern Engine hypothesis](universal-pattern-engine-hypothesis/README.md) | Beyond Regex | Exploratory | Falsifiable long-range hypothesis, not a roadmap. |
+| [Symbolic attribute models for generalized pattern recognition](symbolic-attribute-models-for-generalized-pattern-recognition/README.md) | Beyond Regex | Exploratory | Observations, typed projections and claims, grouping, ambiguity, context, and provenance. |
+| [Symbolic equivalence, confusability, and human-interpretable representation](symbolic-equivalence-confusability-and-human-interpretable-representation/README.md) | Beyond Regex | Exploratory | Identity, equivalence, confusability, transformation, span correspondence, and uncertain substitution. |
+| [Phonetic, graphemic, and linguistic pattern domains](phonetic-graphemic-and-linguistic-pattern-domains/README.md) | Beyond Regex | Exploratory | Layered linguistic projections, profiles, alignments, and specialized provider boundaries. |
+| [Relational pattern algebra for sequences and structured values](relational-pattern-algebra-for-sequences-and-structured-values/README.md) | Beyond Regex | Exploratory | Structure, relations, views, captures, weave, correspondence, and the boundary before general programming. |
+| [Weighted symbolic similarity and evidence combination](weighted-symbolic-similarity-and-evidence-combination/README.md) | Beyond Regex | Exploratory | Typed evidence vectors, normalization, aggregation, weighting, thresholds, and calibration. |
+| [Automatic discovery of symbolic patterns in data](automatic-discovery-of-symbolic-patterns-in-data/README.md) | Beyond Regex | Exploratory | Bounded hypothesis search, proposal portfolios, residual discovery, and independent verification. |
+| [Meaningfulness, compression, recurrence, and false discovery](meaningfulness-compression-recurrence-and-false-discovery/README.md) | Beyond Regex | Exploratory | Compression, significance, prediction, stability, novelty, and claim boundaries for discovered patterns. |
+| [Computational models and complexity limits of symbolic matching and discovery](computational-models-and-complexity-limits-of-symbolic-matching-and-discovery/README.md) | Beyond Regex | Exploratory | Computational classes, algorithm dispatch, tractability, budgets, and refusal boundaries. |
+| [Symbolic pattern architecture synthesis](symbolic-pattern-architecture-synthesis/README.md) | Beyond Regex | Exploratory | Cross-report convergence, analogies, domain specialization, conflicts, and a bounded shared-framework hypothesis. |
+| [Universal Pattern Engine hypothesis](universal-pattern-engine-hypothesis/README.md) | Beyond Regex | Superseded | Historical universal-engine hypothesis; superseded by the bounded architecture synthesis. |
 
 ## Expectations
 

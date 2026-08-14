@@ -68,6 +68,12 @@ The stream-agnostic parser and universal `Sequence<T>` compiler layers are not a
 
 **Disposition:** none.
 
+## Related research
+
+- [Symbolic Attribute Models](../symbolic-attribute-models-for-generalized-pattern-recognition/README.md) owns the observation, projection, grouping, and provenance vocabulary that a non-text provider could expose.
+- [Relational Pattern Algebra](../relational-pattern-algebra-for-sequences-and-structured-values/README.md) owns sequence views and relations; this inquiry retains domain-specific element, alignment, and structure semantics.
+- [Computational Boundaries](../computational-models-and-complexity-limits-of-symbolic-matching-and-discovery/README.md) owns runtime and tractability classification for any proposed cross-domain operators.
+
 ## Reports
 
 - [Stream-Agnostic Parser Deep Research](reports/stream-agnostic-parser.md) — historical discovery and architecture input; requires domain-specific revalidation.

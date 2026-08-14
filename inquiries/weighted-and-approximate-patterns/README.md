@@ -68,6 +68,11 @@ A single “stochastic pattern logic” that collapses distance, weights, score,
 
 **Disposition:** none.
 
+## Related research
+
+- [Weighted Symbolic Similarity](../weighted-symbolic-similarity-and-evidence-combination/README.md) now owns the focused vector-first evidence and aggregation-contract question; this inquiry retains the broader approximate-pattern landscape.
+- [Symbolic Equivalence](../symbolic-equivalence-confusability-and-human-interpretable-representation/README.md) owns the underlying exact, confusable, contextual, and uncertain relation types that numeric evidence must not erase.
+
 ## Reports
 
 - [Stochastic Pattern Language Research](reports/stochastic-pattern-language.md) — historical research input; terminology and architecture require revalidation.
