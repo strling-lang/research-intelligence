@@ -5,18 +5,17 @@ programs:
   - Regex Conformance Science
 horizon: Post-Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - Regex Knowledge resumes or changes its authority model
-  - Regex Conformance begins a production evidence campaign
-  - A cross-system identity or reconciliation contract is proposed downstream
+  - First real Conformance checkpoint, evidence correction or consumer reconciliation
+  - Change to semantic corpus authority or evidence lineage
 ---
 
 # Regex Knowledge–Conformance architecture
 
 ## Research question
 
-How should researched claims, normative expectations, executable probes, immutable observations, discrepancies, and corrections link across Regex Knowledge and Regex Conformance without creating a duplicate source of truth?
+How should canonical researched claims, delegated expectations, executable probes, immutable observations and corrections link across Conformance and its consumers?
 
 ## Motivation / decision informed
 
@@ -24,7 +23,7 @@ The answer may inform a future authority-preserving bridge between documented kn
 
 ## Current state
 
-The [Regex Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230e?pvs=204) remains the operational researched-knowledge authority and is on hold pending reassessment against Conformance. [`regex-conformance`](https://github.com/strling-lang/regex-conformance/blob/57672519e899f986d94b7d1256ffe0aa90f1b26d/README.md) has certified repository bootstrap and is implementing its Control Plane foundation; it records no certified observation and has authorized no production evidence campaign. No cross-system bridge described here has been adopted.
+Conformance owns the canonical researched semantic corpus and source claims. It has independent authorities for expectations and admissibility, conditional applicability, exact execution provenance, adjudicated claims, and certification. RegEx Docs consumes the reviewed semantic snapshot. The prior separate Regex Knowledge authority description is historical. The present remit of that workspace was not verified. See C1–C2 and W1 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -40,11 +39,11 @@ An AI-assisted deep-research report compared current STRling authority documents
 
 ## Evidence and source quality
 
-Current-state claims were checked directly against the governing Notion page and pinned repository revisions. The report names strong primary precedents, but its opaque session citations lacked a durable mapping and were removed. External comparisons and proposed schemas therefore remain provisional.
+Committed semantic, denominator, adjudication, certification and checkpoint indexes, and the Website source lock establish the current relationships. The August report retains proposals and partly resolved citation mappings as historical context.
 
 ## Findings
 
-- Authority is claim-type specific: Knowledge governs researched/documented propositions; immutable Conformance evidence governs exact observations.
+- The Conformance semantic corpus governs researched taxonomy and source-claim bindings. The relevant primary specification governs normative semantics. Immutable evidence governs exact observations.
 - Claims, expectations, probes, observations, comparisons, discrepancies, findings, and corrections require distinct identities when their histories or authority differ.
 - A qualified many-to-many bridge can associate exact revisions without copying ontology or evidence.
 - Disagreement and ambiguity are states to preserve, not signals to overwrite an input.
@@ -53,11 +52,11 @@ Current-state claims were checked directly against the governing Notion page and
 
 ## Limits, uncertainty, and negative knowledge
 
-No row-level audit established that every existing Knowledge record follows the candidate rules. No production campaign has tested correction propagation, discrepancy lifecycle, crosswalk evolution, or derived-view reconstruction. Exact identifier syntax, claim-family identity, historical source retention, and feature-level empirical aggregation remain unresolved.
+Synthetic adjudication covers typed claim derivation. A first real checkpoint is still needed to test producer-to-consumer digest agreement, independent cursors, correction, and replay. Corpus taxonomy and source claims preserve their own documented scope. The state of other legacy planning work remains unknown.
 
 ## Alternatives considered
 
-A merged database, Knowledge-owned empirical fields, Conformance-owned ontology, automatic capability flipping after observations, stored compatibility truth, and revision-qualified federation were compared.
+The August report compared a merged database, separate knowledge and evidence authorities, a Conformance-owned ontology, automatic capability changes and revision-qualified federation. The committed corpus now anchors the Conformance-owned ontology. Distinct claim and evidence identities support traceable projections across consumers.
 
 ## Implications for STRling
 
@@ -65,7 +64,7 @@ If adopted downstream, compiler and product consumers could cite exact documente
 
 ## Recommendations
 
-The report recommends a candidate dual-identity and qualified-link model: durable logical IDs plus immutable revisions, owner-qualified references, explicit discrepancy history, versioned crosswalk and projection policies, and derived views with lineage. Before adoption, owners should validate the smallest end-to-end lifecycle on one claim, expectation, probe, observation, discrepancy, correction, and regenerated view.
+Use current Conformance identity and lifecycle contracts. Validate the smallest real lineage chain when a certified checkpoint becomes available, including source-claim revision, applicability, observed result and consumer correction.
 
 ## Rejected or abandoned alternatives
 
@@ -73,9 +72,7 @@ Reject silent synchronization, editable copies of observations, empirical pass/f
 
 ## Downstream disposition
 
-**Disposition:** none.
-
-No downstream owner has adopted the candidate model.
+**Disposition:** none. Current Conformance identity and adjudication work is independently related to the historical bridge proposal. The checked record supplies no link adopting that research model.
 
 ## Reports
 

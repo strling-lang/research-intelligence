@@ -4,11 +4,10 @@ programs:
   - Portability & Compatibility
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - Ratification of a STRling portability contract or verdict vocabulary
-  - Material change to target-profile or portability-planning contracts
-  - Certified cross-profile observations that challenge a semantic dimension
+  - Change to the target profile, portability decision or rewrite registry contract
+  - An independently replayed counterexample or proposed stronger observable preservation relation
 ---
 
 # Regex portability semantics
@@ -23,7 +22,7 @@ The answer may inform STRling portability contracts, profile comparison, diagnos
 
 ## Current state
 
-STRling at [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a) already separates capability evaluation from portability planning and binds planning to exact profiles and evidence. No active downstream record establishes the report's proposed portability tuple or verdict vocabulary as normative STRling semantics.
+Fourth Edition uses exact profile-scoped capability evaluation and versioned portability planning. Final decisions are native, equivalent rewrite or unsupported. Indeterminate capability or proof remains unresolved evidence. The registry has exactly two governed rules, including an optional explicit action separate from mandatory portability. See S3–S4 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -53,7 +52,7 @@ The central dimensions are supported by primary standards and official runtime d
 
 ## Limits, uncertainty, and negative knowledge
 
-The minimum public contract for the word “portable,” treatment of performance/safety, normalization allowances, and version-range admission remain unsettled. The report's tuple and verdict vocabulary are candidates. Regex Knowledge retains authority over profile facts, and Regex Conformance retains authority over controlled observations.
+The historical portability tuple, performance/safety claims, normalization allowances, and version-family admission remain exploratory. Runtime result, index, replacement and capture behavior need separate scope and evidence. Conformance owns its semantic corpus and empirical observations. The compiler owns authored target capability claims.
 
 ## Alternatives considered
 
@@ -65,7 +64,7 @@ Any downstream portability claim should state what must agree, for which profile
 
 ## Recommendations
 
-The report recommends a typed portability contract with explicit dimensions, conditions, evidence, and indeterminate outcomes. It also recommends separating intent portability from same-source portability. These models are non-normative.
+Use the current planner vocabulary and its evidence distinctions. For proposals beyond the closed registry, define the observable and obtain the applicable proof first. The [bounded language-relation study](../regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md) establishes a narrower model for accepted-language decisions.
 
 ## Rejected or abandoned alternatives
 

@@ -4,11 +4,11 @@ programs:
   - Adoption & Ergonomics
 horizon: Post-Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - New STRling package, migration, or public-product availability
-  - Focused adoption, workflow, or task-frequency research
-  - Product analytics establish or refute a proposed transition
+  - Qualified Lab availability changes a measured workflow
+  - Consented Lab task study or follow-up supplies evidence on use and return
+  - Compatibility or dependency changes affect a measured adoption barrier
 ---
 
 # Developer adoption pathways
@@ -23,7 +23,7 @@ The answer may inform user-job hypotheses, adoption-friction research, interoper
 
 ## Current state
 
-Website commit [`7c7042f`](https://github.com/strling-lang/website/tree/7c7042f3d4418533f5dc0283537546529633b081) presents Fourth Edition as pre-release and has no dedicated Reference/Lab funnel or analytics-backed STRling adoption evidence. The historical report's “Stockholm Syndrome” framing remains rejected. The modern report offers a more respectful, task-centered synthesis, but its STRling-specific pathways are hypotheses rather than observed behavior.
+Fourth Edition 4.0.3 is released. Website `3187d307` lists STRling Docs and RegEx Docs as available and both Lab surfaces as coming soon. The August website snapshot describes its own period. Current availability establishes opportunities to use the tools. STRling-specific adoption, return, and switching pathways remain hypotheses. [Release](https://github.com/strling-lang/strling/releases/tag/v4.0.3), [Website surface definitions](https://github.com/strling-lang/website/blob/3187d307e1d4707d706b1a7508f0cc5c067cadac/src/data/surfaces.ts).
 
 ## Scope
 
@@ -37,9 +37,11 @@ This inquiry does not prescribe Reference or Lab architecture, a marketing funne
 
 The modern report synthesized published developer, regex-usage, language-adoption, library-selection, static-analysis, migration, and tooling research. This synthesis distinguishes published findings from inferences and STRling-specific hypotheses and refreshes current product availability.
 
+The [Lab study packet](../regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) ties inheritance, debugging, replacement, profile selection, authoring, and continued use to scorable task outcomes. Its technical pilot tested the fixtures and instrument only.
+
 ## Evidence and source quality
 
-The report is partially verified: selected surveys and regex studies were checked, but many research-session citations lack durable claim-level mapping. Published developer evidence supports bounded observations about studied samples and ecosystems; it does not establish STRling-specific conversion behavior. No STRling user study or behavioral dataset supports the proposed pathways.
+The report is partially verified. The workflow survey and interviews can inform candidate tasks, within the published sample and method. Many research-session citations still lack durable claim-level mappings. No STRling participant or behavioral data support the proposed pathways. [Michael IV et al., ASE 2019](https://arxiv.org/abs/2303.02555v1).
 
 ## Findings
 
@@ -65,7 +67,7 @@ Downstream teams can frame adoption work as falsifiable job and friction hypothe
 
 ## Recommendations
 
-The report recommends native-regex utility first, uncertainty-removal jobs, persistent behavioral evidence, authoring only when maintenance value is demonstrated, transparent provenance, and measurable hypotheses. These are non-normative research recommendations, not a prescribed product funnel.
+Evaluate immediate task success and exact session continuation in both Labs. A consented follow-up can test repeated use separately. The no-conversion raw-regex outcome remains a valid success.
 
 ## Rejected or abandoned alternatives
 
@@ -85,7 +87,8 @@ The “Stockholm Syndrome” thesis, universal “write-only” framing, replace
 
 ## Sources
 
-- [STRling Website at `7c7042f`](https://github.com/strling-lang/website/tree/7c7042f3d4418533f5dc0283537546529633b081)
+- [STRling Website at `7c7042f`, August provenance](https://github.com/strling-lang/website/tree/7c7042f3d4418533f5dc0283537546529633b081)
+- [Lab task study and technical dry run](../regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md)
 - [Stack Overflow 2025 Developer Survey](https://survey.stackoverflow.co/2025/)
 - [JetBrains Developer Ecosystem 2025](https://www.jetbrains.com/lp/devecosystem-2025/)
 - [Regex usage in practice, IEEE Software](https://doi.org/10.1109/MS.2018.2801027)

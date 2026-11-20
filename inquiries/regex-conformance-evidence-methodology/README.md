@@ -4,11 +4,10 @@ programs:
   - Regex Conformance Science
 horizon: Post-Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - First production observation or certified evidence set
-  - Ratification of evidence, replication, correction, or certification contracts
-  - A correction or replication failure exposes a methodological gap
+  - First production observation, real coverage checkpoint or independent evidence replay
+  - A correction, adjudication dispute or replication failure exposes an operational gap
 ---
 
 # Regex Conformance evidence methodology
@@ -23,7 +22,7 @@ The answer may inform future Conformance evidence contracts, replication policy,
 
 ## Current state
 
-At Regex Conformance commit [`f8c603a`](https://github.com/strling-lang/regex-conformance/tree/f8c603a1a4f5f827247f8a5bed61c85f483857f8), repository bootstrap is certified and the portable Control Plane foundation is being implemented. The repository states that no observation is yet a certified conformance result and no production evidence campaign is authorized by repository existence. The report evaluates the design and proposes refinements; it does not create evidence or alter Conformance authority.
+Conformance has accepted the Control Plane foundation, exact vertical-slice environments and later scientific machinery. Current authorities bind the semantic denominator, conditional applicability, oracle independence, evidence admissibility and synthetic adjudication. Full-data evaluation is FAIL, no certification is issued and downstream coverage checkpoints are empty. See C2 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -39,7 +38,7 @@ The report compared the current Conformance architecture with reproducibility, p
 
 ## Evidence and source quality
 
-The current-state boundary is verified at an exact commit, and selected primary methodology standards were checked. The report's broader empirical literature and specific proposed controls remain partially verified. Most importantly, the proposed design has not been validated under production evidence load.
+Use the committed certification index and bound evaluator for the exact current result, the adjudication authority for synthetic contract acceptance, and the checkpoint index for public consumption. The report's broader research controls remain partially verified.
 
 ## Findings
 
@@ -66,7 +65,7 @@ If adopted by Regex Conformance, the recommendations could make evidence reusabl
 
 ## Recommendations
 
-The report recommends an evidence envelope, immutable attempt disposition, a candidate E0-E5 reproducibility ladder, declared replication-independence dimensions, predeclared rerun policy, correction impact tracking, evidence-set snapshots, independent verification, archival identity, and authenticated certification. All are non-normative candidate models.
+Study operational discrepancies against the accepted owner contracts when a production evidence slice or independent replay exposes a concrete gap. Preserve lineage, independence, correction history and exact limits as decision criteria.
 
 ## Rejected or abandoned alternatives
 

@@ -13,11 +13,11 @@ Research the information architecture of a definitive public regex reference der
 
 ## Relationship to STRling
 
-Regex Reference is a long-term public product direction. Research Intelligence studies user needs and information architecture; the website owns implementation, while Regex Knowledge and Regex Conformance retain their source authority.
+Website owns the available RegEx Docs projection. Conformance owns the canonical semantic corpus, source claims and empirical pipeline.
 
 ## Current evidence boundary
 
-The current website is the public documentation surface and labels Fourth Edition as pre-release. This repository has not established that a comprehensive Regex Reference exists or selected its architecture.
+The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) verifies the RegEx Docs v4 corpus lock. RegEx Compatibility Check remains gated with no certified checkpoint. Available reference tasks can be evaluated independently of future empirical compatibility.
 
 ## Related existing inquiries
 
@@ -30,10 +30,10 @@ The current website is the public documentation surface and labels Fourth Editio
 
 ## Future research opportunities
 
-User validation of task-oriented taxonomy and search, operation/result presentation, accessible evidence-aware explanation layers, generated-projection freshness, and correction workflows.
+Measure real wayfinding and evidence interpretation. Evaluate the first production checkpoint for scope, accessibility, provenance and correction handling.
 
 ## Explicit non-goals
 
-This program does not build the website, copy Knowledge databases, publish conformance observations, or claim the reference is available.
+Website publication, canonical corpus changes and certification remain with their respective owners.
 
 [← Programs](../README.md)

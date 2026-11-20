@@ -17,7 +17,7 @@ The Fourth Edition compiler owns its normative portability contracts and profile
 
 ## Current evidence boundary
 
-The active compiler distinguishes exact target profiles, factual capability evaluation, portability planning, and evidence-bound rewrites. Regex Knowledge owns researched profile facts; Regex Conformance owns controlled observations. This program synthesizes implications without copying either dataset.
+The 4.0.3 compiler distinguishes exact target profiles, capability evaluation, closed proof-governed rewrites and unresolved evidence. Conformance owns the researched taxonomy, source claims and empirical evidence; Website owns interactive presentation. The [bounded language-relation study](../../inquiries/regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md) compares two bounded language methods. Cross-profile captures, operations and deployment support require separate evidence.
 
 ## Related existing inquiries
 

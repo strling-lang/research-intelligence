@@ -14,9 +14,7 @@ Beyond Patterns focuses on symbolic representations, relational pattern algebra,
 
 ## Research boundary
 
-A future architecture must be supported by convergence across focused inquiries, not repeated terminology or one synthesis proposal. The current evidence may justify formalization and falsifiable prototypes; it does not select a product architecture, one IR, one execution engine, or one extension mechanism.
-
-Fourth Edition work remains independent. Nothing in this program creates Fourth Edition tasks, changes the current STRling semantic compiler, or describes a later STRling release.
+The shared typed observation, provenance and witness hypothesis remains provisional. The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) found no active cross-domain job with a testable benefit over specialist interoperability. Keep this line of work paused. Reopen for a named task, explicit observables, a specialist baseline and independently replayable witnesses. Discovery requires a prior validated candidate contract and checker. Fourth Edition remains independent.
 
 ## Current inquiries
 

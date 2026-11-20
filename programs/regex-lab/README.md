@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Research a public interactive experience that may combine **Audit**, **Evaluate**, **Compare**, and **Playground** while preserving clear boundaries among static reasoning, controlled execution, compilation, and evidence.
+Study RegEx Lab and STRling Lab. Investigate shared execution, session and evidence handling while preserving raw profile behavior and semantic compile and target provenance.
 
 ## Important research questions
 
@@ -13,11 +13,11 @@ Research a public interactive experience that may combine **Audit**, **Evaluate*
 
 ## Relationship to STRling
 
-Regex Lab is a product research direction. The website owns public implementation; `strling` owns compiler behavior; Regex Knowledge and Regex Conformance own their source facts and observations.
+Website owns public Labs and provider integration. STRling owns semantic authoring, compilation and exact artifacts. Conformance owns researched semantics and certified evidence.
 
 ## Current evidence boundary
 
-Audit, Evaluate, Compare, Playground, and their umbrella are research/product concepts, not claims of current public availability. Existing tooling reports cover embedded authoring assistance rather than a complete Lab product.
+The committed website has a gated RegEx Lab workspace and a pending STRling Lab page. The [shared Lab contract trial](../../inquiries/regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md) exercises a shared envelope with distinct operation results. The [Lab task and explanation study kit](../../inquiries/regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) measures the procedure with a technical dry run and reserves user conclusions for real participants.
 
 ## Related existing inquiries
 
@@ -30,7 +30,7 @@ Audit, Evaluate, Compare, Playground, and their umbrella are research/product co
 
 ## Future research opportunities
 
-User validation of capability boundaries, operation/result vocabulary, explanation and witness presentation, execution isolation, privacy, and handoff between embedded or imported regex and semantic authoring.
+Evaluate an owner-approved interactive path with exact provider and termination evidence. Test workflow continuity across both Labs with consented users.
 
 ## Explicit non-goals
 

@@ -5,11 +5,10 @@ programs:
   - Regex Conformance Science
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - Adoption or evaluation of a generated-testing strategy
-  - Material change to Semantic IR, lowering, or oracle boundaries
-  - A replicated study changes the expected value of a testing technique
+  - A new test target or evidence gap requires a discriminating oracle
+  - A counterexample reveals circular expected outcomes, projection loss or an incorrect shrink
 ---
 
 # Regex validation testing methods
@@ -24,7 +23,7 @@ The answer may inform compiler validation strategy, generator design, oracle sel
 
 ## Current state
 
-STRling commit [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a) contains stage-specific and property tests across the canonical Rust path, but this inquiry does not establish a comprehensive generated-testing system. Regex Conformance at [`f8c603a`](https://github.com/strling-lang/regex-conformance/tree/f8c603a1a4f5f827247f8a5bed61c85f483857f8) has no certified observations; generated cases are not automatically admitted as evidence.
+The 4.0.3 tree includes compiler stages, property suites, independently authored scoped contract fixtures and exact runtime certification matrices. Conformance now has separate applicability, oracle independence, evidence admission and adjudication authorities. Its full-data certification remains failed and the checkpoint index is empty. See S2–S6 and C2 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -67,7 +66,7 @@ Downstream test owners can select techniques per compiler stage and preserve fai
 
 ## Recommendations
 
-The report recommends small semantically rich generators, co-generated discriminating subjects, independent stage properties, preconditioned metamorphic relations, applicability-aware differential testing, automatic reduction, and deliberate promotion of stable cases. These remain research recommendations.
+Use distinct verdict sources for specification-owned, implementation-derived, and empirical cases. The [bounded language-relation study](../regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md) exercises two algorithms and an independent finite witness oracle. Treat agreement as bounded validation and preserve the possibility of shared grammar or projection errors.
 
 ## Rejected or abandoned alternatives
 

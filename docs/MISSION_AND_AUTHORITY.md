@@ -22,15 +22,15 @@ This repository owns its research questions, methods, syntheses, comparisons, un
 
 [`strling-lang/strling`](https://github.com/strling-lang/strling) is the product repository. Its authority hierarchy, specifications, ratified architecture, active campaign, implementation, tests, and compatibility evidence govern STRling behavior and current implementation status. Research Intelligence may analyze or recommend changes; it does not define compiler semantics, target support, APIs, or release readiness.
 
-The active Fourth Edition direction has multiple authoring frontends converging on canonical semantics through a Rust semantic compiler path. The product repository distinguishes the normative specification from its Rust reference implementation. Exact implemented-versus-planned status must be taken from that repository and its current campaign, not frozen into a research conclusion.
+Fourth Edition 4.0.3 ships a canonical Rust compiler path with scoped, versioned contracts for its authoring frontends and serialized data. The [decision evidence register](DECISION_EVIDENCE_2026-11-20.md) distinguishes the published product from the unratified broad semantic draft and pins the contracts used by current research.
 
-### Regex Knowledge
+### Researched regex semantics and legacy knowledge work
 
-The [STRling Regex Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230e?pvs=204) owns the operational researched-knowledge model for the regex ecosystem: canonical concepts and ontology, engines and dialects, versioned profiles, capabilities, APIs, Unicode, replacement behavior, normative primary-source evidence, relations, and explicit gaps. Research Intelligence may study the architecture and implications of that knowledge. It must not create a competing knowledge database or copy its records as an alternative authority.
+Regex Conformance owns the [canonical researched taxonomy and source-claim bindings](https://github.com/strling-lang/regex-conformance/blob/3285cc9fa8310df0af00fa50724d65531e0695d9/README.md#authority-boundaries). External standards and official specifications govern their own normative claims. The [legacy STRling Regex Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230e?pvs=204) remains historical context for research proposals. Its current workspace remit was not verified. The separate Conformance program hub coordinates program work under its own governance.
 
 ### Regex Conformance
 
-[`strling-lang/regex-conformance`](https://github.com/strling-lang/regex-conformance) is the empirical foundation for exact controlled regex-system behavior. It separates profiles, probes, applicability, logical executions, physical attempts, observations, infrastructure failure, provenance, derived findings, reproducibility, and certification. Research Intelligence may study experimental method and implications. It must not publish a competing conformance result store or call literature review an execution observation.
+[`strling-lang/regex-conformance`](https://github.com/strling-lang/regex-conformance) governs the scientific pipeline for exact controlled regex-system behavior. It separates profiles, applicability, executions and attempts, observations, infrastructure failure, provenance, adjudication, certification, and immutable checkpoint publication. Research Intelligence studies methods and implications. The [current-state ledger](CURRENT_STATE_2026-11-20.md) distinguishes acceptance of the machinery from full-data evidence coverage.
 
 ### Website and product surfaces
 
@@ -46,4 +46,4 @@ Research programs are areas of investigation, not roadmap stages. Inquiries may 
 
 ## Authority test
 
-Before making a claim, ask what kind of claim it is and which system controls it. Use the product repository for current STRling status, Regex Knowledge for canonical researched knowledge, Regex Conformance for certified observations, original publications for their scientific results, and public product repositories for what is actually shipped. Use Research Intelligence for synthesis, inference, hypotheses, and recommendations across those sources.
+Before making a claim, ask what kind of claim it is and which system controls it. Use the compiler repository for STRling semantics and product status, the Conformance semantic corpus for researched regex knowledge, exact certified observations and adjudicated findings for empirical claims, original publications for their scoped scientific results, and the website repository for public surface contracts. Research Intelligence synthesizes and tests hypotheses across those sources.

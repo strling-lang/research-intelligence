@@ -7,11 +7,10 @@ programs:
   - Regex Knowledge Architecture
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - STRling ratifies an exact target-profile contract
-  - Regex Conformance publishes profile-registry schemas or certified observations
-  - Evidence reveals a new behaviorally material profile dimension
+  - New exact compiler target, provider runtime or Conformance checkpoint
+  - Evidence that an omitted profile dimension changes a required observable
 ---
 
 # Regex execution and target profiles
@@ -22,11 +21,11 @@ How should exact runtime execution profiles and compiler-facing target profiles 
 
 ## Motivation / decision informed
 
-The answer may inform future STRling target selection and artifacts, Regex Knowledge profile research, and Conformance execution identity without treating an engine name as a semantic profile.
+The answer informs compiler target selection, Conformance execution identity, and Website provider qualification. Each decision needs a stronger identity than the engine display name.
 
 ## Current state
 
-STRling’s [ratified architecture](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md) requires versioned target profiles and separates host languages from target engines, but explicitly leaves exact profile identity and schema to later contract work. Conformance defines execution profiles as behaviorally relevant component graphs and has a profile-registry boundary, but has no certified observations. The report’s concrete fields are recommendations, not implemented contracts.
+STRling selects an authored target by profile ID, profile revision and digest. Conformance identifies the empirical runtime through behaviorally material components, with separate versioned profiles and evidence. The website execution request binds a runtime and operation to a provider behind its own eligibility gate. These are independently established contracts. No certified coverage checkpoint is available. See S3, C2 and W2 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -64,7 +63,7 @@ Engine-name profiles, host-version profiles, fully enumerated environment identi
 
 ## Implications for STRling
 
-A future compiler contract may need separate resolved execution identity, target contract identity, operation contract, Unicode/text policy, and evidence fingerprint. This is compatible with ratified architecture but requires downstream specification and implementation.
+Map an interactive provider, compiler target and empirical Conformance profile only through applicable identity and version evidence. Preserve unknown dimensions in replay and user-facing results.
 
 ## Recommendations
 

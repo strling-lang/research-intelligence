@@ -6,11 +6,10 @@ programs:
   - Regex Lab
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - STRling ratifies canonical compiler, source, diagnostic, or protocol contracts
-  - A host integration prototype validates or falsifies the projection model
-  - Material change to host-language embedded-language APIs
+  - A named IDE or CI owner decision about source projection or edit inversion
+  - Host API or runtime changes invalidate a concrete mapping
 ---
 
 # Embedded regex tooling
@@ -25,7 +24,7 @@ The answer may inform future LSP/editor integrations, host plugins, diagnostics,
 
 ## Current state
 
-The modern report supersedes the inquiry’s earlier universal-looking virtual-document framing. STRling’s [ratified architecture](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md) requires tooling to consume one canonical compiler, but says binding-to-core convergence and exact source, diagnostic, and protocol contracts remain later work. Existing LSP/editor code is transitional. No proposed projection contract or host pilot is adopted.
+Fourth Edition 4.0.3 has versioned source, diagnostic and interop contracts and records the LSP rebase for diagnostics, hover, completion and code actions. This changes the August transitional-only premise. The cross-host projection and reverse-edit proposal remains untested and has no recorded acceptance. See S2–S3 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md) and the [code actions and islands record](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/docs/migration/lsp-code-actions-islands-rebase.md).
 
 ## Scope
 
@@ -68,7 +67,7 @@ A future compiler may accept canonical source or semantic-node inputs with prove
 
 ## Recommendations
 
-The report recommends a candidate projection/provenance core behind replaceable host and editor adapters. Before implementation commitment, build headless mapping fixtures and independent TypeScript, C#, and adversarial Python pilots; test escapes, Unicode positions, holes, malformed syntax, concatenation, stale edits, and cancellation. Evaluate virtual documents only behind the projection abstraction.
+Pause cross-host expansion until a concrete IDE or CI projection decision emerges. Then compare two contrasting host models with escaped and raw literals, holes, Unicode coordinate conversion, stale snapshots, and independent re-extraction of any proposed reverse edit.
 
 ## Rejected or abandoned alternatives
 

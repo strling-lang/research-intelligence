@@ -6,11 +6,10 @@ programs:
   - Regex Knowledge Architecture
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - STRling ratifies Unicode or text-model semantics
-  - A supported target changes Unicode provider, version, or index behavior
-  - Conformance produces relevant cross-profile observations
+  - New case, predicate or normalization requirement with a pinned Unicode data version
+  - A supported target or provider changes encoding, malformed-input policy or index behavior
 ---
 
 # Unicode and text semantics
@@ -25,7 +24,7 @@ The answer may inform future normative text semantics and the obligations that p
 
 ## Current state
 
-STRling’s architecture requires semantic meaning to precede target lowering but has not ratified the report’s canonical Unicode contract. Current implementation and documentation contain Unicode-sensitive behavior, yet exact Semantic IR and profile contracts remain later work. Regex Knowledge owns researched Unicode/profile facts; Conformance owns future controlled observations.
+The released Semantic IR, structural analysis and exact profiles establish scoped text and index representations. Text and bytes remain distinct in the Python re profiles. Conformance owns the canonical researched text taxonomy. Broader STRling text semantics remain draft. See S2–S3, S6 and C1 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -41,7 +40,7 @@ The report synthesized Unicode standards and representative runtime behavior int
 
 ## Evidence and source quality
 
-Unicode standards are primary for terminology, data, and algorithms. The report’s session markers were not durable, and its engine-specific comparisons and lowering claims remain partially verified. Proposed STRling defaults are recommendations even when based on standards.
+Unicode 17.0 §3.13.3 and UTS #18 revision 25 establish distinctions among simple and full folding, Unicode regex requirements and normalization. These standards do not identify a runtime's actual Unicode data. The [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md) records their versions and the pinned ECMAScript and UTF-8 index boundaries.
 
 ## Findings
 
@@ -55,7 +54,7 @@ Unicode standards are primary for terminology, data, and algorithms. The report�
 
 ## Limits, uncertainty, and negative knowledge
 
-The research does not ratify scalar values as STRling’s default alphabet, a particular `\w`/`\b` formula, newline set, folding mode, normalization policy, Unicode pinning policy, or eager public span API. Exact target lowering and helper requirements need proofs and empirical evidence.
+The [bounded language-relation study](../regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md) intentionally compares explicit symbols and does not discharge Unicode predicate, normalization or case obligations. Cross-provider span projection must distinguish native unit, valid boundaries and the exact source snapshot. General full folding, grapheme semantics, and overlap need a specific profile and evidence.
 
 ## Alternatives considered
 

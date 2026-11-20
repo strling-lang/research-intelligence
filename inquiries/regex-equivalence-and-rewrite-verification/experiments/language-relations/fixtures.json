@@ -1,0 +1,199 @@
+{
+  "cases": [
+    {
+      "id": "branch-order",
+      "relation": "equivalence",
+      "left": ["alt", ["literal", "a"], ["seq", ["literal", "a"], ["literal", "b"]]],
+      "right": ["alt", ["seq", ["literal", "a"], ["literal", "b"]], ["literal", "a"]],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "capture-value-language-shadow",
+      "relation": "equivalence",
+      "left": ["seq", ["literal", "a"], ["literal", "b"]],
+      "right": ["seq", ["literal", "a"], ["literal", "b"]],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "capture-participation-language-shadow",
+      "relation": "equivalence",
+      "left": ["alt", ["literal", "a"], ["literal", "a"]],
+      "right": ["literal", "a"],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "factor-prefix",
+      "relation": "equivalence",
+      "left": ["alt", ["literal", "a"], ["seq", ["literal", "a"], ["literal", "b"]]],
+      "right": ["seq", ["literal", "a"], ["alt", ["epsilon"], ["literal", "b"]]],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "predicate-union",
+      "relation": "equivalence",
+      "left": ["class", "b", "a"],
+      "right": ["alt", ["literal", "a"], ["literal", "b"]],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "nullable-loop",
+      "relation": "equivalence",
+      "left": ["star", ["alt", ["epsilon"], ["literal", "a"]]],
+      "right": ["star", ["literal", "a"]],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "empty-language-versus-empty-word",
+      "relation": "equivalence",
+      "left": ["zero"],
+      "right": ["epsilon"],
+      "expected": ["refuted", ""]
+    },
+    {
+      "id": "ε-only-loop",
+      "relation": "equivalence",
+      "left": ["star", ["epsilon"]],
+      "right": ["star", ["zero"]],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "strict-subset-forward",
+      "relation": "left_subset",
+      "left": ["literal", "a"],
+      "right": ["class", "a", "b"],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "strict-subset-reverse",
+      "relation": "left_subset",
+      "left": ["class", "a", "b"],
+      "right": ["literal", "a"],
+      "expected": ["refuted", "b"]
+    },
+    {
+      "id": "literal-disjointness",
+      "relation": "disjoint",
+      "left": ["literal", "a"],
+      "right": ["literal", "b"],
+      "expected": ["proven", null]
+    },
+    {
+      "id": "finite-predicate-overlap",
+      "relation": "disjoint",
+      "left": ["class", "a", "b"],
+      "right": ["literal", "b"],
+      "expected": ["refuted", "b"]
+    },
+    {
+      "id": "nullable-overlap",
+      "relation": "disjoint",
+      "left": ["star", ["literal", "a"]],
+      "right": ["star", ["literal", "b"]],
+      "expected": ["refuted", ""]
+    },
+    {
+      "id": "shortlex-tie",
+      "relation": "equivalence",
+      "left": ["literal", "b"],
+      "right": ["literal", "a"],
+      "expected": ["refuted", "a"]
+    },
+    {
+      "id": "witness-beyond-finite-oracle-horizon",
+      "relation": "equivalence",
+      "left": ["seq", ["literal", "a"], ["literal", "a"], ["literal", "a"], ["literal", "a"], ["literal", "a"], ["literal", "a"]],
+      "right": ["zero"],
+      "expected": ["refuted", "aaaaaa"]
+    },
+    {
+      "id": "budget-exhaustion",
+      "relation": "equivalence",
+      "left": ["literal", "a"],
+      "right": ["literal", "a"],
+      "pair_budget": 1,
+      "expected": ["unknown_budget", null]
+    },
+    {
+      "id": "subset-growth-budget",
+      "relation": "equivalence",
+      "left": ["seq", ["star", ["class", "a", "b"]], ["literal", "a"],
+        ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"],
+        ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"]],
+      "right": ["seq", ["star", ["alt", ["literal", "a"], ["literal", "b"]]], ["literal", "a"],
+        ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"],
+        ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"], ["class", "a", "b"]],
+      "expected": ["unknown_budget", null]
+    },
+    {
+      "id": "reject-outside-alphabet-literal",
+      "relation": "equivalence",
+      "left": ["literal", "c"],
+      "right": ["zero"],
+      "expected": ["invalid", null]
+    },
+    {
+      "id": "reject-missing-star-body",
+      "relation": "equivalence",
+      "left": ["star"],
+      "right": ["epsilon"],
+      "expected": ["invalid", null]
+    },
+    {
+      "id": "unicode-property-unknown",
+      "relation": "disjoint",
+      "left": ["unicode_property", "Letter"],
+      "right": ["literal", "a"],
+      "expected": ["outside_model", null]
+    },
+    {
+      "id": "folding-unknown",
+      "relation": "equivalence",
+      "left": ["case_fold", ["literal", "a"]],
+      "right": ["literal", "a"],
+      "expected": ["outside_model", null]
+    },
+    {
+      "id": "complement-unknown",
+      "relation": "equivalence",
+      "left": ["complement", ["literal", "a"]],
+      "right": ["literal", "b"],
+      "expected": ["outside_model", null]
+    },
+    {
+      "id": "observable-capture-unknown",
+      "relation": "equivalence",
+      "left": ["capture", ["literal", "a"]],
+      "right": ["literal", "a"],
+      "expected": ["outside_model", null]
+    }
+  ],
+  "operational_controls": [
+    {
+      "id": "branch-order",
+      "left": "a|ab",
+      "right": "ab|a",
+      "subject": "ab",
+      "replacement": "X",
+      "expected_left": {"search": {"span": [0, 1], "groups": []}, "full_match": true, "iteration": [[0, 1]], "replacement": "Xb"},
+      "expected_right": {"search": {"span": [0, 2], "groups": []}, "full_match": true, "iteration": [[0, 2]], "replacement": "X"}
+    },
+    {
+      "id": "capture-value-language-shadow",
+      "left": "(a)b",
+      "right": "a(b)",
+      "subject": "ab",
+      "replacement": "<\\1>",
+      "expected_left": {"search": {"span": [0, 2], "groups": ["a"]}, "full_match": true, "iteration": [[0, 2]], "replacement": "<a>"},
+      "expected_right": {"search": {"span": [0, 2], "groups": ["b"]}, "full_match": true, "iteration": [[0, 2]], "replacement": "<b>"}
+    },
+    {
+      "id": "capture-participation-language-shadow",
+      "left": "(?:(a)|a)",
+      "right": "(?:a|(a))",
+      "subject": "a",
+      "replacement": "<\\1>",
+      "expected_left": {"search": {"span": [0, 1], "groups": ["a"]}, "full_match": true, "iteration": [[0, 1]], "replacement": "<a>"},
+      "expected_right": {"search": {"span": [0, 1], "groups": [null]}, "full_match": true, "iteration": [[0, 1]], "replacement": "<>"}
+    }
+  ]
+}

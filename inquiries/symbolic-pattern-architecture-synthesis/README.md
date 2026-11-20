@@ -4,12 +4,11 @@ programs:
   - Beyond Patterns
 horizon: Beyond Regex
 maturity: Exploratory
-last-reviewed: 2026-08-14
+last-reviewed: 2026-11-20
+supersedes: ../universal-pattern-engine-hypothesis/README.md
 review-triggers:
-  - Claim-level source audits materially strengthen or weaken a focused inquiry
-  - Formalization or prototype tests the bounded shared-framework hypothesis across domains
-  - Independent matcher replay or computational classification fails on a representative task
-  - A downstream authority explicitly requests review of a bounded symbolic architecture
+  - A concrete cross-domain user job and demonstrable benefit over specialist interoperability
+  - Independent matcher replay or operator-composition evidence changes the bounded hypothesis
 ---
 
 # Symbolic pattern architecture synthesis
@@ -23,6 +22,8 @@ Where do the eight focused investigations genuinely support shared concepts for 
 Only a cross-report synthesis should ask whether independently developed findings converge on a shared future architecture. The answer can guide formal research and prototype criteria without creating a STRling roadmap.
 
 ## Current state
+
+This bounded synthesis succeeds the [Universal Pattern Engine hypothesis](../universal-pattern-engine-hypothesis/README.md). The earlier inquiry preserves its rejected architectural claims and their provenance.
 
 All eight reports are now repository-integrated as provenance-bearing inputs with focused active inquiry syntheses. They are substantial AI-assisted investigations with partially verified source sets; their opaque research-session citation markers prevent a complete claim-level audit.
 
@@ -131,15 +132,11 @@ The evidence rejects the first, leaves the second conditional, provides material
 
 ## Implications for STRling
 
-The findings may justify a downstream review only if the Program Owner wants to evaluate a narrower bounded framework. They do not justify implementation tasks, changes to the current regex IR, a generalized VM, generic confidence, embedded linguistic machinery, or a discovery engine. Fourth Edition remains independent.
+The current product decisions are grounded in released regex/compiler contracts. The narrower shared-framework hypothesis needs a concrete user job spanning two domains and a meaningful specialist interoperability comparator. The November review found neither in the checked product sources.
 
 ## Recommendations
 
-1. Formalize a minimal cross-inquiry contract for observations, projections, relations, spans, witnesses, evidence types, and computational signatures.
-2. Define falsification criteria and compare the contract with interoperable specialized DSLs on at least three structurally different tasks.
-3. Require discovered candidates to replay through an independently specified matcher and retain search and evaluation provenance.
-4. Audit material primary-source claims before raising any inquiry to Evidence-backed.
-5. Ask downstream authority for review only after formalization and prototype evidence, not from this synthesis alone.
+Do not expand this program on the current evidence. Reopen for an actual cross-domain job and owner decision. Freeze a small typed fragment and its observables, compare against thin specialist adapters, and independently replay valid and corrupted witnesses. If specialist interoperability meets the task, close the shared-framework trial. Evaluate discovery only after the candidate language and checker exist.
 
 ## Rejected or abandoned alternatives
 
