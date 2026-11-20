@@ -23,6 +23,8 @@ The answer may inform user-job hypotheses, adoption-friction research, interoper
 
 ## Current state
 
+The [Lab study moderator packet](../regex-cognitive-ergonomics/reports/lab-study-moderator-packet.md) prepares paired tasks using the qualified isolated Lab build and synthetic examples. Estimates of repeated use or switching still require human observations.
+
 Fourth Edition 4.0.3 is released. Website `3187d307` lists STRling Docs and RegEx Docs as available and both Lab surfaces as coming soon. The August website snapshot describes its own period. Current availability establishes opportunities to use the tools. STRling-specific adoption, return, and switching pathways remain hypotheses. [Release](https://github.com/strling-lang/strling/releases/tag/v4.0.3), [Website surface definitions](https://github.com/strling-lang/website/blob/3187d307e1d4707d706b1a7508f0cc5c067cadac/src/data/surfaces.ts).
 
 ## Scope

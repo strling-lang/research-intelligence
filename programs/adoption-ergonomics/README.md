@@ -17,6 +17,8 @@ Findings may inform Simply APIs, Semantic STRling, adapters, CLI/LSP/editor work
 
 ## Current evidence boundary
 
+The [study activation and moderator records](../../inquiries/regex-cognitive-ergonomics/reports/lab-study-activation-and-scoring.md) provide fixed tasks, real runtime rehearsal, paired scoring, and the operational consent and data plan. Consented sessions and comparative user outcomes remain open.
+
 The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) establishes released 4.0.3 options, available documentation, and pending Labs. The [Lab task and explanation study kit](../../inquiries/regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) provides a technical dry run and credible baseline tasks. Current evidence supports the evaluation procedure. Human success, repeated use, and adoption effects remain open.
 
 ## Related existing inquiries

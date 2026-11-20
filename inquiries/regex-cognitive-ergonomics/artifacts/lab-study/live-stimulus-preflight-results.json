@@ -1,0 +1,138 @@
+{
+  "kind": "technical_stimulus_preflight",
+  "participants": 0,
+  "executionHost": {
+    "node": "v24.4.1",
+    "v8": "13.6.233.10-node.17"
+  },
+  "compilerWasmSha256": "6a24a334d5d7e78b17c09e6d9a62d33299d65ac79e52212c4f8db130250656d7",
+  "pyodideWasmSha256": "e14d49ceca9b4a0e274ea918f3a898de2d3880b6e5573a6cfe1a2267ecc70329",
+  "adapterFilesLfSha256": {
+    "src/lib/regex-lab/compiler.ts": "79d28661a0a3bec8ffb8c5acb91cdaeba8a3af2680d75d19488c8c80f637b7a2",
+    "src/lib/regex-lab/javascript-engine.ts": "10fc095659c379b5d56f3726856d6b42acfe3022122ae544a14a5f72c3be93a6",
+    "src/lib/regex-lab/interactive.ts": "20e344c0f2c301cb04187dca90cd0be3689996482705adef88f61154dfd20777"
+  },
+  "authoring": [
+    {
+      "form": "A",
+      "outcomes": [
+        {
+          "matches": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "capture": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "matches": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "capture": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "matches": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "capture": [
+            "AX",
+            "AY",
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "form": "B",
+      "outcomes": [
+        {
+          "matches": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "capture": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "matches": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "capture": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "matches": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "capture": [
+            "BY",
+            "BZ",
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "form": "A",
+      "pythonStringSpan": [
+        1,
+        2
+      ],
+      "pythonAsciiSpan": null,
+      "ecmascript": "no-match"
+    },
+    {
+      "form": "B",
+      "pythonStringSpan": [
+        1,
+        2
+      ],
+      "pythonAsciiSpan": null,
+      "ecmascript": "no-match"
+    }
+  ],
+  "python": {
+    "version": "3.14.2",
+    "span": [
+      0,
+      0
+    ]
+  }
+}

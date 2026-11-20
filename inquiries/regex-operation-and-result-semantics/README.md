@@ -26,7 +26,9 @@ The answer may inform future adapter, artifact, Conformance-vector, Lab, and Ref
 
 ## Current state
 
-Fourth Edition 4.0.3 has scoped compile request/result, target profile, and TargetArtifact contracts. They govern compiler output and provenance on their terms. The RegEx Lab v1 workspace keeps match outcomes, native span units, capture participation and failures distinct, but its committed result union has no structured split or replacement payload, and the default provider is unavailable. RegEx Docs is available while both Labs remain coming soon. Conformance owns the canonical semantic corpus and controlled evidence; its committed certified Coverage Shard index is empty. [Pinned sources](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
+The [integrated dual-Lab source](../../docs/THREE_GAP_INTEGRATION_2026-11-20.md#website-acceptance-evidence) was qualified locally with real JavaScript, PCRE2, and Python providers and with semantic target execution. The source preserves provider-specific capabilities, operation-specific results, and separate termination and refusal states. Session history can support a fresh run, and the saved native cursor is unavailable. Certified compatibility still depends on Conformance's checkpoint authority.
+
+Fourth Edition 4.0.3 has scoped compile request/result, target profile, and TargetArtifact contracts. They govern compiler output and provenance on their terms. The earlier public Website revision is the baseline for the authored feasibility trial. The merged source adds structured split and replace behavior where the named provider supports those operations. Conformance owns the canonical semantic corpus and controlled evidence. Its certified Coverage Shard index at the verified baseline is empty. [Historical baseline](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20), [merged contracts](https://github.com/strling-lang/website/blob/674e06a70a8f86ae9a1cb18061111be949f8e785/src/lib/regex-lab/contracts.ts).
 
 ## Scope
 
@@ -57,7 +59,7 @@ Versioned compiler schemas and Website source establish the implementation bound
 
 ## Limits, uncertainty, and negative knowledge
 
-The tested envelope covers selected Node operations and synthetic semantic target provenance. Repeated-capture histories, reverse matching, streaming, callbacks, other replacement mini-languages, malformed-input transport policies, and production provider resource enforcement remain open. Unsupported must come from provider evidence or a controlling contract, and unknown stays explicit.
+The original trial covers selected Node operations and synthetic semantic target provenance. The subsequent browser qualification adds the exact providers, profiles and limits in the acceptance record. Repeated-capture histories, reverse matching, streaming, callbacks, other replacement mini-languages and production resource enforcement remain open. Unsupported must come from provider evidence or a controlling contract, and unknown stays explicit.
 
 ## Alternatives considered
 

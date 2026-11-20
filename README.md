@@ -42,6 +42,8 @@ This repository does not define STRling semantics or architecture, implement the
 
 The [November 20 current-state ledger](docs/CURRENT_STATE_2026-11-20.md) reviews all 35 inquiries against STRling 4.0.3, the public website source, and Conformance. The [decision evidence register](docs/DECISION_EVIDENCE_2026-11-20.md) pins the controlling revisions, scope and unresolved sources. The [completion record](docs/REVIEW_2026-11-20.md) links the three studies, replay results and downstream decisions. The August 14 checkpoint remains the baseline for historical reports.
 
+The [three-gap integration record](docs/THREE_GAP_INTEGRATION_2026-11-20.md) pins the merged compiler and Website revisions, qualification results, and study readiness. The [earlier decision record](docs/THREE_GAP_CLOSURE_2026-11-20.md) preserves the candidate and baseline evidence.
+
 ## Research programs
 
 [Programs](programs/README.md) are stable areas of investigation, not roadmap stages:
