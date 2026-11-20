@@ -9,6 +9,15 @@ Participant count: 0
 
 Use the [nine-task protocol](lab-task-success-and-evidence-interpretation.md), [A/B fixtures](../artifacts/lab-study/fixtures.json), and [activation and scoring guide](lab-study-activation-and-scoring.md). Keep the scoring key and `expected` fixture values on the moderator side. Only the synthetic task inputs and equal reference extracts go to participants.
 
+Generate the participant-facing T1–T8 prompts and inputs from the repository root. Serve each form only to the people assigned to it. For T9, show the protocol's six pinned evidence payloads in the assigned order and presentation, withholding the answer key.
+
+```sh
+node inquiries/regex-cognitive-ergonomics/artifacts/lab-study/participant-form.mjs A --fresh-replay
+node inquiries/regex-cognitive-ergonomics/artifacts/lab-study/participant-form.mjs B --fresh-replay
+```
+
+Omit `--fresh-replay` only for a separately qualified exact-replay condition.
+
 ## Before scheduling
 
 1. Obtain study-owner approval for the named moderator and reviewer, contact channel, exact runnable build and baseline conditions, consent text, protected workspace, and deletion windows below. Record the approval and the functional contact address privately. Use an isolated study host and browser profile with account sync and saved credentials disabled.

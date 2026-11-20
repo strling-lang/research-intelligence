@@ -87,6 +87,7 @@ Universal “write-only” framing and a single rewrite threshold are abandoned 
 - [Technical dry-run executable](artifacts/lab-study/dry-run.mjs)
 - [Raw dry-run result](artifacts/lab-study/dry-run-results.json)
 - [Live stimulus preflight](artifacts/lab-study/live-stimulus-preflight.mjs) and [recorded result](artifacts/lab-study/live-stimulus-preflight-results.json)
+- [Participant prompt generator](artifacts/lab-study/participant-form.mjs)
 - [Scored-export analysis and synthetic checks](artifacts/lab-study/analyze-scored.py)
 
 ## Sources
