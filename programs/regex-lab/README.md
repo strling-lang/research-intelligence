@@ -17,7 +17,7 @@ Website owns public Labs and provider integration. STRling owns semantic authori
 
 ## Current evidence boundary
 
-The [three-gap candidate review](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) adds real browser and compiler artifact evidence from local qualification. The decision record identifies approval and capability boundaries separately from the public source baseline and human study.
+The [three-gap integration record](../../docs/THREE_GAP_INTEGRATION_2026-11-20.md#website-acceptance-evidence) pins the merged dual-Lab source, isolated browser qualification, and the compiler artifact. Production distribution and human study retain their independent approvals.
 
 The committed website has a gated RegEx Lab workspace and a pending STRling Lab page. The [shared Lab contract trial](../../inquiries/regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md) exercises a shared envelope with distinct operation results. The [Lab task and explanation study kit](../../inquiries/regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) measures the procedure with a technical dry run and reserves user conclusions for real participants.
 

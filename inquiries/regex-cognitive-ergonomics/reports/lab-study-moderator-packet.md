@@ -3,7 +3,7 @@
 ```text
 Role: Participant operations and study activation packet
 Origin: Research Intelligence, prepared for STRL-2026-11-20-three-gap-closure
-Current status: Prepared, pending authorization and matched build freeze
+Current status: Technical build pinned, pending study-owner authorization
 Participant count: 0
 ```
 
@@ -27,12 +27,16 @@ Omit `--fresh-replay` only for a separately qualified exact-replay condition.
 | Build record | Freeze before scheduling |
 | --- | --- |
 | Lab arm | Website commit and build manifest SHA-256, compiler adapter identity and SHA-256, exact provider/profile IDs, browser build, feature flags, and sealed profile scope |
-| T1–T4 | Raw RegEx Lab and the pinned regex101 editor when the necessary operation and comparable options are available. Record displayed flavor and editor version. Use the exact local runtime for claims where the editor cannot establish provider identity. |
+| T1–T4 | Raw RegEx Lab and the pinned regex101 editor using JavaScript and matching options. Record the displayed flavor and editor version. Use the exact local runtime for claims requiring engine identity. |
 | T5 | Shared version-evidence exercise with pinned 3.13 observation, 3.14 documentation, and separately marked 3.14 observation if the frozen build reproduces it |
 | T6–T7 | STRling Lab or Raw RegEx Lab as specified by the protocol. Give the comparison arm VS Code and exact tested local runtimes and references for the same authoring, capture and profile jobs. |
 | T8 | Use the fresh-run task below when the frozen candidate lacks native cursor resumption. Exact resumed and cross-Lab cursor replay remain a descriptive capability question. |
 | T9 | Same six evidence payloads in both presentations. Record the view versions, rotate card order, and check class and scope separately before showing any feedback. |
 | Instruments | A/B fixture and protocol digests, final participant cards, rubric, references, and the trial schedule |
+
+The integration rehearsal exercised both T4 substitution forms in the JavaScript flavor of regex101 v14.6.2. The template `$$$<id>` produced `$07 $19 usd` for form A and `$05 $81 fee` for form B. These are synthetic UI observations. The exact engine build was unavailable in the editor view. RegExr continued to display a maintenance page. [regex101 substitution editor](https://regex101.com/substitution), [RegExr status](https://regexr.com/).
+
+The technical build freeze is Website `674e06a70a8f86ae9a1cb18061111be949f8e785` with compiler adapter `0.1.0-rc.3`, SHA-256 `3da8047dbbc6402885634b4eb49475ad06cdf894c1eced13fee62b400e23cc81`. Its isolated artifact manifest is `068a37215ab6ceba6cf65996362288bb189f2eb6081633d6efe224a858937683`. Use Node `22.23.5`, Playwright `1.62.1`, and Chromium `151.0.7922.34` for the candidate browser replay. The frozen local comparison uses VS Code `1.147.0`, Node `24.4.1`, and CPython `3.13.5`. Reconfirm live regex101 access and matched conditions before inviting participants. [Pinned build and reproduction instructions](https://github.com/strling-lang/website/blob/674e06a70a8f86ae9a1cb18061111be949f8e785/docs/LAB_ACCEPTANCE.md).
 
 ### T8 when native cursor resumption is unavailable
 

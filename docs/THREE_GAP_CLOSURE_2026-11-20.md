@@ -2,6 +2,8 @@
 
 `STRL-2026-11-20-three-gap-closure` extends the [November decision-grade review](REVIEW_2026-11-20.md). The [current-state ledger](CURRENT_STATE_2026-11-20.md) remains the record of its baseline. This addendum tracks separately governed candidate evidence, approval and release.
 
+The [integration record](THREE_GAP_INTEGRATION_2026-11-20.md) follows this review snapshot with the main-only policy and subsequent qualification evidence.
+
 ## Baseline and ownership
 
 | Source | Verified baseline | Scope |

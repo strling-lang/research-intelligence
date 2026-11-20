@@ -24,7 +24,7 @@ The answer may inform future capability boundaries, sessions, profiles, result t
 
 ## Current state
 
-The [three-gap candidate review](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) exercised the newer dual-Lab Website worktree with real browser providers and a separate compiler-tools Wasm candidate. That evidence concerns exact review revisions. Public availability and compiler distribution still depend on their owners' decisions.
+The [integrated Website source](../../docs/THREE_GAP_INTEGRATION_2026-11-20.md#website-acceptance-evidence) implements the shared workbench for both Labs. Isolated browser qualification used real JavaScript, PCRE2, and Python providers and the compiler's admitted `0.1.0-rc.3` adapter. Public availability and adapter distribution retain their release gates.
 
 RegEx Docs is available. Both Labs are marked coming soon. Website `3187d307` has a RegEx Lab route with a locked workbench, v1 execution types and a reactive coordinator. Its production profile state is empty and the default provider is unavailable. STRling Lab is a pending route without website compile or execution wiring. Fourth Edition 4.0.3 has versioned compiler artifact, semantic explanation, and bounded no-match contracts. The Conformance checkpoint index at `3285cc9f` contains zero certified Coverage Shards. [Pinned sources and scope](reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
 
@@ -56,7 +56,7 @@ Pinned code establishes the product boundary. The bounded replay establishes fea
 
 ## Limits, uncertainty, and negative knowledge
 
-The candidate interaction names, information density, workflow, sharing behavior, and user jobs remain open to formative evaluation. Actual browser identity, semantic compile and target run, storage/consent, provider termination in deployment, and execution cost remain untested. The local fixture replay does not establish the security of a production trust boundary.
+The interaction names, information density, workflows, and developer outcomes await formative evaluation. Local browser tests exercised runtime identity, semantic compile and target execution, termination, and session handling. Hosted operating cost and the production trust boundary remain untested. Restored history can support a fresh run. Native cursor continuation remains unavailable.
 
 ## Alternatives considered
 

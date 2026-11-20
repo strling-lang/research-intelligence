@@ -17,7 +17,7 @@ Research can inform compiler analyses, diagnostics, Audit, Evaluate, Compare, an
 
 ## Current evidence boundary
 
-The [three-gap candidate review](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) records the compiler-owned relation and private browser explanation candidates. Whole-input analysis, observable-preserving rewrite authority, and human interpretation remain separately evaluated.
+The [three-gap integration record](../../docs/THREE_GAP_INTEGRATION_2026-11-20.md) pins the admitted private language analysis and browser explanation sources, their qualification, and the remaining scope limits. Observable-preserving rewrite authorization and human interpretation have separate evidence requirements.
 
 Structural and safety facts, conversion, semantic explanation and bounded no-match contracts exist in 4.0.3. The [bounded language-relation study](../../inquiries/regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md) establishes and tests a scoped accepted-language decision. The [Lab task and explanation study kit](../../inquiries/regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) uses the existing explanation contracts to test evidence interpretation. Nothing in the studies establishes runtime immunity or a general observable-preserving rewrite.
 
