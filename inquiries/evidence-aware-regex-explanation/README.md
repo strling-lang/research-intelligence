@@ -7,11 +7,11 @@ programs:
   - Regex Reference
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - STRling ratifies structured diagnostic or explanation contracts
-  - Analysis inquiries produce new proof, witness, or uncertainty result types
-  - User research evaluates regex explanations or remediation communication
+  - STRling revises either versioned explanation contract or the bounded evaluator
+  - Analysis produces new proof, witness, or uncertainty results suitable for presentation
+  - Consented Lab studies identify evidence-scope or remediation-interpretation errors
 ---
 
 # Evidence-aware regex explanation
@@ -26,7 +26,7 @@ The answer may inform future structured compiler outputs and downstream CLI, edi
 
 ## Current state
 
-STRling’s architecture assigns target-independent diagnostics, safety findings, and explanations to semantic analysis, but exact diagnostic and protocol contracts remain later work. Current analysis produces structured facts and uncertainties, while the website remains pre-release and does not establish a shipped Regex Lab or comprehensive Regex Reference. The report’s explanation schema is a research recommendation, not adopted architecture.
+STRling `eba5dad3` establishes versioned semantic explanation and bounded no-match explanation contracts. Semantic explanation offers concise and detailed representations with typed evidence. No-match separates evaluation outcome from the strength of a localized cause, and explicitly represents resource exhaustion and unavailable target context. Each contract has scoped authority while the broader semantic specification remains draft. RegEx Docs is available at Website `3187d307`, and both Labs remain coming soon. [Semantic explanation model](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/explanations/semantic/1.0/README.md), [no-match model](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/explanations/no-match/1.0/README.md), [Website surface definitions](https://github.com/strling-lang/website/blob/3187d307e1d4707d706b1a7508f0cc5c067cadac/src/data/surfaces.ts).
 
 ## Scope
 
@@ -38,11 +38,11 @@ This inquiry does not choose the derivative, automata, symbolic, abstract, empir
 
 ## Research method
 
-The deep-research report compared formal explanation, debugging, static-analysis usability, compiler diagnostics, structured result standards, solver uncertainty, and regex-repair work. The active synthesis checked downstream status and extracted a bounded explanation contract without adopting its candidate schema.
+The historical report compared explanation, debugging, diagnostics, structured result standards, solver uncertainty, and repair work. This review checked the versioned contracts and their authored result fixtures. A [task-based study packet](../regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) uses those fixtures to test the interpretation of evidence and scope.
 
 ## Evidence and source quality
 
-Pinned STRling and website documents support the current-state boundary. Official LSP, SARIF, Rust, solver, and language specifications provide useful structural precedents. The report’s human-factors and repair citations were not durably mapped, and no STRling user study validates its vocabulary or presentation choices.
+Pinned source and authored examples establish the distinction between semantic facts, sample executions, a bounded proof, likely localized cause, unknown, and scoped campaign evidence. These are study categories and controlling source fields where applicable. The report’s older human-factors and repair citations lack durable mappings for material claims beyond this study’s scope. The dry run validated fields and the scoring key, with zero participant observations.
 
 ## Findings
 
@@ -54,6 +54,7 @@ Pinned STRling and website documents support the current-state boundary. Officia
 - `proven`, `refuted`, `supported`, `possible`, `unknown`, `unsupported`, and `empirical only` must not collapse into a confidence score.
 - Remediation applicability is separate from syntactic validity and semantic preservation.
 - The design objective is calibrated reliance: explanations should expose analyzer limits, not maximize user confidence.
+- The pinned no-match fixtures include completed no-match with a likely localized cause and a step-exhausted unknown. The dry-run scoring detected constructed confusion between those outcomes, an all-target extrapolation, and a sample mistaken for certification.
 
 ## Limits, uncertainty, and negative knowledge
 
@@ -65,11 +66,11 @@ Message-only diagnostics, raw traces, proof-object-only output, confidence score
 
 ## Implications for STRling
 
-A future compiler may expose a structured explanation result linked to canonical semantic nodes and exact evidence while adapters and products own presentation. Lab and Reference could consume the same contract without becoming analysis or evidence authorities.
+The compiler already supplies structured explanations linked to semantic program and source evidence. Presentation can consume those scoped results. The Lab and Docs owners control any presentation changes.
 
 ## Recommendations
 
-The report recommends a candidate structured explanation envelope carrying query, claim, scope, profile, operation, evidence, reasoning steps, uncertainty, witness, limitations, and remediation applicability. Downstream owners should first validate a small cross-surface contract and run user studies that measure task and repair correctness, scope comprehension, and appropriate reliance.
+Use the versioned models as the study inputs. Compare presentations of identical evidence and measure debugging correctness, class-and-scope interpretation, and harmful high-confidence answers before changing either model.
 
 ## Rejected or abandoned alternatives
 
@@ -79,13 +80,14 @@ Reject prose strings as semantic authority, confidence percentages without calib
 
 **Disposition:** none.
 
-No explanation schema or vocabulary from this inquiry is recorded as adopted.
+The compiler contracts are independently related downstream work. There is no recorded acceptance of the historical research schema or of the presentation intervention.
 
 ## Reports
 
 | Report | Role | Current status |
 | --- | --- | --- |
 | [Trustworthy Regex Explanations for STRling](reports/evidence-aware-regex-explanation.md) | Modern primary research input | Active input; partially verified with unresolved literature citations. |
+| [Lab task success and evidence interpretation](../regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) | Experiment report and study protocol | Pinned examples and instrument dry-run verified; participant outcomes open. |
 
 ## Related inquiries
 

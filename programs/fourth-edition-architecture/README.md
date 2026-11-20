@@ -13,11 +13,11 @@ Investigate questions directly relevant to STRling's transition to a canonical s
 
 ## Relationship to STRling
 
-This program may analyze and recommend. The [`strling` product repository](https://github.com/strling-lang/strling), its authority hierarchy, active `architecture/v4` branch, and current Fourth Edition campaign govern architecture, implementation, and delivery status.
+The compiler repository owns contracts, implementation, product certification and release decisions. Research may test concrete extensions or analyze scoped behavior.
 
 ## Current evidence boundary
 
-As reviewed at [`strling` commit `9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a), active product work contains a Rust compiler kernel and semantic, structural, safety, capability, portability, and target-family work. The ratified architecture still identifies exact source, Semantic IR, diagnostic, compiler-protocol, target-profile, and TargetArtifact contracts as later work. Semantic STRling and full adapter convergence remain directions unless downstream authority records implementation.
+Fourth Edition 4.0.3 is released. Scoped frontend, compiler and target contracts govern the canonical Rust implementation. The broad Semantic Specification remains draft. The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) distinguishes certified product source, closure and current maintenance, and records exact package and profile limits.
 
 ## Related existing inquiries
 
@@ -34,7 +34,7 @@ As reviewed at [`strling` commit `9991575`](https://github.com/strling-lang/strl
 
 ## Future research opportunities
 
-Prototype and empirically evaluate the candidate profile, text, analysis-dispatch, explanation, and host-projection contracts; measure adapter conformance and active compiler behavior without treating these inquiry recommendations as ratified architecture.
+Use accepted versioned contracts and scope existing conformance evidence before proposing changes. Investigate observable preservation and concrete new profile, adapter or tooling gaps.
 
 ## Explicit non-goals
 

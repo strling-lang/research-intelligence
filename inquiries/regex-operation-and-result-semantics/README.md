@@ -6,12 +6,12 @@ programs:
   - Regex Lab
   - Regex Reference
 horizon: Fourth Edition
-maturity: Exploratory
-last-reviewed: 2026-08-12
+maturity: Evidence-backed
+last-reviewed: 2026-11-20
 review-triggers:
-  - STRling ratifies compiler or adapter operation/result contracts
-  - Regex Conformance defines executable operation schemas
-  - A Lab or Reference surface for execution results is proposed downstream
+  - Website selects operation payloads, an interactive provider, or a coordinate conversion policy
+  - Compiler or adapter changes artifact, target profile, or execution contracts
+  - An applicable Coverage Shard or operation-level counterexample changes the evidence
 ---
 
 # Regex operation and result semantics
@@ -26,7 +26,7 @@ The answer may inform future adapter, artifact, Conformance-vector, Lab, and Ref
 
 ## Current state
 
-STRling’s ratified architecture defines compiler responsibility but leaves exact request/result and TargetArtifact contracts to later work. Conformance reserves protocol responsibility for native indexes, captures, replacement, errors, and timeouts, but no certified observations exist. The website remains Fourth Edition pre-release; Regex Lab and a comprehensive Regex Reference are research directions, not shipped surfaces.
+Fourth Edition 4.0.3 has scoped compile request/result, target profile, and TargetArtifact contracts. They govern compiler output and provenance on their terms. The RegEx Lab v1 workspace keeps match outcomes, native span units, capture participation and failures distinct, but its committed result union has no structured split or replacement payload, and the default provider is unavailable. RegEx Docs is available while both Labs remain coming soon. Conformance owns the canonical semantic corpus and controlled evidence; its committed certified Coverage Shard index is empty. [Pinned sources](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
 
 ## Scope
 
@@ -38,11 +38,11 @@ This inquiry does not build an engine compatibility table, redefine portability,
 
 ## Research method
 
-The report decomposed representative native APIs into an engine-independent operation model, compared edge cases, and proposed structured results. The active synthesis checked current downstream status and retained distinctions that survive API-specific vocabulary.
+The August report decomposed representative native APIs and proposed structured results. The new bounded study tested search, full-match, scan, replace, split, and extraction with fixed local ECMAScript inputs and independent expected outputs. It used fixtures for semantic target execution, non-UTF-16 coordinates, and failure outcomes, and checked the pinned raw coordinator with a deterministic provider.
 
 ## Evidence and source quality
 
-Official downstream documents support the ownership and implementation boundary. The report’s broad API survey lacks a durable marker-to-source map, so exact mappings and edge cases require focused verification against versioned official documentation and controlled observations.
+Versioned compiler schemas and Website source establish the implementation boundary. ECMA-262 and fixed native operations establish specific ECMAScript behavior in the trial. The August API survey lacks its original durable citation map, so claims outside the verified sources and fixtures remain partially verified.
 
 ## Findings
 
@@ -53,10 +53,11 @@ Official downstream documents support the ownership and implementation boundary.
 - Every span needs a unit and coordinate space. Native spans are evidence; normalized spans are derived and require mapping provenance.
 - Scan is a state machine. Zero-width progression, overlap, and termination policy are part of semantics.
 - Split and replace are composite operations with callback/template, unmatched-capture, limit, and output semantics beyond language acceptance.
+- The trial found that `a|ab` can select `a` for search and `ab` under a separately defined full-match operation. It reproduced different zero-width scan starts under Unicode/code-unit progression and showed that unchanged replacement output is compatible with either a match or no match. [Trial results](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md#method-and-results)
 
 ## Limits, uncertainty, and negative knowledge
 
-There is no verified universal core that losslessly represents every native API. Repeated-capture histories, reverse matching, streaming, callbacks, replacement mini-languages, malformed text, resource accounting, and index conversion may require extensions or explicit refusal. The candidate schema is not adopted.
+The tested envelope covers selected Node operations and synthetic semantic target provenance. Repeated-capture histories, reverse matching, streaming, callbacks, other replacement mini-languages, malformed-input transport policies, and production provider resource enforcement remain open. Unsupported must come from provider evidence or a controlling contract, and unknown stays explicit.
 
 ## Alternatives considered
 
@@ -68,7 +69,7 @@ Future artifacts and adapters may need to state operation contracts separately f
 
 ## Recommendations
 
-The report recommends a candidate operation vocabulary and layered result model: explicit operation and state, typed outcomes, capture participation, native spans plus optional normalized spans, declared scan progression, and structured replacement/split behavior. Validate per operation and profile before downstream ratification.
+Keep a small shared envelope and operation-specific payloads. Preserve native spans, derive display coordinates only when mapped, record the scan and replacement policies, and require separate completion, interruption and refusal states. Qualify each selected operation against the actual provider before exposing it publicly. [Owner handoff](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md#shared-envelope-and-owner-handoff)
 
 ## Rejected or abandoned alternatives
 
@@ -78,13 +79,14 @@ Reject unqualified `match`, unmatched-as-empty normalization, unitless offsets, 
 
 **Disposition:** none.
 
-No operation or result schema from this inquiry is recorded as adopted.
+The compiler artifact and raw Lab request/result unions are independently related and have their own downstream authority. No schema from this inquiry is recorded as adopted.
 
 ## Reports
 
 | Report | Role | Current status |
 | --- | --- | --- |
-| [What It Means to “Run a Regex”](reports/regex-operation-and-result-semantics.md) | Modern primary research input | Active input; partially verified with unresolved claim-level citations. |
+| [Shared Lab execution and session contract feasibility](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md) | November operation trial | Scoped native-case evidence and contract fixtures. |
+| [What It Means to “Run a Regex”](reports/regex-operation-and-result-semantics.md) | August research input | Partially verified with unresolved claim-level citations. Product references are historical. |
 
 ## Related inquiries
 
@@ -94,8 +96,7 @@ No operation or result schema from this inquiry is recorded as adopted.
 
 ## Sources
 
-- [`strling` architectural invariants](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/governance/architecture.md), reviewed commit `9991575`.
-- [`regex-conformance` adapter protocol boundary](https://github.com/strling-lang/regex-conformance/blob/57672519e899f986d94b7d1256ffe0aa90f1b26d/protocol/README.md).
-- [`website` Fourth Edition content rules](https://github.com/strling-lang/website/blob/7c7042f3d4418533f5dc0283537546529633b081/README.md), reviewed commit `7c7042f`.
+- [November contract locations and editions](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
+- [ECMA-262 2025 RegExp operations and abstract operations](https://tc39.es/ecma262/2025/multipage/text-processing.html#sec-regexp-regular-expression-objects)
 
 [← Inquiries](../README.md)

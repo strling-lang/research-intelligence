@@ -23,7 +23,7 @@ Research may reveal future opportunities or reasons not to expand. Any product o
 
 ## Current evidence boundary
 
-The repository preserves broad historical reports as discovery inputs. Most were AI-assisted, mix distinct problem classes, and predate Fourth Edition. Their citations and conclusions require focused revalidation.
+The historical reports preserve useful distinctions and rejected ideas. The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) found no current product task justifying a grammar runtime, new evaluation engine, non-text framework, approximation model, general AI repair or neuro-symbolic architecture. Each row identifies what would justify reopening.
 
 ## Related existing inquiries
 
@@ -38,7 +38,7 @@ The repository preserves broad historical reports as discovery inputs. Most were
 
 ## Future research opportunities
 
-Formal boundary maps, interoperable result and explanation models, comparisons against specialized systems, safety and verification boundaries, and criteria for product relevance.
+Evaluate a named user task against established specialist systems when evidence and product scope exist. Keep the Beyond Patterns falsification gate for any shared contract.
 
 ## Explicit non-goals
 

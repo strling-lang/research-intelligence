@@ -1,0 +1,1611 @@
+{
+  "cases": [
+    {
+      "Derivatives": {
+        "initial_units": 10,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 10,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 20,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 8,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "branch-order",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 6,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 12,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "capture-value-language-shadow",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 8,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "capture-participation-language-shadow",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 10,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 10,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 20,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 11,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "factor-prefix",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 8,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "predicate-union",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 6,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 12,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 10,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "nullable-loop",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 3,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "empty-language-versus-empty-word",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 8,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 7,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "id": "\u03b5-only-loop",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "strict-subset-forward",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "id": "strict-subset-reverse",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "literal-disjointness",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "id": "finite-predicate-overlap",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 4,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 8,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 6,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "nullable-overlap",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "id": "shortlex-tie",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 8,
+        "pairs_examined": 8,
+        "pairs_seen": 8,
+        "peak_pair_width": 8,
+        "status": "refuted",
+        "transitions": 14,
+        "witness": "aaaaaa"
+      },
+      "Thompson": {
+        "initial_units": 16,
+        "pairs_examined": 8,
+        "pairs_seen": 8,
+        "peak_pair_width": 3,
+        "status": "refuted",
+        "transitions": 14,
+        "witness": "aaaaaa"
+      },
+      "id": "witness-beyond-finite-oracle-horizon",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 2,
+        "status": "unknown_budget",
+        "transitions": 1,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 2,
+        "status": "unknown_budget",
+        "transitions": 1,
+        "witness": null
+      },
+      "id": "budget-exhaustion",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 26,
+        "pairs_examined": 129,
+        "pairs_seen": 256,
+        "peak_pair_width": 116,
+        "status": "unknown_budget",
+        "transitions": 257,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 52,
+        "pairs_examined": 129,
+        "pairs_seen": 256,
+        "peak_pair_width": 43,
+        "status": "unknown_budget",
+        "transitions": 258,
+        "witness": null
+      },
+      "id": "subset-growth-budget",
+      "relation": "equivalence"
+    },
+    {
+      "id": "reject-outside-alphabet-literal",
+      "reason": "node_shape_or_symbol",
+      "relation": "equivalence",
+      "status": "invalid"
+    },
+    {
+      "id": "reject-missing-star-body",
+      "reason": "node_shape_or_symbol",
+      "relation": "equivalence",
+      "status": "invalid"
+    },
+    {
+      "id": "unicode-property-unknown",
+      "reason": "unicode_property",
+      "relation": "disjoint",
+      "status": "outside_model"
+    },
+    {
+      "id": "folding-unknown",
+      "reason": "case_fold",
+      "relation": "equivalence",
+      "status": "outside_model"
+    },
+    {
+      "id": "complement-unknown",
+      "reason": "complement",
+      "relation": "equivalence",
+      "status": "outside_model"
+    },
+    {
+      "id": "observable-capture-unknown",
+      "reason": "capture",
+      "relation": "equivalence",
+      "status": "outside_model"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 14,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 32,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 46,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 40,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-00",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 2,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 74,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 18,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-01",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 10,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 10,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 24,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 13,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "seeded-02",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "Thompson": {
+        "initial_units": 4,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "id": "seeded-03",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 12,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 12,
+        "status": "proven",
+        "transitions": 10,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 52,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 36,
+        "status": "proven",
+        "transitions": 10,
+        "witness": null
+      },
+      "id": "seeded-04",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 11,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 23,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 26,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 21,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-05",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 6,
+        "status": "refuted",
+        "transitions": 6,
+        "witness": "ab"
+      },
+      "Thompson": {
+        "initial_units": 40,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 15,
+        "status": "refuted",
+        "transitions": 8,
+        "witness": "ab"
+      },
+      "id": "seeded-06",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 14,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 12,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "id": "seeded-07",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 46,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 37,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-08",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 8,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-09",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 7,
+        "status": "refuted",
+        "transitions": 6,
+        "witness": "bb"
+      },
+      "Thompson": {
+        "initial_units": 30,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 25,
+        "status": "refuted",
+        "transitions": 6,
+        "witness": "bb"
+      },
+      "id": "seeded-10",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 28,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 12,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "seeded-11",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 18,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 18,
+        "status": "proven",
+        "transitions": 10,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 76,
+        "pairs_examined": 7,
+        "pairs_seen": 7,
+        "peak_pair_width": 22,
+        "status": "proven",
+        "transitions": 14,
+        "witness": null
+      },
+      "id": "seeded-12",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 8,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 6,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-13",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 7,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 7,
+        "status": "refuted",
+        "transitions": 6,
+        "witness": "aaa"
+      },
+      "Thompson": {
+        "initial_units": 14,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 7,
+        "status": "refuted",
+        "transitions": 6,
+        "witness": "aaa"
+      },
+      "id": "seeded-14",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 10,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 12,
+        "status": "refuted",
+        "transitions": 8,
+        "witness": "bba"
+      },
+      "Thompson": {
+        "initial_units": 36,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 20,
+        "status": "refuted",
+        "transitions": 8,
+        "witness": "bba"
+      },
+      "id": "seeded-15",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 46,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 27,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-16",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 13,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 13,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 52,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 38,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "seeded-17",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 6,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "Thompson": {
+        "initial_units": 12,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 5,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "id": "seeded-18",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 7,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 7,
+        "status": "proven",
+        "transitions": 10,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 32,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 18,
+        "status": "proven",
+        "transitions": 10,
+        "witness": null
+      },
+      "id": "seeded-19",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 12,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 20,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 52,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 37,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "seeded-20",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 16,
+        "pairs_examined": 7,
+        "pairs_seen": 7,
+        "peak_pair_width": 20,
+        "status": "proven",
+        "transitions": 14,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 44,
+        "pairs_examined": 7,
+        "pairs_seen": 7,
+        "peak_pair_width": 25,
+        "status": "proven",
+        "transitions": 14,
+        "witness": null
+      },
+      "id": "seeded-21",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 8,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 8,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 20,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 14,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "seeded-22",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 16,
+        "pairs_examined": 12,
+        "pairs_seen": 12,
+        "peak_pair_width": 16,
+        "status": "proven",
+        "transitions": 24,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 46,
+        "pairs_examined": 12,
+        "pairs_seen": 12,
+        "peak_pair_width": 22,
+        "status": "proven",
+        "transitions": 24,
+        "witness": null
+      },
+      "id": "seeded-23",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 10,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 5,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-24",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 54,
+        "pairs_examined": 5,
+        "pairs_seen": 5,
+        "peak_pair_width": 22,
+        "status": "proven",
+        "transitions": 10,
+        "witness": null
+      },
+      "id": "seeded-25",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 12,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 19,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "Thompson": {
+        "initial_units": 36,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 15,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "id": "seeded-26",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 2,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 16,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 3,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-27",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 20,
+        "pairs_examined": 6,
+        "pairs_seen": 6,
+        "peak_pair_width": 22,
+        "status": "proven",
+        "transitions": 12,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 70,
+        "pairs_examined": 7,
+        "pairs_seen": 7,
+        "peak_pair_width": 30,
+        "status": "proven",
+        "transitions": 14,
+        "witness": null
+      },
+      "id": "seeded-28",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 17,
+        "pairs_examined": 6,
+        "pairs_seen": 6,
+        "peak_pair_width": 18,
+        "status": "proven",
+        "transitions": 12,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 38,
+        "pairs_examined": 8,
+        "pairs_seen": 8,
+        "peak_pair_width": 23,
+        "status": "proven",
+        "transitions": 16,
+        "witness": null
+      },
+      "id": "seeded-29",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "Thompson": {
+        "initial_units": 32,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 26,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "id": "seeded-30",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 5,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 5,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "Thompson": {
+        "initial_units": 22,
+        "pairs_examined": 2,
+        "pairs_seen": 3,
+        "peak_pair_width": 17,
+        "status": "refuted",
+        "transitions": 2,
+        "witness": "a"
+      },
+      "id": "seeded-31",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 6,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 22,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 8,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "seeded-32",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 14,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 22,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 48,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 39,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-33",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 6,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "Thompson": {
+        "initial_units": 16,
+        "pairs_examined": 3,
+        "pairs_seen": 4,
+        "peak_pair_width": 13,
+        "status": "refuted",
+        "transitions": 4,
+        "witness": "b"
+      },
+      "id": "seeded-34",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 14,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 14,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 32,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 21,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "seeded-35",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 16,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 12,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "id": "seeded-36",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 6,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 6,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 32,
+        "pairs_examined": 4,
+        "pairs_seen": 4,
+        "peak_pair_width": 18,
+        "status": "proven",
+        "transitions": 8,
+        "witness": null
+      },
+      "id": "seeded-37",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 13,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 13,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 36,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 15,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "seeded-38",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 5,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 5,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 38,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 30,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "seeded-39",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 40,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 39,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "id": "seeded-40",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 8,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-41",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 8,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 8,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 22,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 12,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "seeded-42",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 2,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 2,
+        "status": "proven",
+        "transitions": 2,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 18,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 11,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "id": "seeded-43",
+      "relation": "disjoint"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 2,
+        "pairs_seen": 2,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 4,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 46,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 37,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-44",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 4,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 4,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 20,
+        "pairs_examined": 3,
+        "pairs_seen": 3,
+        "peak_pair_width": 17,
+        "status": "proven",
+        "transitions": 6,
+        "witness": null
+      },
+      "id": "seeded-45",
+      "relation": "left_subset"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 7,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 7,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "Thompson": {
+        "initial_units": 20,
+        "pairs_examined": 1,
+        "pairs_seen": 1,
+        "peak_pair_width": 9,
+        "status": "refuted",
+        "transitions": 0,
+        "witness": ""
+      },
+      "id": "seeded-46",
+      "relation": "equivalence"
+    },
+    {
+      "Derivatives": {
+        "initial_units": 7,
+        "pairs_examined": 6,
+        "pairs_seen": 6,
+        "peak_pair_width": 7,
+        "status": "proven",
+        "transitions": 12,
+        "witness": null
+      },
+      "Thompson": {
+        "initial_units": 26,
+        "pairs_examined": 7,
+        "pairs_seen": 7,
+        "peak_pair_width": 11,
+        "status": "proven",
+        "transitions": 14,
+        "witness": null
+      },
+      "id": "seeded-47",
+      "relation": "disjoint"
+    }
+  ],
+  "finite_oracle_depth": 5,
+  "generated_cases": 48,
+  "measurement_counts": {
+    "false_assertions": 0,
+    "finite_membership_checks": 16380,
+    "membership_disagreements": 0,
+    "method_disagreements": 0,
+    "witnesses_replayed": 46
+  },
+  "model": {
+    "alphabet": [
+      "a",
+      "b"
+    ],
+    "default_pair_budget": 256,
+    "input_depth_cap": 12,
+    "input_node_cap": 64
+  },
+  "operational_observations": [
+    {
+      "id": "branch-order",
+      "left": {
+        "full_match": true,
+        "iteration": [
+          [
+            0,
+            1
+          ]
+        ],
+        "replacement": "Xb",
+        "search": {
+          "groups": [],
+          "span": [
+            0,
+            1
+          ]
+        }
+      },
+      "right": {
+        "full_match": true,
+        "iteration": [
+          [
+            0,
+            2
+          ]
+        ],
+        "replacement": "X",
+        "search": {
+          "groups": [],
+          "span": [
+            0,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "capture-value-language-shadow",
+      "left": {
+        "full_match": true,
+        "iteration": [
+          [
+            0,
+            2
+          ]
+        ],
+        "replacement": "<a>",
+        "search": {
+          "groups": [
+            "a"
+          ],
+          "span": [
+            0,
+            2
+          ]
+        }
+      },
+      "right": {
+        "full_match": true,
+        "iteration": [
+          [
+            0,
+            2
+          ]
+        ],
+        "replacement": "<b>",
+        "search": {
+          "groups": [
+            "b"
+          ],
+          "span": [
+            0,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "capture-participation-language-shadow",
+      "left": {
+        "full_match": true,
+        "iteration": [
+          [
+            0,
+            1
+          ]
+        ],
+        "replacement": "<a>",
+        "search": {
+          "groups": [
+            "a"
+          ],
+          "span": [
+            0,
+            1
+          ]
+        }
+      },
+      "right": {
+        "full_match": true,
+        "iteration": [
+          [
+            0,
+            1
+          ]
+        ],
+        "replacement": "<>",
+        "search": {
+          "groups": [
+            null
+          ],
+          "span": [
+            0,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "python": "3.13.5",
+  "seed": 20261120
+}

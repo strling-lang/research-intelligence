@@ -4,12 +4,12 @@ programs:
   - Regex Analysis & Explanation
   - Portability & Compatibility
 horizon: Fourth Edition
-maturity: Exploratory
-last-reviewed: 2026-08-12
+maturity: Evidence-backed
+last-reviewed: 2026-11-20
 review-triggers:
-  - Ratification of an equivalence relation or proof-evidence contract
-  - Implementation or independent validation of a complete proof fragment
-  - A counterexample invalidates a proposed rewrite class
+  - Compiler owner defines a product comparison query and its IR and text interpretation
+  - A proposed rewrite needs a specified context, span, capture, or operation relation
+  - A witness or exhaustion mismatch or a change to an existing preservation contract
 ---
 
 # Regex equivalence and rewrite verification
@@ -24,7 +24,7 @@ The answer may inform rewrite gating, containment, migration, counterexample gen
 
 ## Current state
 
-STRling at [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a) binds portability rewrites to authored strategy and evidence identities, but the inspected repository does not establish the report's proposed equivalence vocabulary or a general proof kernel as adopted contracts.
+The Fourth Edition 4.0.3 closure includes two bounded structural strategies with preconditions, evidence identities, exact-profile applicability and separate automatic-portability and explicit optimization roles. The semantic conversion contract proves normalized semantic alpha equivalence for exact reconstruction into its named destinations. These own different relations. The broad semantic specification remains unratified, and a general product equivalence kernel is open. [Rewrite registry](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/portability/equivalence/1.0/registry.json), [conversion contract](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/conversions/semantic/1.0/README.md), [specification hub](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/README.md).
 
 ## Scope
 
@@ -36,11 +36,11 @@ This inquiry does not define the portability ontology, generated-test system, sa
 
 ## Research method
 
-The report compared formal-language decision procedures, tagged and symbolic methods, translation validation, and practical regex observables. The synthesis retains stable distinctions and boundaries while leaving algorithms and schemas unselected.
+The August report surveyed general approaches. The November study implemented two deterministic state representations for whole-input word relations, gave an analytical reachability argument, and used a third direct evaluator for bounded checks and witness replay. Three local CPython cases test a possible misuse of the language result. [Comparative study](reports/bounded-language-relation-study.md).
 
 ## Evidence and source quality
 
-Classical regular-language foundations and several primary standards were checked. Tool-specific capabilities, specialized complexity claims, capture-aware completeness, and some version-drift examples remain partially verified because the original marker mapping is unavailable.
+The November study documents the claim-to-source mapping for the implemented methods, ERE# span reasoning and the mechanized JavaScript comparison. A publisher-record check repairs the Antimirov DOI in the active bibliography. The August report retains its imported citation, with this correction recorded in the successor study. Its unmapped specialized claims remain provisional. [Study methods and source verification](reports/bounded-language-relation-study.md), [Antimirov publisher record](https://www.sciencedirect.com/science/article/pii/0304397595001824).
 
 ## Findings
 
@@ -51,10 +51,11 @@ Classical regular-language foundations and several primary standards were checke
 - Backreferences create a major boundary for unrestricted universal equivalence; bounded and restricted results must say so.
 - Rewrite evidence needs relation, assumptions, profiles, method, domain, dependencies, and invalidation rules.
 - Safety-motivated rewrites must delegate their semantic-preservation obligation here rather than assume it.
+- Both trial implementations established 40 relations, refuted 23 and returned two budget unknowns. All 46 witness instances replayed independently. CPython controls show differences in selected span, iteration, capture values, capture participation, and replacement despite equal word languages.
 
 ## Limits, uncertainty, and negative knowledge
 
-A complete capture-aware relation for STRling's intended regular fragment is not established. Regular lookaround, repeated captures, Unicode predicate theories, operation semantics, certificate checking, and useful restricted backreference fragments remain open. The proposed status vocabulary is not adopted.
+The word model uses a literal, finite alphabet and excludes context, priority, captures, positions, complement, case folding and Unicode properties. A product correspondence proof, general contextual or capture-aware relation, operation equivalence, and external certificate checking remain open. A budget or model refusal carries no conclusion about the underlying relation.
 
 ## Alternatives considered
 
@@ -62,11 +63,11 @@ DFA products, NFA subset/antichain methods, derivatives, symbolic automata, SMT 
 
 ## Implications for STRling
 
-Downstream systems can use exact proofs where available, preserve witnesses where refuted, report bounded evidence honestly, and refuse automatic rewrites when the required observable relation cannot be established.
+Compiler-owned comparison could expose exact model-scoped proofs, replayable counterexamples and explicit unknowns. The proven word relation can inform a validation check where whole-input acceptance is the actual requirement. Rewrite use depends on the operation and contextual obligations that downstream defines.
 
 ## Recommendations
 
-The report recommends typed relations, proof-carrying or independently checkable rewrite evidence, shortest useful witnesses, explicit stale-evidence handling, and conservative refusal. These are candidate models.
+Conditionally evaluate a whole-input query if the compiler owner can define its admitted inputs and prove a mapping from canonical IR. Retain independently checkable witnesses and explicit budget outcomes. Any stronger operation-preserving rewrite requires evidence for that relation before registration.
 
 ## Rejected or abandoned alternatives
 
@@ -74,19 +75,20 @@ This inquiry rejects a single Boolean equivalence flag, capture-blind algebraic 
 
 ## Downstream disposition
 
-**Disposition:** none.
+**Disposition:** none. The scoped conversion and structural rewrite contracts are established downstream and independently related to the August research. No adoption of the study procedures or general rewrite proposal is recorded.
 
 ## Reports
 
 | Report | Role | Source verification |
 | --- | --- | --- |
+| [Comparing bounded regular-language decision procedures](reports/bounded-language-relation-study.md) | Executed comparative study | Scoped formal argument, primary sources, independent bounded checks, and local behavior controls. |
 | [Regex Equivalence, Containment, Witness Generation, and Rewrite Verification](reports/regex-equivalence-and-rewrite-verification.md) | Modern active research input | Partially verified; formal foundations and selected standards checked, specialized claims remain gaps. |
 
 ## Sources
 
-- [STRling architecture at `9991575`](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/docs/architecture.md)
+- [STRling specification hub at the 4.0.3 closure](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/README.md)
 - [Brzozowski, Derivatives of Regular Expressions](https://dl.acm.org/doi/10.1145/321239.321249)
-- [Antimirov, Partial Derivatives of Regular Expressions](https://doi.org/10.1016/0304-0208(95)00058-H)
+- [Antimirov, Partial Derivatives of Regular Expressions](https://doi.org/10.1016/0304-3975(95)00182-4)
 - [ECMAScript pattern semantics](https://tc39.es/ecma262/multipage/text-processing.html#sec-patterns)
 - [Alive2](https://alive2.llvm.org/)
 - [Regex Analysis & Explanation program](../../programs/regex-analysis-explanation/README.md)

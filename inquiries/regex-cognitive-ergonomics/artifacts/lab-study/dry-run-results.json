@@ -1,0 +1,272 @@
+{
+  "kind": "technical_dry_run",
+  "participants": 0,
+  "seed": "no_randomness",
+  "runtime": {
+    "node": "24.4.1",
+    "v8": "13.6.233.10-node.17",
+    "python": "3.13.5"
+  },
+  "compilerRevision": "eba5dad3de3fa620eb1ea13e0514d02f4b23e288",
+  "websiteRevision": "3187d307e1d4707d706b1a7508f0cc5c067cadac",
+  "sourceChecks": {
+    "status": "verified_fields_in_pinned_sources",
+    "digests": {
+      "F": "91e10ca8c48b31d7ed939e3c35d09b6d785f9c81c60b569e7d377e04e0541262",
+      "P": "e1e70a7e4940d524ae6c4025b0f3175b65cd33b3dd50bdb2916018919e22fa0d",
+      "L": "0aa59529dd0d3e928674986a61f6ef0fbba6652a47edf9a0b1fb374173370a87",
+      "U": "877c9f750fc005f031eea3ec567260a6626ba529ce25b2d59851fabecd4a869c",
+      "C": "5cd797292d33616889df902054803b24393722fcab9377a61a4edf0ce8c89800",
+      "frontendPositive": "a1de275fc7b567d415c6e1770dfad87119f687566b83241d65abfab170546acd"
+    }
+  },
+  "observed": [
+    {
+      "form": "A",
+      "inherited": [
+        "04",
+        null,
+        null
+      ],
+      "diagnosisBefore": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "diagnosisAfter": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "capturesBefore": [
+        [
+          "K",
+          "7"
+        ],
+        [
+          "K",
+          null
+        ],
+        [
+          "",
+          "7"
+        ],
+        [
+          "",
+          null
+        ]
+      ],
+      "capturesAfter": [
+        [
+          "K",
+          "7"
+        ],
+        [
+          "K",
+          ""
+        ],
+        [
+          "",
+          "7"
+        ],
+        [
+          "",
+          ""
+        ]
+      ],
+      "replaced": "$07 $19 usd",
+      "python313VersionSpan": null,
+      "python314VersionSpan": "not_tested",
+      "authorLiteralModel": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "authorChoiceModel": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "pythonDigitSpan": [
+        1,
+        2
+      ],
+      "pythonAsciiDigitSpan": null,
+      "jsDigitSpan": null,
+      "rawResult": {
+        "status": "observed",
+        "span": [
+          4,
+          6
+        ],
+        "unit": "utf16-code-unit"
+      },
+      "semanticFixtureResult": {
+        "status": "observed",
+        "span": [
+          4,
+          6
+        ],
+        "unit": "utf16-code-unit"
+      },
+      "resetCursorResult": {
+        "status": "observed",
+        "span": [
+          0,
+          2
+        ],
+        "unit": "utf16-code-unit"
+      },
+      "noCursorResult": {
+        "status": "unavailable"
+      },
+      "missingProfileResult": {
+        "status": "unavailable"
+      },
+      "changedSubjectResult": {
+        "status": "unavailable"
+      },
+      "changedOptionsResult": {
+        "status": "unavailable"
+      }
+    },
+    {
+      "form": "B",
+      "inherited": [
+        "08",
+        null,
+        null
+      ],
+      "diagnosisBefore": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "diagnosisAfter": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "capturesBefore": [
+        [
+          "m",
+          "4"
+        ],
+        [
+          "m",
+          null
+        ],
+        [
+          "",
+          "4"
+        ],
+        [
+          "",
+          null
+        ]
+      ],
+      "capturesAfter": [
+        [
+          "m",
+          "4"
+        ],
+        [
+          "m",
+          ""
+        ],
+        [
+          "",
+          "4"
+        ],
+        [
+          "",
+          ""
+        ]
+      ],
+      "replaced": "$05 $81 fee",
+      "python313VersionSpan": null,
+      "python314VersionSpan": "not_tested",
+      "authorLiteralModel": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "authorChoiceModel": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "pythonDigitSpan": [
+        1,
+        2
+      ],
+      "pythonAsciiDigitSpan": null,
+      "jsDigitSpan": null,
+      "rawResult": {
+        "status": "observed",
+        "span": [
+          4,
+          6
+        ],
+        "unit": "utf16-code-unit"
+      },
+      "semanticFixtureResult": {
+        "status": "observed",
+        "span": [
+          4,
+          6
+        ],
+        "unit": "utf16-code-unit"
+      },
+      "resetCursorResult": {
+        "status": "observed",
+        "span": [
+          0,
+          2
+        ],
+        "unit": "utf16-code-unit"
+      },
+      "noCursorResult": {
+        "status": "unavailable"
+      },
+      "missingProfileResult": {
+        "status": "unavailable"
+      },
+      "changedSubjectResult": {
+        "status": "unavailable"
+      },
+      "changedOptionsResult": {
+        "status": "unavailable"
+      }
+    }
+  ],
+  "instrumentChecks": {
+    "complete": {
+      "correct": 6,
+      "possible": 6,
+      "highConfidenceErrors": 0
+    },
+    "ambiguousAndMissing": {
+      "correct": 1,
+      "possible": 6,
+      "highConfidenceErrors": 3
+    }
+  },
+  "notTested": [
+    "both public Lab workflows",
+    "semantic compilation",
+    "Python 3.14 execution",
+    "regex101 UI",
+    "VS Code UI",
+    "human performance",
+    "repeat use"
+  ]
+}

@@ -4,11 +4,10 @@ programs:
   - Regex Reference
 horizon: Post-Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - A downstream Regex Reference product decision
-  - Material change to Regex Knowledge projection or Website architecture
-  - User research challenges the proposed navigation model
+  - A user study exposes a findability or provenance issue in available RegEx Docs
+  - A published semantic revision or first certified consumer-compatible checkpoint
 ---
 
 # Regex Reference information architecture
@@ -23,7 +22,7 @@ The answer may inform future Website information architecture, page identities, 
 
 ## Current state
 
-Website commit [`7c7042f`](https://github.com/strling-lang/website/tree/7c7042f3d4418533f5dc0283537546529633b081) contains documentation, learning, package, and Fourth Edition pre-release surfaces. No dedicated comprehensive Regex Reference was found. Regex Knowledge remains the authority for canonical entities and claims; Regex Conformance remains the authority for controlled observations; Website would own any public projection.
+RegEx Docs is available at the pinned website revision. It projects the reviewed Conformance v4 semantic corpus, with source-lock identity, 269 features and 16 categories. The compatibility consumer has no checkpoint. Website owns navigation and presentation. See C1 and W1–W2 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -31,7 +30,7 @@ Developer questions, navigation lenses, feature/system/profile/operation pages, 
 
 ## Non-goals
 
-This inquiry does not define or copy Regex Knowledge data, store Conformance observations, implement Website pages, prescribe Lab execution, or choose production schemas. Interactive execution belongs to [Regex Lab interaction model](../regex-lab-interaction-model/README.md).
+This inquiry studies information architecture. The corpus, observations, Website pages and production schemas are maintained by their owners. The [Lab interaction inquiry](../regex-lab-interaction-model/README.md) covers interactive execution.
 
 ## Research method
 
@@ -39,7 +38,7 @@ The report compared mature technical references and regex documentation with the
 
 ## Evidence and source quality
 
-Current product absence is repository-observed at an exact commit. Official documentation and selected reference precedents were checked, but user-task frequency, search behavior, and maintenance-effect claims remain partially verified. No STRling Reference usability study exists.
+The versioned surface registry and source lock establish the available product projection and its provenance. Deployment reachability and participant results remain unverified. User-task frequency, search behavior and maintenance effects remain provisional.
 
 ## Findings
 
@@ -53,7 +52,7 @@ Current product absence is repository-observed at an exact commit. Official docu
 
 ## Limits, uncertainty, and negative knowledge
 
-The correct top-level taxonomy, search ranking, comparison density, novice/expert layering, accessibility, and editorial workflow have not been tested with users. The proposed page/entity model may expose too much or too little detail. No comprehensive Reference currently exists to evaluate.
+The public projection can be evaluated for wayfinding, accessibility and provenance interpretation. No current task-success data selects a search or editorial design. First-checkpoint scope, compatibility display, and correction behavior require producer-and-consumer evidence.
 
 ## Alternatives considered
 
@@ -61,7 +60,7 @@ Engine-manual collections, Boolean compatibility matrices, whole-site version sn
 
 ## Implications for STRling
 
-A future public Reference can remain a projection rather than a new source of truth. Website decisions would need freshness, provenance, conflict, correction, and source-boundary contracts before generation.
+Evaluate the available reference against tasks and keep semantic scope visible. Claims about exact runtime compatibility require the relevant empirical evidence and a validated downstream checkpoint.
 
 ## Recommendations
 
@@ -73,7 +72,7 @@ Boolean support tables as canonical truth, engine names as behavioral identity, 
 
 ## Downstream disposition
 
-**Disposition:** none.
+**Disposition:** none. RegEx Docs has an independently related catalog projection. No documented acceptance relationship was found for the report's proposed IA.
 
 ## Reports
 

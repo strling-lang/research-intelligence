@@ -4,12 +4,12 @@ programs:
   - Fourth Edition Architecture
   - Regex Analysis & Explanation
 horizon: Fourth Edition
-maturity: Exploratory
-last-reviewed: 2026-08-12
+maturity: Evidence-backed
+last-reviewed: 2026-11-20
 review-triggers:
-  - New comparative or reproduced evidence for a portfolio technique
+  - New evidence from an independently authored language relation corpus or a witness mismatch
   - STRling ratifies an analysis query/result or entitlement contract
-  - Expansion of supported semantic envelopes or observable relations
+  - A specific selected-span or caseless question requires another model or predicate algebra
 ---
 
 # Regex analysis techniques
@@ -24,7 +24,7 @@ The answer may inform future method selection for nullability, safety, ambiguity
 
 ## Current state
 
-The modern report replaces the historical two-technique framing with a property-specific portfolio. At reviewed commit [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a/core), the Rust core exposes canonical semantic, structural, and safety analyses with typed uncertainty and complexity limits. This is useful implementation evidence, not adoption of the report’s dispatcher, semantic envelopes, guarantee matrix, or derived-view portfolio.
+Fourth Edition 4.0.3 has canonical foundational, structural, and safety analysis stages. At the released closure revision, structural analysis preserves typed unknowns for certain caseless predicate and overlap decisions, and safety analysis produces structural risk evidence. This compiler work is independently related to the August portfolio proposal. The broader dispatcher remains a hypothesis. [Structural analysis](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/docs/migration/structural-analysis.md), [safety analysis](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/docs/migration/semantic-safety-analysis.md).
 
 ## Scope
 
@@ -36,11 +36,11 @@ This inquiry does not redefine equivalence, safety, validation, portability, or 
 
 ## Research method
 
-The modern AI-assisted report surveyed formal and practical technique families, defined semantic envelopes, proposed a property-to-technique dispatch matrix, and compared epistemic result categories. The historical derivative-versus-graph report remains context for an earlier architecture proposal. Current STRling analysis files were inspected, but no comparative prototype or benchmark was run.
+The August report surveyed a portfolio of methods. The current bounded study compares normalized derivatives with a Thompson ε-NFA implementation using an independently defined finite-word oracle and a formal reachable-state argument. The fixture corpus includes explicit budget failures. [Comparative study](../regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md).
 
 ## Evidence and source quality
 
-Current compiler facts are verified against a pinned repository revision. The modern report cites relevant primary papers and official tool documentation, but its opaque citation mapping was removed and the comparative guarantee/performance matrix has not been reproduced. Maturity therefore remains exploratory.
+The scoped language result rests on a declared model, a formal argument, primary publications and deterministic replay. Both methods decided the same 63 relation cases and returned unknown on two budgeted cases. The broader guarantee and performance matrix and unresolved historical citation mappings remain provisional. The publisher record corrects the earlier Antimirov citation. [Comparative study methods and results](../regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md), [Antimirov publisher record](https://www.sciencedirect.com/science/article/pii/0304397595001824).
 
 ## Findings
 
@@ -51,10 +51,11 @@ Current compiler facts are verified against a pinned repository revision. The mo
 - Language acceptance, selected span, captures, iteration, operation behavior, and target behavior are distinct observables and may require different analyzers.
 - A staged portfolio can combine exact decision procedures, sound abstractions, bounded witness search, and concrete validation if each stage keeps a typed epistemic role.
 - Result states must distinguish proven, refuted by a valid witness, unknown/resource-exhausted, unsupported/refused, and empirical evidence only.
+- In the finite-alphabet model, both derivative and NFA state-set searches support language equality, containment, and disjointness, with independently replayed shortest witnesses. The witness for an overlap can be the empty word even when positive leading symbols are disjoint.
 
 ## Limits, uncertainty, and negative knowledge
 
-The report does not establish comparative performance, implementation cost, proof-object checking, cache stability, witness minimality, or sound handling of every lookaround, capture, backreference, recursion, priority, or replacement behavior. No shared corpus or prototype has validated dispatch thresholds. Failure, timeout, bounded search, and no found counterexample are not proofs.
+Comparative production performance, implementation cost, proof-object checking, cache stability, and dispatch thresholds remain untested. The experiment's shortest-witness claim is confined to the declared word domain and completed search. Richer observables and excluded operators require their own decision procedure and evidence. Budget exhaustion leaves the relation unknown.
 
 ## Alternatives considered
 
@@ -62,11 +63,11 @@ A universal derivative engine, canonical Thompson NFA or DFA, symbolic automata,
 
 ## Implications for STRling
 
-The existing canonical facts and typed uncertainty can form inputs to future property-specific analyzers. A query contract could prevent tools from asking an analyzer to make claims outside its semantic entitlement while preserving evidence and explanations across stages.
+Existing canonical facts and typed uncertainty can inform a future property-specific query contract. A whole-input comparison can expose the precise relation and witness without committing to a general dispatcher or stronger observables.
 
 ## Recommendations
 
-The report recommends a candidate entitlement-aware dispatcher over shared facts and disposable derived views. Before adoption, define representative property/observable queries, build small competing prototypes, require checkable witnesses or proof artifacts where applicable, and measure accuracy, unknown rates, latency, memory, and explanation quality under explicit budgets.
+If a compiler-owned comparison decision arises, define the language relation and IR projection first. Keep the independent Thompson construction for cross-checking. Measure latency, memory, and refusal rates on realistic input before selecting an implementation. Revisit broader dispatch when a concrete query requires more than one property model.
 
 ## Rejected or abandoned alternatives
 
@@ -74,14 +75,13 @@ The historical recommendation to make symbolic derivatives the linter architectu
 
 ## Downstream disposition
 
-**Disposition:** none.
-
-No portfolio dispatcher or technique selection from this inquiry is recorded as adopted.
+**Disposition:** none. The compiler's existing analysis stages are independently related. No adoption of the proposed dispatcher or either study algorithm is recorded.
 
 ## Reports
 
 | Report | Role | Current status |
 | --- | --- | --- |
+| [Comparing bounded regular-language decision procedures](../regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md) | Executed comparative study | Evidence-backed for the declared word model. |
 | [STRling Semantic Regex Analysis](reports/regex-analysis-architecture.md) | Modern primary research input | Active input; partially verified and not prototyped. |
 | [STRling Linter Architecture — Derivatives vs. Graph](reports/linter-derivatives-vs-graph.md) | Historical comparative proposal | Historical context; architecture and performance claims require revalidation. |
 
@@ -94,9 +94,9 @@ No portfolio dispatcher or technique selection from this inquiry is recorded as 
 
 ## Sources
 
-- [`strling` core](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a/core), reviewed commit `9991575`.
+- [`strling` compiler specification hub at the 4.0.3 closure](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/README.md).
 - Brzozowski, [Derivatives of Regular Expressions](https://doi.org/10.1145/321239.321249), 1964.
-- Antimirov, [Partial Derivatives of Regular Expressions and Finite Automaton Constructions](https://doi.org/10.1016/0304-0208(95)00011-G), 1996.
+- Antimirov, [Partial Derivatives of Regular Expressions and Finite Automaton Constructions](https://doi.org/10.1016/0304-3975(95)00182-4), 1996.
 - [Rust `regex-automata` documentation](https://docs.rs/regex-automata/).
 
 [← Inquiries](../README.md)

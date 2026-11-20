@@ -3,19 +3,20 @@ title: Regex Lab interaction model
 programs:
   - Regex Lab
 horizon: Post-Fourth Edition
-maturity: Exploratory
-last-reviewed: 2026-08-12
+maturity: Evidence-backed
+last-reviewed: 2026-11-20
 review-triggers:
-  - A downstream Regex Lab product decision
-  - User research validates or rejects proposed capability boundaries
-  - Material change to compiler, Knowledge, Conformance, or Website interfaces
+  - Website selects a shared operation or replay contract or qualifies an interactive provider
+  - First eligible certified Coverage Shard checkpoint is consumed
+  - Participant observations change a proposed interaction or evidence presentation
+  - Compiler artifact or explanation contract changes where Labs use it
 ---
 
 # Regex Lab interaction model
 
 ## Research question
 
-How should an interactive Regex Lab separate static inspection, controlled execution, cross-profile comparison, and composition while sharing useful session context and preserving authority and evidence boundaries?
+How can RegEx Lab and STRling Lab share orchestration and session context while preserving raw provider operations, semantic compiler provenance, and evidence boundaries?
 
 ## Motivation / decision informed
 
@@ -23,7 +24,7 @@ The answer may inform future capability boundaries, sessions, profiles, result t
 
 ## Current state
 
-No dedicated Regex Lab or Inspect/Run/Compare/Compose surface was found in Website commit [`7c7042f`](https://github.com/strling-lang/website/tree/7c7042f3d4418533f5dc0283537546529633b081). STRling at [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a) provides evolving compiler contracts but not the full product architecture proposed by the report. Regex Conformance at [`f8c603a`](https://github.com/strling-lang/regex-conformance/tree/f8c603a1a4f5f827247f8a5bed61c85f483857f8) has no certified observations.
+RegEx Docs is available. Both Labs are marked coming soon. Website `3187d307` has a RegEx Lab route with a locked workbench, v1 execution types and a reactive coordinator. Its production profile state is empty and the default provider is unavailable. STRling Lab is a pending route without website compile or execution wiring. Fourth Edition 4.0.3 has versioned compiler artifact, semantic explanation, and bounded no-match contracts. The Conformance checkpoint index at `3285cc9f` contains zero certified Coverage Shards. [Pinned sources and scope](reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
 
 ## Scope
 
@@ -35,25 +36,25 @@ This inquiry does not build the Lab, create Conformance evidence, redefine compi
 
 ## Research method
 
-The report analyzed mature regex and developer tools against STRling's authority boundaries. This synthesis refreshes current product state and retains interaction principles while treating all names and schemas as proposals.
+The August report analyzed tool precedents. The November study read the pinned downstream contracts, executed fixed native Node operations against hand-authored expectations, exercised the exact Website coordinator with an injected fixture, and saved a dual-Lab session using labelled semantic target fixtures. [Method and results](reports/shared-lab-contract-feasibility.md#method-and-results)
 
 ## Evidence and source quality
 
-Repository state and selected public-tool behavior were checked. The report has no direct STRling usability, privacy, security, or performance study. Competitive and user-workflow claims remain partially verified, so the inquiry is Exploratory.
+Pinned code establishes the product boundary. The bounded replay establishes feasibility of preserving operation, state, provider and provenance distinctions. It combines local runtime observations with synthetic semantic and failure cases. The August competitive and user-workflow claims remain partially verified. Public provider operation, isolation, performance, and user effects remain untested by this study.
 
 ## Findings
 
 - Static reasoning, runtime execution, profile comparison, and authoring/composition have different contracts and must not share an ambiguous generic result.
-- Shared session context can reduce re-entry cost, but operation-specific inputs, results, provenance, and failure states must remain distinct.
-- A compiler result, runtime observation, Knowledge statement, Conformance observation, and explanation have different authorities.
+- In the trial, two exact raw operations could replay from shared history and a semantic compile-target fixture retained its own evidence label and provenance. Reduction in user effort remains a hypothesis.
+- A compiler result, local runtime observation, researched corpus claim, certified observation, and explanation have different authority and scope.
 - Comparison should preserve exact profiles, observables, conditions, and replayable witnesses rather than only a red/green verdict.
 - Permalinks need immutable or versioned dependencies, privacy choices, and explicit reproducibility limits.
-- Public execution requires isolation, quotas, cancellation, output limits, and separation from trusted Conformance production.
+- The coordinator dropped stale work but accepted a fixture response with mismatched operation and provider identity. Public provider qualification should test correct request binding, isolation, quotas, output limits, and operational termination independently from Conformance.
 - Explanations should cite the underlying result and evidence rather than becoming a new fact source.
 
 ## Limits, uncertainty, and negative knowledge
 
-The names Inspect/Run/Compare/Compose, their information density, session transitions, default profiles, sharing behavior, and expected user jobs are unvalidated. Execution cost and privacy boundaries are unknown. A unified surface may be too complex; separate tools may fragment context.
+The candidate interaction names, information density, workflow, sharing behavior, and user jobs remain open to formative evaluation. Actual browser identity, semantic compile and target run, storage/consent, provider termination in deployment, and execution cost remain untested. The local fixture replay does not establish the security of a production trust boundary.
 
 ## Alternatives considered
 
@@ -61,11 +62,11 @@ One generic playground, separate standalone tools, a shared session with typed c
 
 ## Implications for STRling
 
-If a downstream owner pursues a Lab, it can ask the compiler, Knowledge, Conformance, and execution systems for typed results without merging their authority. The session and result schemas would require independent product and security decisions.
+The existing RegEx workspace can inform common coordination and history. Per-operation payloads, semantic provenance, and explicit evidence/replay states are needed before it can faithfully represent both Labs. Public execution and certified compatibility keep independent qualification and evidence boundaries.
 
 ## Recommendations
 
-The report recommends candidate Inspect/Run/Compare/Compose capabilities, a shared but typed session model, evidence-class labels, replayable witnesses, versioned sharing, and hardened execution boundaries. Names, LabSession/ProfileRef shapes, and result schemas remain proposals.
+Consider the [typed handoff](reports/shared-lab-contract-feasibility.md#shared-envelope-and-owner-handoff) for operation variants, coordinate mapping, lifecycle, provider qualification, and replay. Exercise public-provider requirements in the actual deployment and evaluate evidence interpretation in the formative study. The candidate envelope carries no production API commitment.
 
 ## Rejected or abandoned alternatives
 
@@ -75,17 +76,24 @@ A generic “Run” result that conflates static and executed evidence, executio
 
 **Disposition:** none.
 
+The raw workspace, typed coordinator, and checkpoint integration are independently related. No downstream record reviewed establishes adoption of the shared-Lab recommendation.
+
 ## Reports
 
 | Report | Role | Source verification |
 | --- | --- | --- |
-| [STRling Regex Lab: Product Architecture and Developer-Tooling Research](reports/regex-lab-interaction-model.md) | Modern active research input | Partially verified; current product boundaries and selected tool precedents checked. |
+| [Shared Lab execution and session contract feasibility](reports/shared-lab-contract-feasibility.md) | November bounded experiment | Pinned authority, native fixed-case tests, semantic fixtures, and replay. |
+| [STRling Regex Lab: Product Architecture and Developer-Tooling Research](reports/regex-lab-interaction-model.md) | August research input | Partially verified. Product and authority descriptions refer to the August baseline. |
+
+## Replay artifacts
+
+- [Hand-authored fixtures](artifacts/contract-cases.json)
+- [Offline runner](artifacts/replay-contract.mjs)
+- [Recorded output](artifacts/replay-record.json)
 
 ## Sources
 
-- [STRling Website at `7c7042f`](https://github.com/strling-lang/website/tree/7c7042f3d4418533f5dc0283537546529633b081)
-- [STRling architecture at `9991575`](https://github.com/strling-lang/strling/blob/9991575b347ac5f56108f18065c88b2b16a5065a/docs/architecture.md)
-- [Regex Conformance at `f8c603a`](https://github.com/strling-lang/regex-conformance/tree/f8c603a1a4f5f827247f8a5bed61c85f483857f8)
+- [November product, compiler, and checkpoint sources](reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
 - [Regex Lab program](../../programs/regex-lab/README.md)
 - [Developer adoption pathways](../developer-adoption-pathways/README.md)
 

@@ -17,7 +17,7 @@ Research can inform compiler analyses, diagnostics, Audit, Evaluate, Compare, an
 
 ## Current evidence boundary
 
-Existing reports discuss ReDoS, derivatives, graph analysis, maintainability, validation, and AI verification, but broad guarantees and architecture selections have not been revalidated. Active STRling safety analysis is implementation evidence, not proof of universal immunity or performance.
+Structural and safety facts, conversion, semantic explanation and bounded no-match contracts exist in 4.0.3. The [bounded language-relation study](../../inquiries/regex-equivalence-and-rewrite-verification/reports/bounded-language-relation-study.md) establishes and tests a scoped accepted-language decision. The [Lab task and explanation study kit](../../inquiries/regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) uses the existing explanation contracts to test evidence interpretation. Nothing in the studies establishes runtime immunity or a general observable-preserving rewrite.
 
 ## Related existing inquiries
 
@@ -31,7 +31,7 @@ Existing reports discuss ReDoS, derivatives, graph analysis, maintainability, va
 
 ## Future research opportunities
 
-Prototype the property-specific analysis portfolio; verify soundness envelopes and proof/witness contracts; empirically evaluate why-no-match, uncertainty, remediation, and explanation comprehension.
+Reopen for a defined stronger observable, a counterexample within the decision fragment or a qualified provider. Use consented study data to assess explanation comprehension.
 
 ## Explicit non-goals
 

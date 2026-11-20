@@ -36,10 +36,11 @@ This repository does not define STRling semantics or architecture, implement the
 | System | Primary responsibility | Relationship to Research Intelligence |
 | --- | --- | --- |
 | [`strling-lang/strling`](https://github.com/strling-lang/strling) | Product repository: specification, architecture, implementation, campaign, tests, adapters, and tooling | Governs current STRling status and accepts or rejects implementation-facing recommendations. |
-| [STRling Regex Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230e?pvs=204) | Canonical researched regex concepts, profiles, capabilities, relations, normative evidence, and gaps | Supplies knowledge context; is not duplicated here. |
-| [`strling-lang/regex-conformance`](https://github.com/strling-lang/regex-conformance) | Reproducible controlled executions, observations, provenance, findings, and certification | Supplies empirical evidence; Research Intelligence may study method and implications. |
+| [`strling-lang/regex-conformance`](https://github.com/strling-lang/regex-conformance) | Canonical researched semantic corpus and source claims, controlled executions, provenance, adjudication, and certification | Supplies separately identified semantic and empirical evidence. Research Intelligence studies method and implications. |
 | [`strling-lang/website`](https://github.com/strling-lang/website) | Public organization, product, documentation, and interactive-tool surface | Owns implementation and publication of researched public experiences. |
 | `strling-lang/.github` | Organization-level orientation and genuinely shared canonical material | Outside this repository's scope. |
+
+The [November 20 current-state ledger](docs/CURRENT_STATE_2026-11-20.md) reviews all 35 inquiries against STRling 4.0.3, the public website source, and Conformance. The [decision evidence register](docs/DECISION_EVIDENCE_2026-11-20.md) pins the controlling revisions, scope and unresolved sources. The [completion record](docs/REVIEW_2026-11-20.md) links the three studies, replay results and downstream decisions. The August 14 checkpoint remains the baseline for historical reports.
 
 ## Research programs
 

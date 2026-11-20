@@ -18,7 +18,7 @@ Conformance evidence may inform target profiles, portability reasoning, compiler
 
 ## Current evidence boundary
 
-[`regex-conformance`](https://github.com/strling-lang/regex-conformance) is in repository bootstrap as reviewed 2026-08-12; it states that no repository observation is yet a certified result and no production evidence campaign is authorized merely by repository existence. Its foundation and program govern exact status.
+The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) verifies foundation and adjudication acceptance boundaries, semantic corpus and denominator authority, full-data FAIL and zero certified coverage checkpoints. Operational datasets and certification remain with Conformance.
 
 ## Related existing inquiries
 
@@ -34,7 +34,7 @@ These inquiries may motivate future experiments; their reports are not conforman
 
 ## Future research opportunities
 
-Before a production campaign, validate profile materiality, operation vectors, discrepancy and correction lifecycles, cross-authority linkage, replication independence, completeness under applicability, and certification criteria.
+Examine an actual campaign discrepancy, independently admitted observation or first certified checkpoint against the established applicability, oracle, adjudication and certification contracts.
 
 ## Explicit non-goals
 

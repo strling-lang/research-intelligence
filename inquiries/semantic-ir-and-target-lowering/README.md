@@ -4,11 +4,10 @@ programs:
   - Fourth Edition Architecture
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - Ratification or incompatible revision of Semantic IR or TargetArtifact contracts
-  - A second target lowering reaches the canonical compiler path
-  - New equivalence evidence changes legalization requirements
+  - Incompatible change to Semantic IR, artifact or interop contracts
+  - A new target requirement or observed loss of match, capture or provenance across lowering
 ---
 
 # Semantic IR and target lowering
@@ -23,7 +22,7 @@ The answer may inform contract boundaries, legalization, target lowering, artifa
 
 ## Current state
 
-STRling `architecture/v4` commit [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a) contains versioned source, Semantic IR, diagnostic, compiler, analysis, capability, and portability contracts. The Rust kernel implements normalization, analysis, profile-aware planning, and a pure pre-serialization PCRE2 lowering tree. Regex serialization, TargetArtifact construction, runtime execution, and equivalent completed lowerings for ECMAScript and Python are not established by that inspected revision.
+Fourth Edition 4.0.3 defines canonical Semantic IR, compiler protocol, analysis, diagnostic, portability, profile, artifact and interop contracts. PCRE2, ECMAScript and Python re have scoped lowering, serialization and exact-profile runtime evidence. The August pre-serialization PCRE2 checkpoint remains prior implementation evidence. See S2–S4 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -39,7 +38,7 @@ The report analyzed compiler-IR precedents and STRling contracts. This synthesis
 
 ## Evidence and source quality
 
-Current status is tied to an exact STRling commit. MLIR dialect-conversion and ECMAScript regex sources were checked, but much of the report's detailed precedent mapping and field-level reasoning remains partially verified because the original citation-token map is unavailable.
+The serialized IR, target-artifact and target-profile schemas ground information placement. Runtime certification has exact profile and operation scope. The comparative IR precedents and field proposals in the August report remain partially verified.
 
 ## Findings
 
@@ -53,7 +52,7 @@ Current status is tied to an exact STRling commit. MLIR dialect-conversion and E
 
 ## Limits, uncertainty, and negative knowledge
 
-Exact capture-observation and character-domain contracts still require downstream specification. One implemented lowering cannot establish that the proposed boundaries generalize across target families. The report's example schemas are recommendations, not contracts, and partial lowering must not be mistaken for a valid partial artifact.
+The versioned data contracts and exact target profiles establish scoped representation and execution evidence. New target families and stronger preservation claims require independent checks for capture participation, character domains and priority. Unresolved required capability evidence prevents a complete usable artifact.
 
 ## Alternatives considered
 
@@ -65,7 +64,7 @@ The research supplies review questions for downstream contract owners: whether e
 
 ## Recommendations
 
-The report recommends a layered source-to-artifact model, instance-sensitive legality, monotonic evidence-qualified legalization, explicit capture contracts, target-specific IR, and deterministic artifact construction. Concrete field lists and API shapes remain candidate models.
+Use the current contract fields and invalid fixtures as the boundary for review. Investigate new fields or lowering stages only for a concrete target or independently replayed loss of required meaning or provenance.
 
 ## Rejected or abandoned alternatives
 

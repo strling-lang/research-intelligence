@@ -5,10 +5,11 @@ programs:
   - Regex Analysis & Explanation
 horizon: Post-Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
   - New controlled studies of regex comprehension or maintenance
-  - Major change to STRling authoring or explanation surfaces
+  - Both Lab study builds and matched tool baselines are ready for consented sessions
+  - Change to the authoring, explanation, or selected runtime contracts invalidates a study fixture
 ---
 
 # Regex cognitive ergonomics
@@ -23,7 +24,7 @@ The answer may inform authoring surfaces, explanation, documentation, refactorin
 
 ## Current state
 
-The historical report gathers cognitive-load arguments, maintenance claims, incidents, and tooling concerns. It frequently generalizes from anecdotes and secondary sources. Regex remains concise, familiar, dependency-free, and excellent for many simple tasks.
+The historical report gathers cognitive-load arguments, maintenance claims, incidents, and tooling concerns. Its broader causal claims remain unresolved. The new [Lab task study](reports/lab-task-success-and-evidence-interpretation.md) uses the released Fourth Edition source-language and explanation contracts with separately scoped RegEx and STRling Lab tasks. Website marks both Labs coming soon. The research dry run exercises the instrument and runnable regex cases.
 
 ## Scope
 
@@ -35,15 +36,17 @@ This inquiry does not declare regex “write-only” for all users, diagnose dev
 
 ## Research method
 
-The current work is a historical-input inventory. Future work should use task-based studies, controlled comparisons, maintenance simulations, qualitative interviews, and repository evidence with explicit populations and expertise levels.
+The new study uses paired task forms, matched tools, a timed protocol, explicit correctness and evidence-scope scoring, and controls for prior familiarity. The technical dry run exercised two forms and scored constructed responses. The protocol preserves a consented comparison for an authorized matched build.
 
 ## Evidence and source quality
 
-The report mixes academic concepts, incident narratives, technical publications, and rhetoric. Its material claims have not been fully verified under the current evidence standard.
+Primary regex-comprehension and developer-workflow studies inform task choice. Official tool documentation establishes credible baseline capabilities. Pinned compiler fixtures and local Node and CPython runs establish the scoped dry-run ground truth. Historical causal claims lack equivalent verification, and there are zero real participant observations for these Labs.
 
 ## Findings
 
 Plausible cost drivers include nesting, distant dependencies, ambiguous grouping, absent names, host escaping, dialect uncertainty, and weak feedback. Semantic naming and modularity may help complex tasks but can add verbosity and abstraction overhead to simple ones. Tooling quality is a confounder, not merely an outcome.
+
+The instrument distinguishes empty capture from nonparticipation, exact replay from a cursor reset, and correct evidence interpretation from a high-confidence overclaim. The two local forms provide fixed expected outcomes for a formative study. They establish neither relative effort nor a notation benefit.
 
 ## Limits, uncertainty, and negative knowledge
 
@@ -59,7 +62,7 @@ STRling should demonstrate value on defined tasks and preserve an easy relations
 
 ## Recommendations
 
-Establish task and population-specific measures before making ergonomic claims. Compare STRling against well-tooled regex, not an intentionally poor baseline.
+Use the validated task packet to compare the candidate Labs with regex101 and VS Code plus exact runtimes. Use correctness and mistaken confidence alongside time. Preserve raw-regex-only task success.
 
 ## Rejected or abandoned alternatives
 
@@ -74,9 +77,18 @@ Universal “write-only” framing and a single rewrite threshold are abandoned 
 | Report | Role | Current status |
 | --- | --- | --- |
 | [Regex Maintainability and Cognitive Cost](reports/regex-maintainability-cognitive-cost.md) | Historical research input | Preserved; empirical and causal claims require revalidation. |
+| [Lab task success and evidence interpretation](reports/lab-task-success-and-evidence-interpretation.md) | Experiment report and study protocol | Task instruments dry-run on fixed inputs; participant evaluation awaits authorization and builds. |
+
+## Artifacts
+
+- [A/B task fixtures and card keys](artifacts/lab-study/fixtures.json)
+- [Technical dry-run executable](artifacts/lab-study/dry-run.mjs)
+- [Raw dry-run result](artifacts/lab-study/dry-run-results.json)
 
 ## Sources
 
-See report bibliography pending focused verification.
+- [Chapman, Wang, and Stolee, Exploring Regular Expression Comprehension, ASE 2017](https://kstolee.github.io/papers/ase2017.pdf)
+- [Michael IV et al., Regexes Are Hard, ASE 2019](https://doi.org/10.1109/ASE.2019.00047)
+- [Current compiler, website, and baseline-tool sources](reports/lab-task-success-and-evidence-interpretation.md)
 
 [← Inquiries](../README.md)

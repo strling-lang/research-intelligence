@@ -1,0 +1,37 @@
+{
+  "compilerRevision": "eba5dad3de3fa620eb1ea13e0514d02f4b23e288",
+  "websiteRevision": "3187d307e1d4707d706b1a7508f0cc5c067cadac",
+  "runtime": { "node": "24.4.1", "v8": "13.6.233.10-node.17", "python": "3.13.5" },
+  "forms": [
+    {
+      "id": "A",
+      "inherited": { "pattern": "^(?:Ticket|Case)-(?<id>[0-9]{2})$", "subjects": ["Case-04", "Ticket-4", "xCase-04"], "expected": ["04", null, null] },
+      "diagnosis": { "pattern": "^cat$", "repair": "^cat(?:s)?$", "subjects": ["cat", "cats", "catx", "wildcat"], "before": [true, false, false, false], "after": [true, true, false, false] },
+      "captures": { "before": "^(?<label>[A-Z]*)(?<rank>[0-9])?$", "after": "^(?<label>[A-Z]*)(?<rank>[0-9]?)$", "subjects": ["K7", "K", "7", ""], "expectedBefore": [["K", "7"], ["K", null], ["", "7"], ["", null]], "expectedAfter": [["K", "7"], ["K", ""], ["", "7"], ["", ""]] },
+      "replace": { "pattern": "(?<id>[0-9]{2})-usd", "subject": "07-usd 19-usd usd", "template": "$$$<id>", "expected": "$07 $19 usd" },
+      "version": { "subject": "", "expected313Span": null, "documented314Span": [0, 0] },
+      "author": { "text": "AX", "choice": ["AX", "AY"], "subjects": ["AX", "AY", "ax", "XA"], "literal": [true, false, false, false], "extension": [true, true, false, false] },
+      "profile": { "subject": "x١y", "pythonSpan": [1, 2] },
+      "replay": { "subject": "AXa AX AX", "literal": "AX", "startAt": 3, "expectedSpan": [4, 6] }
+    },
+    {
+      "id": "B",
+      "inherited": { "pattern": "^(?:Zone|Area)_(?<id>[0-9]{2})$", "subjects": ["Area_08", "Zone_8", "xArea_08"], "expected": ["08", null, null] },
+      "diagnosis": { "pattern": "^dog$", "repair": "^dog(?:s)?$", "subjects": ["dog", "dogs", "dogx", "wilddog"], "before": [true, false, false, false], "after": [true, true, false, false] },
+      "captures": { "before": "^(?<label>[a-z]*)(?<rank>[0-9])?$", "after": "^(?<label>[a-z]*)(?<rank>[0-9]?)$", "subjects": ["m4", "m", "4", ""], "expectedBefore": [["m", "4"], ["m", null], ["", "4"], ["", null]], "expectedAfter": [["m", "4"], ["m", ""], ["", "4"], ["", ""]] },
+      "replace": { "pattern": "(?<id>[0-9]{2})-fee", "subject": "05-fee 81-fee fee", "template": "$$$<id>", "expected": "$05 $81 fee" },
+      "version": { "subject": "", "expected313Span": null, "documented314Span": [0, 0] },
+      "author": { "text": "BY", "choice": ["BY", "BZ"], "subjects": ["BY", "BZ", "by", "YB"], "literal": [true, false, false, false], "extension": [true, true, false, false] },
+      "profile": { "subject": "w७z", "pythonSpan": [1, 2] },
+      "replay": { "subject": "BYb BY BY", "literal": "BY", "startAt": 3, "expectedSpan": [4, 6] }
+    }
+  ],
+  "cards": [
+    { "id": "F", "class": "semantic_fact", "scope": "canonical_program", "source": "spec/explanations/semantic/1.0/examples/source-less-literal.json", "expect": "semantic_fact" },
+    { "id": "S", "class": "sample_observation", "scope": "one_runtime_input", "source": "local versioned runtime", "expect": "matched" },
+    { "id": "P", "class": "bounded_proof", "scope": "one_subject_mode_and_budget", "source": "spec/explanations/no-match/1.0/examples/proven-literal-mismatch.json", "expect": ["no_match", "proven"] },
+    { "id": "L", "class": "likely_explanation", "scope": "localized_cause_not_exhaustive", "source": "spec/explanations/no-match/1.0/examples/likely-multiple-blockers.json", "expect": ["no_match", "likely"] },
+    { "id": "U", "class": "unknown", "scope": "budget_exhausted_no_match_verdict", "source": "spec/explanations/no-match/1.0/examples/unknown-step-limit.json", "expect": ["unknown", "unknown"] },
+    { "id": "C", "class": "certified_evidence", "scope": "named_migration_campaign_denominator", "source": "tests/certification/migration-explanation/1.0/manifest.json", "expect": "campaign_certification_evidence" }
+  ]
+}

@@ -6,11 +6,10 @@ programs:
   - Adoption & Ergonomics
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - Change to STRling validation-guarantee or standard-library contracts
-  - Focused revalidation of a domain pattern or registry model
-  - New standards governing preserved domain examples
+  - New documented demand and controlling standard for a particular domain helper
+  - Change to an Essential-5 helper or guarantee contract
 ---
 
 # Semantic validation and domain libraries
@@ -25,7 +24,7 @@ The answer may inform validation contracts, domain helpers, standard-library evi
 
 ## Current state
 
-The active product repository now defines validation guarantee levels and compiler boundaries. Three historical reports propose a Standard Library, registry and structural extensions, and a global pattern utility map. They predate those contracts and are research/proposal material, not normative design.
+The versioned validation guarantee schemas and canonical Essential-5 registry govern scoped helper claims in 4.0.3. The historical utility map, registry and Standard Library proposals precede these controls. See S7 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -64,7 +63,7 @@ The current validation-guarantee contracts provide a stronger basis for future d
 
 ## Recommendations
 
-Revalidate candidates individually, beginning with a declared user job and controlling standard. Separate semantic contract research from distribution architecture. Preserve “not appropriate for regex” as a valid result.
+Use the current helper guarantee contract for a named validation task. Require the governing standard, permitted subset, relevant inputs and independently checked evidence before proposing an additional helper or stronger claim.
 
 ## Rejected or abandoned alternatives
 

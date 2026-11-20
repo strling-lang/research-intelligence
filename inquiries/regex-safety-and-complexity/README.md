@@ -5,12 +5,11 @@ programs:
   - Regex Analysis & Explanation
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - Material change to STRling safety-analysis contracts or implementation
-  - New certified engine-specific complexity or exploitability evidence
-  - Major survey, analyzer evaluation, or replication of ReDoS methods
-  - A verified counterexample to a recommended safety classification
+  - Change to structural fact or safety finding premises
+  - Qualified provider exposes a resource or termination decision
+  - A verified case contradicts a structural classification
 ---
 
 # Regex safety and complexity
@@ -25,7 +24,7 @@ The answer may inform compiler safety facts, diagnostics, target-aware explanati
 
 ## Current state
 
-At STRling `architecture/v4` commit [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a), the Rust kernel contains structural and semantic safety analysis with structured diagnostics. That implementation is evidence of current behavior, not a proof of universal accuracy or immunity. The modern report supersedes the historical report's engine-general and categorical conclusions as the active research input; both historical files remain preserved.
+The 4.0.3 compiler derives structural safety findings and separate typed uncertainty over normalized canonical IR. The stage proves configured structural conditions under exact input identities. It does not evaluate an execution path, public provider or exploitability. Its present limits and evidence are documented in S6 of the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -67,7 +66,7 @@ A downstream safety contract can preserve multidimensional results, exact eviden
 
 ## Recommendations
 
-The report recommends a staged pipeline from semantic feature classification through formal/heuristic analysis, profile refinement, and empirical confirmation; a multidimensional candidate result model; explicit resource and exploitability boundaries; and proof-gated automatic repair. These remain non-normative recommendations.
+Present structural premises and uncertainty explicitly. Assess runtime resource behavior separately with a qualified provider, exact operation and bounded method. Base repair suggestions on the observable relation required by the user and the governing target profile.
 
 ## Rejected or abandoned alternatives
 

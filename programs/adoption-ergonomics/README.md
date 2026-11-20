@@ -17,7 +17,7 @@ Findings may inform Simply APIs, Semantic STRling, adapters, CLI/LSP/editor work
 
 ## Current evidence boundary
 
-Existing reports identify plausible cognitive, workflow, and adoption issues but rely heavily on secondary synthesis and overbroad rhetoric. They require focused source verification and empirical user research. Regex remains an excellent tool for many simple tasks.
+The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) establishes released 4.0.3 options, available documentation, and pending Labs. The [Lab task and explanation study kit](../../inquiries/regex-cognitive-ergonomics/reports/lab-task-success-and-evidence-interpretation.md) provides a technical dry run and credible baseline tasks. Current evidence supports the evaluation procedure. Human success, repeated use, and adoption effects remain open.
 
 ## Related existing inquiries
 
@@ -28,7 +28,7 @@ Existing reports identify plausible cognitive, workflow, and adoption issues but
 
 ## Future research opportunities
 
-Task-frequency and usability studies, maintenance and comprehension measures, migration and dependency-friction studies, and host-projection pilots that distinguish tool adoption from authoring adoption.
+Run the study with consented participants and accessible comparison tools. Retain task success for raw-regex users. Reopen cross-host projection only for a concrete IDE or CI decision.
 
 ## Explicit non-goals
 

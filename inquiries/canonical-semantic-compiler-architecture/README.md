@@ -4,11 +4,10 @@ programs:
   - Fourth Edition Architecture
 horizon: Fourth Edition
 maturity: Exploratory
-last-reviewed: 2026-08-12
+last-reviewed: 2026-11-20
 review-triggers:
-  - Ratification of a Semantic STRling or Simply frontend contract
-  - Material change to the canonical compiler or adapter boundary
-  - Frontend-convergence evidence across two or more authoring surfaces
+  - Ratification of the broader Semantic Specification or change to a frontend contract
+  - Convergence regression or new adapter contract with an observable mismatch
 ---
 
 # Canonical semantic compiler architecture
@@ -23,7 +22,7 @@ The answer may inform frontend contracts, adapter boundaries, shared compiler in
 
 ## Current state
 
-At STRling `architecture/v4` commit [`9991575`](https://github.com/strling-lang/strling/tree/9991575b347ac5f56108f18065c88b2b16a5065a), the ratified responsibility flow converges authoring frontends on canonical Semantic IR and a Rust reference compiler. The kernel implements the regex-compatible frontend and the common path through certified portability planning and pre-serialization PCRE2 lowering. Semantic STRling remains a future flagship language, current Simply implementations remain transitional, and full adapter/tooling convergence is not established by the inspected repository revision.
+Fourth Edition 4.0.3 ships the Rust compiler boundary. Semantic STRling and regex-compatible source have distinct normative 1.0.0 grammar and mapping contracts. Simply 1.0.0 and 1.1.0 construct canonical input through a versioned host-neutral protocol. Compiler, artifact and interop schemas establish the data boundaries. Semantic Specification 1.0 is still a draft. The August branch describes an earlier implementation snapshot. See S1–S3 in the [decision evidence register](../../docs/DECISION_EVIDENCE_2026-11-20.md).
 
 ## Scope
 
@@ -39,7 +38,7 @@ The report compared compiler precedents with STRling's active architecture and c
 
 ## Evidence and source quality
 
-STRling current-state claims are repository-observed at an exact commit. External precedent claims are partially reconstructed from primary compiler documentation, but the imported report lacks a complete durable mapping from its research-session markers to sources. The report is therefore an active but partially verified input and cannot by itself support Evidence-backed maturity.
+The release, specification hub and controlling schemas establish the scoped contracts. STRling's [convergence test](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/core/tests/explanation_frontend_convergence.rs) is implementation evidence. External architectural precedents in the report remain partially verified.
 
 ## Findings
 
@@ -52,7 +51,7 @@ STRling current-state claims are repository-observed at an exact commit. Externa
 
 ## Limits, uncertainty, and negative knowledge
 
-The inquiry has no cross-frontend convergence results because the inspected revision does not contain the full set of planned authoring surfaces. It is unknown which concepts will prove awkward outside regex import. The report's campaign-only status claims and several precedent details remain incompletely verified. A single Rust implementation does not prove frontend neutrality.
+Convergence fixtures exercise the implemented forms. General frontend neutrality, future constructs, target execution, and untested host adapters require independent evidence. Broader language behavior needs ratification under the compiler authority model.
 
 ## Alternatives considered
 
@@ -64,7 +63,7 @@ If accepted downstream, future frontend and tooling decisions should be evaluate
 
 ## Recommendations
 
-The report recommends a frontend-neutrality audit before semantic authoring contracts are ratified, specification-authored convergence cases, explicit frontend selection, centralized normalization, and stable fact/query boundaries for tools. These are non-normative candidates.
+Use released frontend contracts and accepted convergence fixtures to review future extensions. Require explicit representability, stable provenance and discriminating cross-frontend cases for a concrete compiler change.
 
 ## Rejected or abandoned alternatives
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Research how comprehensive regex knowledge should be modeled, maintained, queried, versioned, and connected to evidence without duplicating the operational STRling Regex Knowledge Program.
+Study the knowledge lifecycle and traceable projections of canonical regex semantics, source claims, and observed behavior.
 
 ## Important research questions
 
@@ -17,7 +17,7 @@ The compiler and public reference need trustworthy knowledge projections. This p
 
 ## Current evidence boundary
 
-The [Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230e?pvs=204) defines a graph of versioned profiles, features, capabilities, relations, claim-level evidence, and coverage facets. As reviewed 2026-08-12, it is on hold pending reassessment against Regex Conformance. That workspace remains the operational knowledge authority while retained; no database is copied here.
+Conformance now owns the canonical researched semantic corpus and source-claim bindings. The prior separate Regex Knowledge authority description is historical. The [November review and pinned sources](../../docs/CURRENT_STATE_2026-11-20.md) links current authority indexes, adjudication, and the website source lock.
 
 ## Related existing inquiries
 
@@ -28,7 +28,7 @@ The [Knowledge Program](https://app.notion.com/p/3ba7d940647581a9b60dd76f67e5230
 
 ## Future research opportunities
 
-Verify the proposed cross-authority identity and revision lifecycle against live schemas; evaluate storage, resolver, query, and derived-projection tradeoffs without resuming or copying the Knowledge corpus.
+Test one real producer-to-consumer evidence and correction chain when the first applicable certified checkpoint or owner-led identity change becomes available.
 
 ## Explicit non-goals
 
