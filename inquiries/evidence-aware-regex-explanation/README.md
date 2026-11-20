@@ -26,6 +26,8 @@ The answer may inform future structured compiler outputs and downstream CLI, edi
 
 ## Current state
 
+The compiler's private browser tools candidate exercises versioned explanation results in a local Wasm build. Its [decision record](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) records the separate approval boundary. Developer interpretation still awaits consented sessions using matched conditions and the [study scoring workflow](../regex-cognitive-ergonomics/reports/lab-study-activation-and-scoring.md).
+
 STRling `eba5dad3` establishes versioned semantic explanation and bounded no-match explanation contracts. Semantic explanation offers concise and detailed representations with typed evidence. No-match separates evaluation outcome from the strength of a localized cause, and explicitly represents resource exhaustion and unavailable target context. Each contract has scoped authority while the broader semantic specification remains draft. RegEx Docs is available at Website `3187d307`, and both Labs remain coming soon. [Semantic explanation model](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/explanations/semantic/1.0/README.md), [no-match model](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/explanations/no-match/1.0/README.md), [Website surface definitions](https://github.com/strling-lang/website/blob/3187d307e1d4707d706b1a7508f0cc5c067cadac/src/data/surfaces.ts).
 
 ## Scope

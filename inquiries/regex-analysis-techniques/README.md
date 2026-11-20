@@ -24,6 +24,8 @@ The answer may inform future method selection for nullability, safety, ambiguity
 
 ## Current state
 
+A [compiler-owned review candidate](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) projects selected canonical IR to a bounded Unicode-scalar language relation. The demonstrated tool is separate from the released compiler interfaces and awaits scoped contract acceptance.
+
 Fourth Edition 4.0.3 has canonical foundational, structural, and safety analysis stages. At the released closure revision, structural analysis preserves typed unknowns for certain caseless predicate and overlap decisions, and safety analysis produces structural risk evidence. This compiler work is independently related to the August portfolio proposal. The broader dispatcher remains a hypothesis. [Structural analysis](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/docs/migration/structural-analysis.md), [safety analysis](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/docs/migration/semantic-safety-analysis.md).
 
 ## Scope

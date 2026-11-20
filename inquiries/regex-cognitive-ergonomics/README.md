@@ -24,7 +24,7 @@ The answer may inform authoring surfaces, explanation, documentation, refactorin
 
 ## Current state
 
-The historical report gathers cognitive-load arguments, maintenance claims, incidents, and tooling concerns. Its broader causal claims remain unresolved. The new [Lab task study](reports/lab-task-success-and-evidence-interpretation.md) uses the released Fourth Edition source-language and explanation contracts with separately scoped RegEx and STRling Lab tasks. Website marks both Labs coming soon. The research dry run exercises the instrument and runnable regex cases.
+The historical report gathers cognitive-load arguments, maintenance claims, incidents, and tooling concerns. Its broader causal claims remain unresolved. The [Lab task study](reports/lab-task-success-and-evidence-interpretation.md) uses the released Fourth Edition source-language and explanation contracts. The [activation and scoring record](reports/lab-study-activation-and-scoring.md) adds fixed-input Wasm stimulus runs and paired analysis checks. Consented participants, a matched study build, and owner-approved study operation remain necessary to assess human outcomes.
 
 ## Scope
 
@@ -78,12 +78,15 @@ Universal “write-only” framing and a single rewrite threshold are abandoned 
 | --- | --- | --- |
 | [Regex Maintainability and Cognitive Cost](reports/regex-maintainability-cognitive-cost.md) | Historical research input | Preserved; empirical and causal claims require revalidation. |
 | [Lab task success and evidence interpretation](reports/lab-task-success-and-evidence-interpretation.md) | Experiment report and study protocol | Task instruments dry-run on fixed inputs; participant evaluation awaits authorization and builds. |
+| [Lab study activation and scoring](reports/lab-study-activation-and-scoring.md) | Technical preflight and study activation record | Both authoring forms and Pyodide version stimulus executed on Node. Zero participants. |
 
 ## Artifacts
 
 - [A/B task fixtures and card keys](artifacts/lab-study/fixtures.json)
 - [Technical dry-run executable](artifacts/lab-study/dry-run.mjs)
 - [Raw dry-run result](artifacts/lab-study/dry-run-results.json)
+- [Live stimulus preflight](artifacts/lab-study/live-stimulus-preflight.mjs) and [recorded result](artifacts/lab-study/live-stimulus-preflight-results.json)
+- [Scored-export analysis and synthetic checks](artifacts/lab-study/analyze-scored.py)
 
 ## Sources
 

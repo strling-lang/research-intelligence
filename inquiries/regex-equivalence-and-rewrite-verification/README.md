@@ -24,6 +24,8 @@ The answer may inform rewrite gating, containment, migration, counterexample gen
 
 ## Current state
 
+The [compiler review candidate](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) exercises whole-input equality, containment and disjointness on a defined canonical IR fragment. It provides independently replayed witnesses. Observable rewrite preservation requires separate evidence and remains outside the proposal.
+
 The Fourth Edition 4.0.3 closure includes two bounded structural strategies with preconditions, evidence identities, exact-profile applicability and separate automatic-portability and explicit optimization roles. The semantic conversion contract proves normalized semantic alpha equivalence for exact reconstruction into its named destinations. These own different relations. The broad semantic specification remains unratified, and a general product equivalence kernel is open. [Rewrite registry](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/portability/equivalence/1.0/registry.json), [conversion contract](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/conversions/semantic/1.0/README.md), [specification hub](https://github.com/strling-lang/strling/blob/eba5dad3de3fa620eb1ea13e0514d02f4b23e288/spec/README.md).
 
 ## Scope

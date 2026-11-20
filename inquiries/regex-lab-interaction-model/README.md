@@ -24,6 +24,8 @@ The answer may inform future capability boundaries, sessions, profiles, result t
 
 ## Current state
 
+The [three-gap candidate review](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) exercised the newer dual-Lab Website worktree with real browser providers and a separate compiler-tools Wasm candidate. That evidence concerns exact review revisions. Public availability and compiler distribution still depend on their owners' decisions.
+
 RegEx Docs is available. Both Labs are marked coming soon. Website `3187d307` has a RegEx Lab route with a locked workbench, v1 execution types and a reactive coordinator. Its production profile state is empty and the default provider is unavailable. STRling Lab is a pending route without website compile or execution wiring. Fourth Edition 4.0.3 has versioned compiler artifact, semantic explanation, and bounded no-match contracts. The Conformance checkpoint index at `3285cc9f` contains zero certified Coverage Shards. [Pinned sources and scope](reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
 
 ## Scope

@@ -26,6 +26,8 @@ The answer may inform future adapter, artifact, Conformance-vector, Lab, and Ref
 
 ## Current state
 
+The [dual-Lab review](../../docs/THREE_GAP_CLOSURE_2026-11-20.md) checks real provider results in addition to the original feasibility fixture. The review distinguishes a fresh request replay from resuming a saved native cursor and preserves provider-specific capabilities. Certified compatibility still depends on Conformance's checkpoint authority.
+
 Fourth Edition 4.0.3 has scoped compile request/result, target profile, and TargetArtifact contracts. They govern compiler output and provenance on their terms. The RegEx Lab v1 workspace keeps match outcomes, native span units, capture participation and failures distinct, but its committed result union has no structured split or replacement payload, and the default provider is unavailable. RegEx Docs is available while both Labs remain coming soon. Conformance owns the canonical semantic corpus and controlled evidence; its committed certified Coverage Shard index is empty. [Pinned sources](../regex-lab-interaction-model/reports/shared-lab-contract-feasibility.md#downstream-baseline-checked-on-2026-11-20)
 
 ## Scope
